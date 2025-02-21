@@ -9,10 +9,9 @@ on:
   # allows to manually run the job at any time
   workflow_dispatch:
   
-  # run on every push on the main branch
   push:
     branches:
-    - main # master
+    - main
 
 jobs:
   generate:
@@ -21,32 +20,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     
-    steps:        
-      # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
+    steps:
       - name: generate snake svg
         uses: Platane/snk/@v3
-        
         with:
-          # github user name to read the contribution graph from (**required**)
-          # using action context var `github.repository_owner` or specified user
           github_user_name: ${{ github.repository_owner }}
-      
-          
-          # list of files to generate.
-          # one file per line. Each output can be customized with options as query string.
-          #
-          #  supported options:
-          #  - palette:     A preset of color, one of [github, github-dark, github-light]
-          #  - color_snake: Color of the snake
-          #  - color_dots:  Coma separated list of dots color.
-          #                 The first one is 0 contribution, then it goes from the low contribution to the highest.
-          #                 Exactly 5 colors are expected.
+          # color_dots:  The first one is 0 contribution, then it goes from the low contribution to the highest.
+          #              Exactly 5 colors are expected.
           outputs: |
             dist/snake.svg?color_snake=#707070&color_dots=#eaeaea,#5d5d5d,#4e4e4e,#414141,#353535
             dist/snake-dark.svg?color_snake=#707070&color_dots=#1e1e1e,#878787,#9d9d9d,#b3b3b3,#cccccc
 
       # push the content of <build_dir> to a branch
-      # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
+      # access pushed content at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
       - name: push snake svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
