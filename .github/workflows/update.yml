@@ -3,7 +3,7 @@ name: Update readme
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 permissions:
   contents: write
@@ -35,8 +35,17 @@ jobs:
           GIFOS_GENERAL_LOOP_COUNT: 4
           GIFOS_GENERAL_COLOR_SCHEME: "everblush"
 
-      - name: Update readme
-        run: |
-          git add README.md output.gif
-          git -c "user.name=bot" -c "user.email=bot@github.com" commit -m "Automatically updated on $(TZ='Asia/Kolkata' date)"
-          git push
+      - name: Create dist directory
+        run: mkdir -p dist
+
+      - name: Copy gif to dist
+        run: cp output.gif dist/
+
+      - name: Push gif to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+          # keep_history: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

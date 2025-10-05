@@ -159,6 +159,8 @@ def main():
 
     t.gen_gif()
     # image = gifos.utils.upload_imgbb("output.gif", 129600)  # 1.5 days expiration
+
+    '''
     readme_file_content = rf"""<div align="justify">
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./output.gif">
@@ -185,7 +187,7 @@ def main():
     with open("README.md", "w") as f:
         f.write(readme_file_content)
         print("INFO: README.md file generated")
-
+    '''
 
 if __name__ == "__main__":
     main()
