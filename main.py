@@ -56,7 +56,7 @@ def main():
     t.clear_frame()
     t.clone_frame(5)
     t.toggle_show_cursor(False)
-    t.gen_text("\x1b[93mGIF OS v1.0.11 (tty1)\x1b[0m", 1, count=5)
+    t.gen_text("\x1b[90mGIF OS v1.0.11 (tty1)\x1b[0m", 1, count=5)
     t.gen_text("login: ", 3, count=5)
     t.toggle_show_cursor(True)
     t.gen_typing_text("noidilin", 3, contin=True)
@@ -86,26 +86,26 @@ def main():
     user_details_lines = f"""
     \x1b[30;101mnoidilin@GitHub\x1b[0m
     --------------
-    \x1b[96mOS:     \x1b[93mWindows, macOS, Arch/OmArchy\x1b[0m
-    \x1b[96mHost:   \x1b[93mNational Taiwan University \x1b[94m#NTU\x1b[0m
-    \x1b[96mKernel: \x1b[93mFinance \x1b[94m#FIN\x1b[0m
-    \x1b[96mUptime: \x1b[93m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
-    \x1b[96mIDE:    \x1b[93mneovim, zed, VSCode\x1b[0m
+    \x1b[93mOS:     \x1b[97mWindows, macOS, Arch/Omarchy\x1b[0m
+    \x1b[93mHost:   \x1b[97mNational Taiwan University \x1b[94m#NTU\x1b[0m
+    \x1b[93mKernel: \x1b[97mFinance \x1b[94m#FIN\x1b[0m
+    \x1b[93mUptime: \x1b[97m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
+    \x1b[93mIDE:    \x1b[97mneovim, zed, VSCode\x1b[0m
     
     \x1b[30;101mContact:\x1b[0m
     --------------
-    \x1b[96mEmail:      \x1b[93mlinganinja.0120@gmail.com\x1b[0m
-    \x1b[96mYouTube:    \x1b[93m@noidilin\x1b[0m
+    \x1b[93mEmail:      \x1b[97mlinganinja.0120@gmail.com\x1b[0m
+    \x1b[93mYouTube:    \x1b[97m@noidilin\x1b[0m
     
     \x1b[30;101mGitHub Stats:\x1b[0m
     --------------
-    \x1b[96mUser Rating: \x1b[93m{git_user_details.user_rank.level}\x1b[0m
-    \x1b[96mTotal Stars Earned: \x1b[93m{git_user_details.total_stargazers}\x1b[0m
-    \x1b[96mTotal Commits ({int(year_now) - 1}): \x1b[93m{git_user_details.total_commits_last_year}\x1b[0m
-    \x1b[96mTotal PRs: \x1b[93m{git_user_details.total_pull_requests_made}\x1b[0m
-    \x1b[96mMerged PR %: \x1b[93m{git_user_details.pull_requests_merge_percentage}\x1b[0m
-    \x1b[96mTotal Contributions: \x1b[93m{git_user_details.total_repo_contributions}\x1b[0m
-    \x1b[96mTop Languages: \x1b[93m{', '.join(top_languages[:5])}\x1b[0m
+    \x1b[93mUser Rating: \x1b[97m{git_user_details.user_rank.level}\x1b[0m
+    \x1b[93mTotal Stars Earned: \x1b[97m{git_user_details.total_stargazers}\x1b[0m
+    \x1b[93mTotal Commits ({int(year_now) - 1}): \x1b[97m{git_user_details.total_commits_last_year}\x1b[0m
+    \x1b[93mTotal PRs: \x1b[97m{git_user_details.total_pull_requests_made}\x1b[0m
+    \x1b[93mMerged PR %: \x1b[97m{git_user_details.pull_requests_merge_percentage}\x1b[0m
+    \x1b[93mTotal Contributions: \x1b[97m{git_user_details.total_repo_contributions}\x1b[0m
+    \x1b[93mTop Languages: \x1b[97m{', '.join(top_languages[:5])}\x1b[0m
     """
     t.gen_prompt(1)
     prompt_col = t.curr_col
@@ -150,7 +150,7 @@ def main():
     t.gen_text(user_details_lines, 2, 35, count=5, contin=True)
     t.gen_prompt(t.curr_row)
     t.gen_typing_text(
-        "\x1b[92m# Let's just forget everything said...",
+        "\x1b[97m# Let's just forget everything said...",
         t.curr_row,
         contin=True,
     )
