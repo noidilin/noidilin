@@ -1,24 +1,22 @@
-name: Update readme
+# reference: https://github.com/x0rzavi/x0rzavi
+name: generate terminal animation
 
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
 
-permissions:
-  contents: write
-
 jobs:
-  update-readme:
+  generate:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+
     steps:
       - uses: actions/checkout@v4
         with:
           lfs: true
-      # - name: Set up Python 3.11
-      #   uses: actions/setup-python@v5
-      #   with:
-      #     python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -26,7 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install git+https://github.com/x0rzavi/github-readme-terminal.git@main
 
-      - name: Run script
+      - name: Run python script to generate output gif
         run: python main.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -41,7 +39,7 @@ jobs:
       - name: Copy gif to dist
         run: cp output.gif dist/
 
-      - name: Push gif to output branch
+      - name: Push output gif to terminal branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: terminal

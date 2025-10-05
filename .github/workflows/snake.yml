@@ -1,14 +1,11 @@
-# source - https://github.com/Platane/Platane/blob/master/.github/workflows/main.yml#L26-L33
-name: generate animation
+# reference - https://github.com/Platane/Platane
+name: Generate snake animation
 
 on:
-  # run automatically every 24 hours
-  schedule:
-    - cron: "0 */24 * * *"
-
   # allows to manually run the job at any time
   workflow_dispatch:
-
+  schedule:
+    - cron: "0 0 * * *"
   push:
     branches:
       - main
@@ -21,7 +18,7 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - name: generate snake svg
+      - name: Generate snake svg
         uses: Platane/snk/@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -33,7 +30,7 @@ jobs:
 
       # push the content of <build_dir> to a branch
       # access pushed content at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
-      - name: push snake svg to the output branch
+      - name: Push snake svg to the snake branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: snake
