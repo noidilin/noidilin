@@ -84,7 +84,7 @@ def main():
     t.clear_frame()
     top_languages = [lang[0] for lang in git_user_details.languages_sorted]
     user_details_lines = f"""
-    \x1b[30;101mnoidilin@GitHub\x1b[0m
+    \x1b[97mnoidilin@GitHub\x1b[0m
     --------------
     \x1b[93mOS:     \x1b[97mWindows, macOS, Arch/Omarchy\x1b[0m
     \x1b[93mHost:   \x1b[97mNational Taiwan University \x1b[94m#NTU\x1b[0m
@@ -92,12 +92,12 @@ def main():
     \x1b[93mUptime: \x1b[97m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
     \x1b[93mIDE:    \x1b[97mneovim, zed, VSCode\x1b[0m
     
-    \x1b[30;101mContact:\x1b[0m
+    \x1b[97mContact:\x1b[0m
     --------------
     \x1b[93mEmail:      \x1b[97mlinganinja.0120@gmail.com\x1b[0m
     \x1b[93mYouTube:    \x1b[97m@noidilin\x1b[0m
     
-    \x1b[30;101mGitHub Stats:\x1b[0m
+    \x1b[97mGitHub Stats:\x1b[0m
     --------------
     \x1b[93mUser Rating: \x1b[97m{git_user_details.user_rank.level}\x1b[0m
     \x1b[93mTotal Stars Earned: \x1b[97m{git_user_details.total_stargazers}\x1b[0m
