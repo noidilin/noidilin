@@ -56,7 +56,7 @@ def main():
     t.clear_frame()
     t.clone_frame(5)
     t.toggle_show_cursor(False)
-    t.gen_text("\x1b[90mGIF OS v1.0.11 (tty1)\x1b[0m", 1, count=5)
+    t.gen_text("\x1b[90;100mGIF OS v1.0.11 (tty1)\x1b[0m", 1, count=5)
     t.gen_text("login: ", 3, count=5)
     t.toggle_show_cursor(True)
     t.gen_typing_text("noidilin", 3, contin=True)
@@ -87,8 +87,8 @@ def main():
     \x1b[97mnoidilin@GitHub\x1b[0m
     --------------
     \x1b[93mOS:     \x1b[97mWindows, macOS, Arch/Omarchy\x1b[0m
-    \x1b[93mHost:   \x1b[97mNational Taiwan University \x1b[94m#NTU\x1b[0m
-    \x1b[93mKernel: \x1b[97mFinance \x1b[94m#FIN\x1b[0m
+    \x1b[93mHost:   \x1b[97mNational Taiwan University \x1b[90;100m#NTU\x1b[0m
+    \x1b[93mKernel: \x1b[97mFinance \x1b[90;100m#FIN\x1b[0m
     \x1b[93mUptime: \x1b[97m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
     \x1b[93mIDE:    \x1b[97mneovim, zed, VSCode\x1b[0m
     

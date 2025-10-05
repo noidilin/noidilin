@@ -1,13 +1,15 @@
 <h2 align="center">noidilin - frontend dev</h2>
 
-<picture align="center">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/noidilin/noidilin/terminal/output.gif">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/noidilin/noidilin/terminal/output.gif">
-  <img alt="GIFOS" src="output.gif">
-</picture>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/noidilin/noidilin/terminal/output.gif">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/noidilin/noidilin/terminal/output.gif">
+    <img alt="GIFOS terminal animation" src="https://raw.githubusercontent.com/noidilin/noidilin/terminal/output.gif">
+  </picture>
+</div>
 
-<div style="display:flex;justify-content:center;">
-  <sub><i>Generated automatically using [x0rzavi/github-readme-terminal](https://github.com/x0rzavi/github-readme-terminal) on {time_now}</i></sub>
+<div align="center">
+  <sub>Generated automatically using [x0rzavi/github-readme-terminal](https://github.com/x0rzavi/github-readme-terminal)</sub>
 </div>
 
 <picture align="center">
