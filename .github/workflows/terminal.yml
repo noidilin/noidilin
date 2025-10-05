@@ -44,7 +44,7 @@ jobs:
       - name: Push gif to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          target_branch: output
+          target_branch: terminal
           build_dir: dist
           # keep_history: true
         env:
