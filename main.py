@@ -18,10 +18,10 @@ def main():
     year_now = datetime.now(ZoneInfo("Asia/Taipei")).strftime("%Y")
     t.gen_text("GIF_OS Modular BIOS v1.0.11", 1)
     t.gen_text(f"Copyright (C) {year_now}, \x1b[31mnoidilin Softwares Inc.\x1b[0m", 2)
-    t.gen_text("\x1b[90mGitHub Profile ReadMe Terminal, Rev 1011\x1b[0m", 4)
+    t.gen_text("\x1b[94mGitHub Profile ReadMe Terminal, Rev 1011\x1b[0m", 4)
     t.gen_text("Krypton(tm) GIFCPU - 250Hz", 6)
     t.gen_text(
-        "Press \x1b[90mDEL\x1b[0m to enter SETUP, \x1b[90mESC\x1b[0m to cancel Memory Test",
+        "Press \x1b[94mDEL\x1b[0m to enter SETUP, \x1b[94mESC\x1b[0m to cancel Memory Test",
         t.num_rows,
     )
     for i in range(0, 65653, 7168):  # 64K Memory
@@ -56,7 +56,7 @@ def main():
     t.clear_frame()
     t.clone_frame(5)
     t.toggle_show_cursor(False)
-    t.gen_text("\x1b[90mGIF OS v1.0.11 (tty1)\x1b[0m", 1, count=5)
+    t.gen_text("\x1b[93mGIF OS v1.0.11 (tty1)\x1b[0m", 1, count=5)
     t.gen_text("login: ", 3, count=5)
     t.toggle_show_cursor(True)
     t.gen_typing_text("noidilin", 3, contin=True)
@@ -84,28 +84,28 @@ def main():
     t.clear_frame()
     top_languages = [lang[0] for lang in git_user_details.languages_sorted]
     user_details_lines = f"""
-    \x1b[1;97mnoidilin@GitHub\x1b[0m
+    \x1b[30;101mnoidilin@GitHub\x1b[0m
     --------------
-    \x1b[97mOS:     \x1b[37mWindows, macOS, Arch/OmArchy\x1b[0m
-    \x1b[97mHost:   \x1b[37mNational Taiwan University \x1b[94m#NTU\x1b[0m
-    \x1b[97mKernel: \x1b[37mFinance \x1b[94m#FIN\x1b[0m
-    \x1b[97mUptime: \x1b[37m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
-    \x1b[97mIDE:    \x1b[37mneovim, zed, VSCode\x1b[0m
+    \x1b[96mOS:     \x1b[93mWindows, macOS, Arch/OmArchy\x1b[0m
+    \x1b[96mHost:   \x1b[93mNational Taiwan University \x1b[94m#NTU\x1b[0m
+    \x1b[96mKernel: \x1b[93mFinance \x1b[94m#FIN\x1b[0m
+    \x1b[96mUptime: \x1b[93m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
+    \x1b[96mIDE:    \x1b[93mneovim, zed, VSCode\x1b[0m
     
-    \x1b[1;97mContact:\x1b[0m
+    \x1b[30;101mContact:\x1b[0m
     --------------
-    \x1b[97mEmail:      \x1b[37mlinganinja.0120@gmail.com\x1b[0m
-    \x1b[97mYouTube:    \x1b[37m@noidilin\x1b[0m
+    \x1b[96mEmail:      \x1b[93mlinganinja.0120@gmail.com\x1b[0m
+    \x1b[96mYouTube:    \x1b[93m@noidilin\x1b[0m
     
-    \x1b[1;97mGitHub Stats:\x1b[0m
+    \x1b[30;101mGitHub Stats:\x1b[0m
     --------------
-    \x1b[97mUser Rating: \x1b[37m{git_user_details.user_rank.level}\x1b[0m
-    \x1b[97mTotal Stars Earned: \x1b[37m{git_user_details.total_stargazers}\x1b[0m
-    \x1b[97mTotal Commits ({int(year_now) - 1}): \x1b[37m{git_user_details.total_commits_last_year}\x1b[0m
-    \x1b[97mTotal PRs: \x1b[37m{git_user_details.total_pull_requests_made}\x1b[0m
-    \x1b[97mMerged PR %: \x1b[37m{git_user_details.pull_requests_merge_percentage}\x1b[0m
-    \x1b[97mTotal Contributions: \x1b[37m{git_user_details.total_repo_contributions}\x1b[0m
-    \x1b[97mTop Languages: \x1b[37m{', '.join(top_languages[:5])}\x1b[0m
+    \x1b[96mUser Rating: \x1b[93m{git_user_details.user_rank.level}\x1b[0m
+    \x1b[96mTotal Stars Earned: \x1b[93m{git_user_details.total_stargazers}\x1b[0m
+    \x1b[96mTotal Commits ({int(year_now) - 1}): \x1b[93m{git_user_details.total_commits_last_year}\x1b[0m
+    \x1b[96mTotal PRs: \x1b[93m{git_user_details.total_pull_requests_made}\x1b[0m
+    \x1b[96mMerged PR %: \x1b[93m{git_user_details.pull_requests_merge_percentage}\x1b[0m
+    \x1b[96mTotal Contributions: \x1b[93m{git_user_details.total_repo_contributions}\x1b[0m
+    \x1b[96mTop Languages: \x1b[93m{', '.join(top_languages[:5])}\x1b[0m
     """
     t.gen_prompt(1)
     prompt_col = t.curr_col
