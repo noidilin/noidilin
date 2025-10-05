@@ -86,16 +86,16 @@ def main():
     user_details_lines = f"""
     \x1b[30;101mnoidilin@GitHub\x1b[0m
     --------------
-     \x1b[96mOS:     \x1b[93mWindows, macOS, Arch/OmArchy\x1b[0m
-     \x1b[96mHost:   \x1b[93mNational Taiwan University \x1b[94m#NTU\x1b[0m
-     \x1b[96mKernel: \x1b[93mFinance \x1b[94m#FIN\x1b[0m
-     \x1b[96mUptime: \x1b[93m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
-     \x1b[96mIDE:    \x1b[93mneovim, zed, VSCode\x1b[0m
+    \x1b[96mOS:     \x1b[93mWindows, macOS, Arch/OmArchy\x1b[0m
+    \x1b[96mHost:   \x1b[93mNational Taiwan University \x1b[94m#NTU\x1b[0m
+    \x1b[96mKernel: \x1b[93mFinance \x1b[94m#FIN\x1b[0m
+    \x1b[96mUptime: \x1b[93m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
+    \x1b[96mIDE:    \x1b[93mneovim, zed, VSCode\x1b[0m
     
     \x1b[30;101mContact:\x1b[0m
     --------------
-     \x1b[96mEmail:      \x1b[93mlinganinja.0120@gmail.com\x1b[0m
-     \x1b[96mYouTube:    \x1b[93m@noidilin\x1b[0m
+    \x1b[96mEmail:      \x1b[93mlinganinja.0120@gmail.com\x1b[0m
+    \x1b[96mYouTube:    \x1b[93m@noidilin\x1b[0m
     
     \x1b[30;101mGitHub Stats:\x1b[0m
     --------------
@@ -159,35 +159,6 @@ def main():
 
     t.gen_gif()
     # image = gifos.utils.upload_imgbb("output.gif", 129600)  # 1.5 days expiration
-
-    '''
-    readme_file_content = rf"""<div align="justify">
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./output.gif">
-    <source media="(prefers-color-scheme: light)" srcset="./output.gif">
-    <img alt="GIFOS" src="output.gif">
-</picture>
-
-<sub><i>Generated automatically using [x0rzavi/github-readme-terminal](https://github.com/x0rzavi/github-readme-terminal) on {time_now}</i></sub>
-
-<!-- <details>
-<summary>More details</summary>
-
-</details> -->
-
-<picture align="center">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/noidilin/noidilin/output/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/noidilin/noidilin/output/snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/noidilin/noidilin/output/snake.svg">
-</picture>
-
-</div>
-
-<!-- Image deletion URL: NONE -->"""
-    with open("README.md", "w") as f:
-        f.write(readme_file_content)
-        print("INFO: README.md file generated")
-    '''
 
 if __name__ == "__main__":
     main()
