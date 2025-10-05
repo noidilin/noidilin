@@ -1,10 +1,13 @@
 # reference: https://github.com/x0rzavi/x0rzavi
-name: generate terminal animation
+name: Generate terminal animation
 
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
+  push:
+    branches:
+      - main
 
 jobs:
   generate:
