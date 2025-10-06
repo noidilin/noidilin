@@ -1,3 +1,18 @@
+'''
+ANSI color code format: `\x1b[<code>m`
+
+Color Order: black, red, green, yellow, blue, magenta, cyan, white
+
+Foreground Colors
+- 30-37: Normal colors
+- 90-97: Bright colors
+
+Background Colors:
+- 40-47: Normal background
+- 100-107: Bright background
+'''
+
+
 from datetime import datetime
 
 import gifos
@@ -39,7 +54,7 @@ def main():
     t.clear_frame()
     t.gen_text("Initiating Boot Sequence ", 1, contin=True)
     t.gen_typing_text(".....", 1, contin=True)
-    t.gen_text("\x1b[96m", 1, count=0, contin=True)  # buffer to be removed
+    t.gen_text("\x1b[31m", 1, count=0, contin=True)  # buffer to be removed
     t.set_font(FONT_FILE_LOGO, 66)
     # t.toggle_show_cursor(True)
     os_logo_text = "GIF OS"
@@ -56,7 +71,7 @@ def main():
     t.clear_frame()
     t.clone_frame(5)
     t.toggle_show_cursor(False)
-    t.gen_text("\x1b[100mGIF OS v1.0.11 (tty1)\x1b[0m", 1, count=5)
+    t.gen_text("\x1b[94mGIF OS v1.0.11 (tty1)\x1b[0m", 1, count=5)
     t.gen_text("login: ", 3, count=5)
     t.toggle_show_cursor(True)
     t.gen_typing_text("noidilin", 3, contin=True)
@@ -84,28 +99,28 @@ def main():
     t.clear_frame()
     top_languages = [lang[0] for lang in git_user_details.languages_sorted]
     user_details_lines = f"""
-     \x1b[97;100mnoidilin@GitHub\x1b[0m
+    \x1b[93;100mnoidilin@GitHub\x1b[0m
     --------------
-    \x1b[93mOS:     \x1b[97mWindows, macOS, Arch/Omarchy\x1b[0m
-    \x1b[93mHost:   \x1b[97mNational Taiwan University \x1b[100m#NTU\x1b[0m
-    \x1b[93mKernel: \x1b[97mFinance \x1b[100m#FIN\x1b[0m
-    \x1b[93mUptime: \x1b[97m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
-    \x1b[93mIDE:    \x1b[97mneovim, zed, VSCode\x1b[0m
+    \x1b[33mOS:      \x1b[97mWindows, macOS, Arch/Omarchy\x1b[0m
+    \x1b[33mHost:    \x1b[97mNational Taiwan University \x1b[93m#NTU\x1b[0m
+    \x1b[33mKernel:  \x1b[97mFinance \x1b[93m#FIN\x1b[0m
+    \x1b[33mUptime:  \x1b[97m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
+    \x1b[33mIDE:     \x1b[97mneovim, zed, VSCode\x1b[0m
     
-     \x1b[97;100mContact:\x1b[0m
+    \x1b[93;100mContact:\x1b[0m
     --------------
-    \x1b[93mEmail:      \x1b[97mlinganinja.0120@gmail.com\x1b[0m
-    \x1b[93mYouTube:    \x1b[97m@noidilin\x1b[0m
+    \x1b[33mEmail:   \x1b[97mlinganinja.0120@gmail.com\x1b[0m
+    \x1b[33mYouTube: \x1b[97m@noidilin\x1b[0m
     
-     \x1b[97;100mGitHub Stats:\x1b[0m
+    \x1b[93;100mGitHub Stats:\x1b[0m
     --------------
-    \x1b[93mUser Rating: \x1b[97m{git_user_details.user_rank.level}\x1b[0m
-    \x1b[93mTotal Stars Earned: \x1b[97m{git_user_details.total_stargazers}\x1b[0m
-    \x1b[93mTotal Commits ({int(year_now) - 1}): \x1b[97m{git_user_details.total_commits_last_year}\x1b[0m
-    \x1b[93mTotal PRs: \x1b[97m{git_user_details.total_pull_requests_made}\x1b[0m
-    \x1b[93mMerged PR %: \x1b[97m{git_user_details.pull_requests_merge_percentage}\x1b[0m
-    \x1b[93mTotal Contributions: \x1b[97m{git_user_details.total_repo_contributions}\x1b[0m
-    \x1b[93mTop Languages: \x1b[97m{', '.join(top_languages[:5])}\x1b[0m
+    \x1b[33mRating:         \x1b[97m{git_user_details.user_rank.level}\x1b[0m
+    \x1b[33mStars:          \x1b[97m{git_user_details.total_stargazers}\x1b[0m
+    \x1b[33mCommits ({int(year_now) - 1}): \x1b[97m{git_user_details.total_commits_last_year}\x1b[0m
+    \x1b[33mPull Requests:  \x1b[97m{git_user_details.total_pull_requests_made}\x1b[0m
+    \x1b[33mMerged PR %:    \x1b[97m{git_user_details.pull_requests_merge_percentage}\x1b[0m
+    \x1b[33mContributions:  \x1b[97m{git_user_details.total_repo_contributions}\x1b[0m
+    \x1b[33mTop Languages:  \x1b[97m{', '.join(top_languages[:5])}\x1b[0m
     """
     t.gen_prompt(1)
     prompt_col = t.curr_col
@@ -150,7 +165,7 @@ def main():
     t.gen_text(user_details_lines, 2, 35, count=5, contin=True)
     t.gen_prompt(t.curr_row)
     t.gen_typing_text(
-        "\x1b[100m# Let's just forget everything said...",
+        "\x1b[37m# Let's just forget everything said...",
         t.curr_row,
         contin=True,
     )
