@@ -1,4 +1,6 @@
-<h2 align="center">noidilin - frontend dev</h2>
+<h2 align="center">noidilin</h2>
+
+<br>
 
 <div align="center">
   <picture>
@@ -8,9 +10,34 @@
   </picture>
 </div>
 
-<div align="center">
-  <sub>Generated automatically using [x0rzavi/github-readme-terminal](https://github.com/x0rzavi/github-readme-terminal)</sub>
-</div>
+<br>
+
+<pre>
+  ~> <strong>whoami</strong>
+  noidilin - frontend dev
+
+  ~> <strong>env | grep STACK</strong>
+  FRONTEND=react,next.js,tailwind,shadcn/ui
+  LEARNING=backend,database
+  PATH=devops,cloud,mobile,misc
+
+  ~> <strong>finger noidilin</strong>
+  Login: noidilin                            Name: xiang-di
+  Directory: /home/noidilin                  Shell: /usr/bin/nushell
+  Project:
+    - <a href="https://github.com/noidilin/color-fatigue">color-fatigue color theme</a>
+  Plan:
+    - become full-stack developer to create tools by myself
+    - become 3d artist to make toys for my child
+    - become film maker to document family's life
+
+  ~> <strong>ls links</strong>
+  blog:     <a href="https://github.com/noidilin/noidilin">noidilin.dev</a>
+  youtube:  <a href="https://www.youtube.com/@noidilin">@noidilin xiang-di</a>
+  3d-works: <a href="https://www.instagram.com/noidilin/">@noidilin</a>
+</pre>
+
+<br>
 
 <picture align="center">
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/noidilin/noidilin/snake/snake-dark.svg">
