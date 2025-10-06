@@ -8,6 +8,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '.github/workflows/terminal.yml'
+      - 'main.py'
+      - 'README.md'
+      - 'fonts/**'
 
 jobs:
   generate:
