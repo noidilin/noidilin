@@ -99,26 +99,26 @@ def main():
     user_details_lines = f"""
     \x1b[31mnoidilin@GitHub\x1b[0m
     ----------------------------
-    \x1b[94mOS:      \x1b[37mWindows, macOS, Arch/Omarchy\x1b[0m
-    \x1b[94mHost:    \x1b[37mNational Taiwan University \x1b[90m#NTU\x1b[0m
-    \x1b[94mKernel:  \x1b[37mFinance \x1b[90m#FIN\x1b[0m
-    \x1b[94mUptime:  \x1b[37m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
-    \x1b[94mIDE:     \x1b[37mneovim, zed, VSCode\x1b[0m
+    \x1b[93mOS:      \x1b[37mWindows, macOS, Arch/Omarchy\x1b[0m
+    \x1b[93mHost:    \x1b[37mNational Taiwan University \x1b[90m#NTU\x1b[0m
+    \x1b[93mKernel:  \x1b[37mFinance \x1b[90m#FIN\x1b[0m
+    \x1b[93mUptime:  \x1b[37m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
+    \x1b[93mIDE:     \x1b[37mneovim, zed, VSCode\x1b[0m
     
     \x1b[31mGitHub Stats:\x1b[0m
     ----------------------------
-    \x1b[94mRating:          \x1b[37m{git_user_details.user_rank.level}\x1b[0m
-    \x1b[94mStars:           \x1b[37m{git_user_details.total_stargazers}\x1b[0m
-    \x1b[94mCommits ({int(year_now) - 1}):  \x1b[37m{git_user_details.total_commits_last_year}\x1b[0m
-    \x1b[94mPull Requests:   \x1b[37m{git_user_details.total_pull_requests_made}\x1b[0m
-    \x1b[94mMerged PR %:     \x1b[37m{git_user_details.pull_requests_merge_percentage}\x1b[0m
-    \x1b[94mContributions:   \x1b[37m{git_user_details.total_repo_contributions}\x1b[0m
-    \x1b[94mTop Languages:   \x1b[37m{', '.join(top_languages[:5])}\x1b[0m
+    \x1b[93mRating:          \x1b[37m{git_user_details.user_rank.level}\x1b[0m
+    \x1b[93mStars:           \x1b[37m{git_user_details.total_stargazers}\x1b[0m
+    \x1b[93mCommits ({int(year_now) - 1}):  \x1b[37m{git_user_details.total_commits_last_year}\x1b[0m
+    \x1b[93mPull Requests:   \x1b[37m{git_user_details.total_pull_requests_made}\x1b[0m
+    \x1b[93mMerged PR %:     \x1b[37m{git_user_details.pull_requests_merge_percentage}\x1b[0m
+    \x1b[93mContributions:   \x1b[37m{git_user_details.total_repo_contributions}\x1b[0m
+    \x1b[93mTop Languages:   \x1b[37m{', '.join(top_languages[:5])}\x1b[0m
     
     \x1b[31mContact:\x1b[0m
     ----------------------------
-    \x1b[94mEmail:    \x1b[37mlinganinja.0120@gmail.com\x1b[0m
-    \x1b[94mYouTube:  \x1b[37m@noidilin\x1b[0m
+    \x1b[93mEmail:    \x1b[37mlinganinja.0120@gmail.com\x1b[0m
+    \x1b[93mYouTube:  \x1b[37m@noidilin\x1b[0m
     """
     t.gen_prompt(1)
     prompt_col = t.curr_col
