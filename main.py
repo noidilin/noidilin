@@ -19,11 +19,9 @@ import gifos
 from zoneinfo import ZoneInfo
 
 FONT_FILE_LOGO = "./fonts/vtks-blocketo.regular.ttf"
-# FONT_FILE_BITMAP = "./fonts/ter-u14n.pil"
 FONT_FILE_BITMAP = "./fonts/gohufont-uni-14.pil"
 FONT_FILE_TRUETYPE = "./fonts/IosevkaTermNerdFont-Bold.ttf"
 FONT_FILE_MONA = "./fonts/Inversionz.otf"
-
 
 def main():
     t = gifos.Terminal(750, 500, 15, 15, FONT_FILE_BITMAP, 15)
@@ -99,28 +97,28 @@ def main():
     t.clear_frame()
     top_languages = [lang[0] for lang in git_user_details.languages_sorted]
     user_details_lines = f"""
-    \x1b[31;100mnoidilin@GitHub\x1b[0m
+    \x1b[31mnoidilin@GitHub\x1b[0m
     ----------------------------
-    \x1b[33mOS:      \x1b[97mWindows, macOS, Arch/Omarchy\x1b[0m
-    \x1b[33mHost:    \x1b[97mNational Taiwan University \x1b[93m#NTU\x1b[0m
-    \x1b[33mKernel:  \x1b[97mFinance \x1b[93m#FIN\x1b[0m
-    \x1b[33mUptime:  \x1b[97m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
-    \x1b[33mIDE:     \x1b[97mneovim, zed, VSCode\x1b[0m
+    \x1b[97mOS:      \x1b[37mWindows, macOS, Arch/Omarchy\x1b[0m
+    \x1b[97mHost:    \x1b[37mNational Taiwan University \x1b[93m#NTU\x1b[0m
+    \x1b[97mKernel:  \x1b[37mFinance \x1b[93m#FIN\x1b[0m
+    \x1b[97mUptime:  \x1b[37m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
+    \x1b[97mIDE:     \x1b[37mneovim, zed, VSCode\x1b[0m
     
-    \x1b[31;100mContact:\x1b[0m
+    \x1b[31mGitHub Stats:\x1b[0m
     ----------------------------
-    \x1b[33mEmail:   \x1b[97mlinganinja.0120@gmail.com\x1b[0m
-    \x1b[33mYouTube: \x1b[97m@noidilin\x1b[0m
+    \x1b[97mRating:         \x1b[37m{git_user_details.user_rank.level}\x1b[0m
+    \x1b[97mStars:          \x1b[37m{git_user_details.total_stargazers}\x1b[0m
+    \x1b[97mCommits ({int(year_now) - 1}): \x1b[37m{git_user_details.total_commits_last_year}\x1b[0m
+    \x1b[97mPull Requests:  \x1b[37m{git_user_details.total_pull_requests_made}\x1b[0m
+    \x1b[97mMerged PR %:    \x1b[37m{git_user_details.pull_requests_merge_percentage}\x1b[0m
+    \x1b[97mContributions:  \x1b[37m{git_user_details.total_repo_contributions}\x1b[0m
+    \x1b[97mTop Languages:  \x1b[37m{', '.join(top_languages[:5])}\x1b[0m
     
-    \x1b[31;100mGitHub Stats:\x1b[0m
+    \x1b[31mContact:\x1b[0m
     ----------------------------
-    \x1b[33mRating:         \x1b[97m{git_user_details.user_rank.level}\x1b[0m
-    \x1b[33mStars:          \x1b[97m{git_user_details.total_stargazers}\x1b[0m
-    \x1b[33mCommits ({int(year_now) - 1}): \x1b[97m{git_user_details.total_commits_last_year}\x1b[0m
-    \x1b[33mPull Requests:  \x1b[97m{git_user_details.total_pull_requests_made}\x1b[0m
-    \x1b[33mMerged PR %:    \x1b[97m{git_user_details.pull_requests_merge_percentage}\x1b[0m
-    \x1b[33mContributions:  \x1b[97m{git_user_details.total_repo_contributions}\x1b[0m
-    \x1b[33mTop Languages:  \x1b[97m{', '.join(top_languages[:5])}\x1b[0m
+    \x1b[97mEmail:   \x1b[37mlinganinja.0120@gmail.com\x1b[0m
+    \x1b[97mYouTube: \x1b[37m@noidilin\x1b[0m
     """
     t.gen_prompt(1)
     prompt_col = t.curr_col
