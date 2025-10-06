@@ -71,7 +71,7 @@ def main():
     t.clear_frame()
     t.clone_frame(5)
     t.toggle_show_cursor(False)
-    t.gen_text("\x1b[94mGIF OS v1.0.11 (tty1)\x1b[0m", 1, count=5)
+    t.gen_text("\x1b[31mGIF OS v1.0.11 (tty1)\x1b[0m", 1, count=5)
     t.gen_text("login: ", 3, count=5)
     t.toggle_show_cursor(True)
     t.gen_typing_text("noidilin", 3, contin=True)
@@ -91,7 +91,7 @@ def main():
     t.toggle_show_cursor(True)
     t.gen_typing_text("\x1b[91mclea", 7, contin=True)
     t.delete_row(7, prompt_col)  # simulate syntax highlighting
-    t.gen_text("\x1b[92mclear\x1b[0m", 7, count=3, contin=True)
+    t.gen_text("\x1b[94mclear\x1b[0m", 7, count=3, contin=True)
 
     ignore_repos = ["noidilin", "BlackJack", "TyFun"]
     git_user_details = gifos.utils.fetch_github_stats("noidilin", ignore_repos)
@@ -99,21 +99,21 @@ def main():
     t.clear_frame()
     top_languages = [lang[0] for lang in git_user_details.languages_sorted]
     user_details_lines = f"""
-    \x1b[93;100mnoidilin@GitHub\x1b[0m
-    --------------
+    \x1b[31;100mnoidilin@GitHub\x1b[0m
+    ----------------------------
     \x1b[33mOS:      \x1b[97mWindows, macOS, Arch/Omarchy\x1b[0m
     \x1b[33mHost:    \x1b[97mNational Taiwan University \x1b[93m#NTU\x1b[0m
     \x1b[33mKernel:  \x1b[97mFinance \x1b[93m#FIN\x1b[0m
     \x1b[33mUptime:  \x1b[97m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
     \x1b[33mIDE:     \x1b[97mneovim, zed, VSCode\x1b[0m
     
-    \x1b[93;100mContact:\x1b[0m
-    --------------
+    \x1b[31;100mContact:\x1b[0m
+    ----------------------------
     \x1b[33mEmail:   \x1b[97mlinganinja.0120@gmail.com\x1b[0m
     \x1b[33mYouTube: \x1b[97m@noidilin\x1b[0m
     
-    \x1b[93;100mGitHub Stats:\x1b[0m
-    --------------
+    \x1b[31;100mGitHub Stats:\x1b[0m
+    ----------------------------
     \x1b[33mRating:         \x1b[97m{git_user_details.user_rank.level}\x1b[0m
     \x1b[33mStars:          \x1b[97m{git_user_details.total_stargazers}\x1b[0m
     \x1b[33mCommits ({int(year_now) - 1}): \x1b[97m{git_user_details.total_commits_last_year}\x1b[0m
@@ -128,7 +128,7 @@ def main():
     t.toggle_show_cursor(True)
     t.gen_typing_text("\x1b[91mfetch.s", 1, contin=True)
     t.delete_row(1, prompt_col)
-    t.gen_text("\x1b[92mfetch.sh\x1b[0m", 1, contin=True)
+    t.gen_text("\x1b[94mfetch.sh\x1b[0m", 1, contin=True)
     t.gen_typing_text(" -u noidilin", 1, contin=True)
 
     t.set_font(FONT_FILE_MONA, 16, 0)
