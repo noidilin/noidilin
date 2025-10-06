@@ -32,6 +32,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
+          GIFOS_GENERAL_USER_NAME: "noidilin"
           GIFOS_GENERAL_FPS: 12
           GIFOS_GENERAL_LOOP_COUNT: 0
           GIFOS_GENERAL_COLOR_SCHEME: "yoru"
