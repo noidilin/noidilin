@@ -17,13 +17,13 @@ content:
     # headline: Headed for the Pacific
     phone: "(886) 929-054-136"
     email: linganinja.0120@gmail.com
-    url: https://github.com/noidilin
+    # url: https://github.com/noidilin
     # All summary fields supports a limited rich text capabilities in markdown (bold, italic, list, link)
     summary: |
-      - Finance graduate transitioning into full-stack web development with a strong foundation in analytical thinking and project management
-      - Built freelance expertise in 3D and design production, developing systematic workflows and technical precision transferable to modern web engineering
-      - Skilled in agile collaboration and cross-disciplinary communication through client and team-based projects
-      - Passionate about creating scalable, user-centered digital experiences that blend aesthetic clarity with technical reliability
+      - Finance graduate transitioning into web development with a strong foundation in analytical thinking and project management
+      - Built freelance expertise in 3D and design production, developing systematic workflows and technical precision
+      - Skilled in agile collaboration and cross-disciplinary communication in client and team-based projects
+      - Passionate about creating scalable, user-centered experiences that blend aesthetic clarity with technical reliability
   location:
     address: 15F., No. 119, Sec. 1, Ronghua Rd.
     city: Xinzhuang Dist
@@ -31,14 +31,14 @@ content:
     country: Taiwan
     postalCode: "242045"
   profiles:
+    - network: GitHub
+      url: https://github.com/noidilin
+      username: noidilin
     - network: YouTube
       url: https://www.youtube.com/@noidilin
       username: noidilin
     - network: Instagram
       url: https://www.instagram.com/noidilin
-      username: noidilin
-    - network: GitHub
-      url: https://github.com/noidilin
       username: noidilin
   education:
     - institution: National Taiwan University
@@ -52,7 +52,7 @@ content:
       courses:
         - Financial Statement Analysis
         - Business Management
-        - Risk Management and Insurance
+        - Risk Management
         - Statistics
         - Computer Programming
       summary: |
@@ -60,10 +60,10 @@ content:
         - Built data visualizations with Tableau to translate business requirements into analytical insights
         - Conducted financial modeling, valuation, and credit risk analysis using real company data
         - Produced industry reports using SWOT, Porter’s Six Forces, and PEST frameworks to assess market dynamics
-        - Collaborated in agile, team-based projects using Scrum methodology and popular tools to coordinate goals and deliverables
+        - Collaborated in agile, team-based projects using Scrum methodology and popular tools to coordinate objectives
   skills:
     # Valid level options: 'Novice', 'Beginner', 'Intermediate', 'Advanced', 'Expert', 'Master'
-    - name: Front-end Web Dev
+    - name: Front-end
       level: Intermediate
       keywords:
         - React
@@ -76,39 +76,40 @@ content:
         - Shell
         - Docker
         - GitHub Action
-    - name: Graphic Design
+    - name: Design
       level: Expert
       keywords:
         - Figma
         - Adobe Suite
+        - Blender
+        - Unreal Engine 5
   projects:
-    - name: color fatigue
+    - name: Color Fatigue Color Theme
       url: https://marketplace.visualstudio.com/items?itemName=noidilin.color-fatigue
-      description: a calm, understated aesthetic theme for application and webpages
+      # description: aesthetic theme for applications
       startDate: 2025-03
       endDate:
       summary: |
-        - Designed a cohesive, system-wide color theme emphasizing calm focus through muted hues, gentle contrast, and balanced tonal hierarchy
-        - Defined a custom color palette and syntax design language for consistent readability across multiple environments, including VS Code, Neovim, and popular CLI tools
-        - Developed native configuration files for each supported platform, ensuring fidelity to platform-specific rendering and accessibility guidelines
-        - Maintains public distribution through the VS Code Marketplace, with ongoing development toward a unified cross-environment ecosystem
+        - Designed a cohesive, system-wide color theme emphasizing calm focus through muted hues, and balanced tonal hierarchy
+        - Defined a color palette for syntax highlighting that maintains consistent readability in multiple environments
+        - Ensured fidelity and accessibility guidelines across platform, including VS Code, Neovim, and popular CLI tools
         - Currently developing a programmatic approach for multi-platform build automation and palette synchronization
       keywords:
         - Editor Theming
         - dotfiles
         - userstyles
         - CLI
-    - name: react exploration
+    - name: React
       url: https://github.com/noidilin/edu/tree/main/react
-      description: React from fundamentals to production-ready applications with state management, routing, and server state
+      # description: React from fundamentals to production-ready applications with state management, routing, and server state
       startDate: 2024-08
       endDate: 2025-02
       summary: |
-        - Developed 24 React projects progressing from core concepts to advanced patterns (hooks, Context API, Redux Toolkit, React Query)
+        - Developed 24 React projects progressing from core concepts to advanced patterns
         - Implemented complex state management using Redux Toolkit with async thunks and React Query for server state caching
-        - Created reusable component libraries following composition patterns and implemented client-side routing with React Router (loaders, actions, deferred loading)
-        - Built full-stack applications with RESTful API integration, authentication, and real-time data synchronization (Wild-oasis with Supabase)
-        - Applied form validation with React Hook Form, declarative animations with Framer Motion, and developed custom hooks for code reusability
+        - Created reusable component libraries following composition patterns and implemented client-side routing with React Router
+        - Built full-stack applications with RESTful API integration, authentication, and real-time data synchronization
+        - Applied form validation with React Hook Form, declarative animations with Motion, and custom hooks for code reusability
       keywords:
         - React
         - JavaScript
@@ -117,18 +118,18 @@ content:
         - Tanstack Query
         - React Router
         - React Hook Form
-        - Framer Motion
+        - Motion
         - Supabase
-    - name: next exploration
+    - name: Next.js
       url: https://github.com/noidilin/edu/tree/main/next
-      description: Next.js App Router mastery with server components, server actions, and modern UI libraries
+      # description: Next.js App Router mastery with server components, server actions, and modern UI libraries
       startDate: 2025-08
       endDate:
       summary: |
-        - Built 11 Next.js projects covering App Router fundamentals including file-based routing, server/client components, and middleware
-        - Implemented server-side data fetching with caching strategies, revalidation patterns, and Server Actions for type-safe mutations
+        - Built 11 Next.js projects including file-based routing, server/client components, and middleware (proxy)
+        - Implemented server-side data fetching with caching strategies, revalidation patterns, and type-safe mutations
         - Developed applications with Lucia Auth authentication, session management, and protected routes
-        - Created accessible, animated UIs using shadcn/ui component system with Radix UI primitives and Motion library (staggered animations, parallax, scroll-driven effects)
+        - Created accessible, animated UIs using shadcn/ui component system with Motion library
         - Optimized performance through image/font optimization, code splitting, and leveraged Turbopack for faster builds
       keywords:
         - Next.js
@@ -146,10 +147,10 @@ content:
       summary: |
         - Managed full video production pipeline independently, from concept and shooting to color grading and final delivery
         - Balanced artistic goals with technical constraints through systematic problem-solving and workflow design
-        - Collaborated with cross-functional teams to gather project requirements and translate creative objectives into technical solutions
+        - Collaborated with cross-functional teams to gather requirements and translate creative objectives into technical solutions
         - Specialized in documentary and commercial storytelling, applying narrative structure and pacing principles
-        - Performed film print emulation and advanced color grading using DaVinci Resolve, ensuring consistent visual tone across diverse hardware setups
-        - Applied visual composition and cinematic principles to convey emotion and brand identity through precise framing and color theory
+        - Performed film print emulation and advanced color grading, ensuring consistent visual tone across diverse hardware setups
+        - Applied visual composition and cinematic principles to convey emotion and brand identity through framing and color theory
       keywords:
         - DaVinci Resolve Color Grading
         - Color Management Pipeline
@@ -161,9 +162,9 @@ content:
       position: 3D & Interior Designer
       summary: |
         - Designed interactive 3D virtual environments using Blender, Unreal Engine, and NVIDIA Omniverse
-        - Implemented Blueprint scripting in Unreal Engine to create dynamic user interactions, real-time model changes, and day-night simulations
-        - Produced architectural and product visualizations from photographic references using Unreal Engine 5 and Blender's Cycles renderer
-        - Integrated AI-assisted rendering and interpolation workflows to reduce production time by 40% while maintaining visual fidelity
+        - Implemented Blueprint scripting in Unreal Engine to create dynamic user interactions, and day-night simulations
+        - Produced architectural and product visualizations from photographic references using Unreal Engine 5 and Cycles renderer
+        - Integrated AI rendering and interpolation workflows to reduce production time by 40% while maintaining visual fidelity
         - Applied procedural modeling and shader node techniques to streamline asset generation and animation pipelines
         - Managed ACES color workflows and physically based lighting standards for cross-software visual consistency
       keywords:
@@ -187,7 +188,7 @@ content:
       fluency: Native or Bilingual Proficiency
       keywords: []
   interests:
-    - name: OS ricing
+    - name: OS Ricing
       keywords:
         - NixOS
         - Omarchy
@@ -201,22 +202,6 @@ content:
         - D3.js
         - GSAP
         - Blender Geometry Node
-  # certificates:
-  #   - name: AWS Certified Developer - Associate
-  #     url: https://aws.amazon.com/certification/
-  #     issuer: AWS
-  #     date: Mar 2021
-  # volunteer:
-  #   - organization: USC Computer Science and Engineering Society
-  #     url: https://www.usccsesociety.org/
-  #     position: Tech Mentor
-  #     startDate: Sep 2015
-  #     endDate: Jul 2023
-  #     summary: |
-  #       - Volunteered as a Tech Mentor at USC Computer Science and Engineering Society
-  #       - Provided guidance and assistance to fellow students in their technical projects and coursework
-  #       - Assisted in organizing workshops, coding competitions, and networking events for the society members
-  #       - Contributed to fostering a collaborative and supportive environment within the student community
 
 layout:
   sections:
