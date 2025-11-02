@@ -90,10 +90,9 @@ content:
       summary: |
         - Designed a cohesive, system-wide color theme emphasizing calm focus through muted hues, gentle contrast, and balanced tonal hierarchy
         - Defined a custom color palette and syntax design language for consistent readability across multiple environments, including VS Code, Neovim, and popular CLI tools
-        - Handcrafted native configuration files for each supported platform, ensuring fidelity to platform-specific rendering and accessibility guidelines
-        - Maintains public distribution of the theme, available in the VS Code Marketplace, and expanding toward a unified cross-environment ecosystem similar to Catppuccin
+        - Developed native configuration files for each supported platform, ensuring fidelity to platform-specific rendering and accessibility guidelines
+        - Maintains public distribution through the VS Code Marketplace, with ongoing development toward a unified cross-environment ecosystem
         - Currently developing a programmatic approach for multi-platform build automation and palette synchronization
-        - Combines design sensibility with technical execution, bridging user experience design and developer tooling aesthetics
       keywords:
         - Editor Theming
         - dotfiles
@@ -110,7 +109,6 @@ content:
         - Created reusable component libraries following composition patterns and implemented client-side routing with React Router (loaders, actions, deferred loading)
         - Built full-stack applications with RESTful API integration, authentication, and real-time data synchronization (Wild-oasis with Supabase)
         - Applied form validation with React Hook Form, declarative animations with Framer Motion, and developed custom hooks for code reusability
-        - Developed and implemented efficient and scalable code, ensuring high-quality and maintainable web applications
       keywords:
         - React
         - JavaScript
@@ -127,9 +125,9 @@ content:
       startDate: 2025-08
       endDate:
       summary: |
-        - Built 11 Next.js projects mastering App Router fundamentals including file-based routing, server/client components, and middleware
+        - Built 11 Next.js projects covering App Router fundamentals including file-based routing, server/client components, and middleware
         - Implemented server-side data fetching with caching strategies, revalidation patterns, and Server Actions for type-safe mutations
-        - Developed production-grade applications with Lucia Auth authentication, session management, and protected routes
+        - Developed applications with Lucia Auth authentication, session management, and protected routes
         - Created accessible, animated UIs using shadcn/ui component system with Radix UI primitives and Motion library (staggered animations, parallax, scroll-driven effects)
         - Optimized performance through image/font optimization, code splitting, and leveraged Turbopack for faster builds
       keywords:
@@ -147,15 +145,15 @@ content:
       position: Film Maker & Colorist
       summary: |
         - Managed full video production pipeline independently, from concept and shooting to color grading and final delivery
-        - Balanced artistic goals with technical constraints, strengthening problem-solving and workflow design
+        - Balanced artistic goals with technical constraints through systematic problem-solving and workflow design
         - Collaborated with cross-functional teams to gather project requirements and translate creative objectives into technical solutions
-        - Specialized in documentary and commercial storytelling, developing strong narrative and pacing instincts
+        - Specialized in documentary and commercial storytelling, applying narrative structure and pacing principles
         - Performed film print emulation and advanced color grading using DaVinci Resolve, ensuring consistent visual tone across diverse hardware setups
         - Applied visual composition and cinematic principles to convey emotion and brand identity through precise framing and color theory
       keywords:
         - DaVinci Resolve Color Grading
         - Color Management Pipeline
-        - Comercial Production Workflow
+        - Commercial Production Workflow
     - name: Self-Employed Designer
       # url: https://ppresume.com
       startDate: 2020-10
@@ -164,7 +162,7 @@ content:
       summary: |
         - Designed interactive 3D virtual environments using Blender, Unreal Engine, and NVIDIA Omniverse
         - Implemented Blueprint scripting in Unreal Engine to create dynamic user interactions, real-time model changes, and day-night simulations
-        - Produced architectural and product visualizations from photographic references, achieving photo-real rendering using latest engine
+        - Produced architectural and product visualizations from photographic references using Unreal Engine 5 and Blender's Cycles renderer
         - Integrated AI-assisted rendering and interpolation workflows to reduce production time by 40% while maintaining visual fidelity
         - Applied procedural modeling and shader node techniques to streamline asset generation and animation pipelines
         - Managed ACES color workflows and physically based lighting standards for cross-software visual consistency
