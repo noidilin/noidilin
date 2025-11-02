@@ -1,0 +1,229 @@
+# yaml-language-server: $schema=https://yamlresume.dev/schema.json
+#
+# YAMLResume provides a builtin schema to validate resumes and help avoid lots
+# of low level mistakes.
+#
+# You need to install https://github.com/redhat-developer/yaml-language-server
+# in order to get the best editing experience in your choice of editor/IDE.
+#
+# ref:
+# - https://yamlresume.dev/docs/compiler/schema
+# - https://yamlresume.dev/docs/compiler/schema/json
+
+---
+content:
+  basics:
+    name: Jia-Long, Lin
+    # headline: Headed for the Pacific
+    phone: "(886) 929-054-136"
+    email: linganinja.0120@gmail.com
+    # url: https://github.com/noidilin
+    # All summary fields supports a limited rich text capabilities in markdown (bold, italic, list, link)
+    summary: |
+      - 財務金融系畢業，目前正轉型為網頁開發人員，具備紮實的分析思維與專案管理基礎
+      - 在自由接案過程中，累積了 3D 與設計產出的經驗和系統化的工作流程，還有精確的技術執行力
+      - 熟悉敏捷協作與跨領域的溝通，具備豐富的客戶及團隊合作經驗
+      - 熱衷於打造以使用者為核心且可擴展的體驗，並兼具審美與技術穩定性
+  # location:
+  #   address: 15F., No. 119, Sec. 1, Ronghua Rd.
+  #   city: Xinzhuang Dist
+  #   region: New Taipei City
+  #   country: Taiwan
+  #   postalCode: "242045"
+  profiles:
+    - network: GitHub
+      url: https://github.com/noidilin
+      username: noidilin
+    - network: YouTube
+      url: https://www.youtube.com/@noidilin
+      username: noidilin
+    - network: Instagram
+      url: https://www.instagram.com/noidilin
+      username: noidilin
+  education:
+    - institution: 國立臺灣大學
+      url: https://management.ntu.edu.tw/en/Fin
+      # Valid degree options: 'Middle School', 'High School', 'Diploma', 'Associate', 'Bachelor', 'Master', 'Doctor'
+      degree: Bachelor
+      area: 財務金融
+      # score: "3.8"
+      startDate: 2014-09
+      endDate: 2019-06 # Leave endDate blank to indicate "Present"
+      courses:
+        - 財務報告分析
+        - 企業管理
+        - 風險管理
+        - 統計學
+        - 商管程式設計
+      summary: |
+        - 使用 Python 解決商業、供應鏈與財務問題，累積實務程式設計經驗
+        - 使用 Tableau 實現資料視覺化，將商業需求轉化為具洞察力的分析成果
+        - 以真實企業資料進行財務模型的建模、估值與信用風險分析
+        - 透過 SWOT、波特五力與 PEST 架構撰寫產業報告，評估市場動態
+        - 於敏捷式團隊專案中協作，並採用 Scrum 方法論與熱門工具來協調專案目標
+  skills:
+    # Valid level options: 'Novice', 'Beginner', 'Intermediate', 'Advanced', 'Expert', 'Master'
+    - name: Front-end
+      level: Intermediate
+      keywords:
+        - React
+        - Next
+        - shadcn/ui
+        - motion
+    - name: DevOps
+      level: Beginner
+      keywords:
+        - Shell
+        - Docker
+        - GitHub Action
+    - name: Design
+      level: Expert
+      keywords:
+        - Figma
+        - Adobe Suite
+        - Blender
+        - Unreal Engine 5
+  projects:
+    - name: Color Fatigue Color Theme
+      url: https://marketplace.visualstudio.com/items?itemName=noidilin.color-fatigue
+      # description: aesthetic theme for applications
+      startDate: 2025-03
+      endDate:
+      summary: |
+        - 一款風格一致且橫跨各系統的配色主題，以柔和色調營造平靜專注的氛圍，並維持平衡的色階層次
+        - 特別優化其在各環境中語法高亮的配色方案，確保在多種環境中仍具有一致的可讀性
+        - 於 VS Code、Neovim 與常見 CLI 工具中實現色彩準確度與無障礙設計規範
+        - 正在規劃自動化流程，以實現多平台自動化建置與色彩同步
+      keywords:
+        - Editor Theming
+        - dotfiles
+        - userstyles
+        - CLI
+    - name: React
+      url: https://github.com/noidilin/edu/tree/main/react
+      # description: React from fundamentals to production-ready applications with state management, routing, and server state
+      startDate: 2024-08
+      endDate: 2025-02
+      summary: |
+        - 開發了 24 個 React 專案，從核心概念循序深化到進階設計模式
+        - 使用 Redux Toolkit 搭配 async thunks 實作複雜狀態管理，並以 React Query 進行伺服器狀態快取
+        - 依循組合式設計模式建立可重用元件庫，並以 React Router 實作用戶端路由
+        - 建置整合 RESTful API、身份驗證與即時資料同步的全端應用程式
+        - 使用 React Hook Form 進行表單驗證，以 Motion 實作聲明式動畫，並開發 custom hooks 以提升程式碼可複用性
+      keywords:
+        - React
+        - JavaScript
+        - TypeScript
+        - Redux Toolkit
+        - Tanstack Query
+        - React Router
+        - React Hook Form
+        - Motion
+        - Supabase
+    - name: Next.js
+      url: https://github.com/noidilin/edu/tree/main/next
+      # description: Next.js App Router mastery with server components, server actions, and modern UI libraries
+      startDate: 2025-08
+      endDate:
+      summary: |
+        - 建置了 11 個 Next.js 專案，涵蓋 App Router 基礎功能，包含檔案路由、伺服器/客戶端元件與中介層
+        - 實作伺服器端資料擷取，搭配快取策略、重新驗證模式與 Server Actions 以達成型別安全的資料變更
+        - 開發整合 Lucia Auth 身份驗證、會話管理與受保護路由的應用程式
+        - 使用 shadcn/ui 元件系統搭配 Motion 函式庫，建立無障礙且具動畫效果的 UI
+        - 透過圖片/字型最佳化、程式碼分割與運用 Turbopack 提升效能並加速建置
+      keywords:
+        - Next.js
+        - shadcn/ui
+        - Prisma
+        - Zod
+        - Lucia Auth
+        - Biome
+  work:
+    - name: Self-Employed Film Maker
+      # url: https://ppresume.com
+      startDate: 2023-03
+      endDate:
+      position: Film Maker & Colorist
+      summary: |
+        - 獨立負責完整影像製作流程，從概念發想、拍攝、調色與最終交付
+        - 透過系統化的問題解決與流程設計，在藝術目標與技術限制之間取得平衡
+        - 與跨領域團隊協作，蒐集需求並將創意構想轉化為具體技術解決方案
+        - 專注於紀錄片與商業敘事，運用故事結構與節奏原則強化內容表達
+        - 進行膠片模擬與進階調色，並確保不同硬體設備間視覺風格一致
+        - 應用視覺構圖與電影美學原則，透過構圖與色彩理論傳達情感與品牌識別
+      keywords:
+        - DaVinci Resolve Color Grading
+        - Color Management Pipeline
+        - Commercial Production Workflow
+    - name: Self-Employed Designer
+      # url: https://ppresume.com
+      startDate: 2020-10
+      endDate: 2023-06
+      position: 3D & Interior Designer
+      summary: |
+        - 使用 Blender、Unreal Engine 與 NVIDIA Omniverse 設計互動式 3D 虛擬環境
+        - 在 Unreal Engine 中實作 Blueprint 腳本，動態互動效果與日夜循環模擬
+        - 以 Unreal Engine 5 與 Cycles 渲染器，實現影視級別擬真度的建築與產品視覺化成品
+        - 導入 AI 渲染與插幀推理流程，在維持影像品質的同時縮短 40% 製作時間
+        - 使用程序化建模與著色器節點技術，優化資產生成與動畫製作流程
+        - 管理 ACES 色彩工作流程與物理基礎光照標準，確保跨軟體的視覺一致性
+      keywords:
+        - Blender
+        - Unreal Engine 5
+        - BIM & IFC Industry Open Standard
+        - Fusion
+  languages:
+    # Valid language fluency options:
+    #
+    # - 'Elementary Proficiency'
+    # - 'Limited Working Proficiency'
+    # - 'Minimum Professional Proficiency'
+    # - 'Full Professional Proficiency'
+    # - 'Native or Bilingual Proficiency'
+    - language: English
+      fluency: Full Professional Proficiency
+      keywords:
+        - TOEIC 985
+    - language: Chinese
+      fluency: Native or Bilingual Proficiency
+      keywords: []
+  interests:
+    - name: OS Ricing
+      keywords:
+        - NixOS
+        - Omarchy
+        - CLI tools
+    - name: Memory Management
+      keywords:
+        - Heap and Stack
+        - Process and Program
+    - name: Data Visualization
+      keywords:
+        - D3.js
+        - GSAP
+        - Blender Geometry Node
+
+layout:
+  sections:
+    # default: basics, education, work, languages, skills, awards, certificates, publications, references, projects, interests, volunteer
+    order:
+      - basics
+      - education
+      - skills
+      - projects
+      - work
+  locale:
+    # Use `yamlresume languages list` to get the list of supported languages
+    language: zh-hant-tw
+  margins:
+    top: 2.5cm
+    left: 1.5cm
+    right: 1.5cm
+    bottom: 2.5cm
+  page:
+    showPageNumbers: true
+  # Use `yamlresume templates list` to get the list of available templates
+  template: moderncv-banking
+  typography:
+    # LaTeX engine only supports 10pt, 11pt, and 12pt
+    fontSize: 11pt
