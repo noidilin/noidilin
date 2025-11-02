@@ -1,36 +1,21 @@
 # Agent Guidelines for github-readme-terminal
 
 ## Repo Goals
-
-Build a minimalism github profile that showcase my personal information with cli interface aesthetics by mimicking real command's behavior.
+Generate a minimalist GitHub profile README with CLI/terminal aesthetics using animated GIFs created via the `gifos` library.
 
 ## Build/Run/Test Commands
-
-- **Run script**: `python main.py`
-- **No test suite present**: This is a single-script project
-- **Dependencies**: Install with `pip install git+https://github.com/x0rzavi/github-readme-terminal.git@main`
+- **Install dependencies**: `pip install git+https://github.com/x0rzavi/github-readme-terminal.git@main` (also requires `ffmpeg`)
+- **Run script**: `python main.py` (generates `output.gif` in current directory)
+- **No test suite**: Single-script project with no automated tests
+- **Environment vars**: Optionally set `GITHUB_TOKEN`, `GIFOS_GENERAL_USER_NAME`, `GIFOS_GENERAL_FPS`, `GIFOS_GENERAL_LOOP_COUNT`, `GIFOS_GENERAL_COLOR_SCHEME`
 
 ## Code Style Guidelines
-
-### Imports
-
-- Standard library imports first (`datetime`, `zoneinfo`)
-- Third-party imports after (`gifos`)
-- No type hints used in this codebase
-
-### Formatting
-
-- Indentation: 4 spaces
-- No trailing commas in function calls
-- ANSI color codes used extensively for terminal styling (e.g., `\x1b[96m`, `\x1b[93m`)
-
-### Naming Conventions
-
-- Variables: `snake_case` (e.g., `user_age`, `git_user_details`, `top_languages`)
-- Constants: `UPPER_SNAKE_CASE` (e.g., `FONT_FILE_LOGO`, `FONT_FILE_BITMAP`)
-- Functions: `snake_case` (e.g., `main()`)
-
-### Error Handling
-
-- No explicit error handling in current code
-- Relies on default Python exceptions
+- **Imports**: Standard library first (`datetime`, `zoneinfo`), third-party after (`gifos`). No type hints.
+- **Formatting**: 4-space indentation, no trailing commas in function calls, multi-line f-strings for large text blocks
+- **ANSI colors**: Extensive use of ANSI escape codes (e.g., `\x1b[31m` for red, `\x1b[93m` for bright yellow, `\x1b[0m` to reset)
+- **Naming**: Variables/functions = `snake_case`, constants = `UPPER_SNAKE_CASE`
+- **Error handling**: No explicit try/except blocks; relies on default Python exceptions
+- **String formatting**: Prefer f-strings and triple-quoted strings for multi-line terminal output
+- **Comments**: Minimal inline comments; use docstrings sparingly (only module-level docstring for ANSI color reference)
+- **Font files**: Reference fonts in `./fonts/` directory; use `.pil`, `.ttf`, `.otf` formats
+- **User data**: Hard-coded personal info (name, age, contact) directly in `user_details_lines` variable
