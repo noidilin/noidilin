@@ -1,3 +1,7 @@
+# resume compiled files
+resumes/**.tex
+resumes/**.pdf
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
