@@ -17,7 +17,7 @@ content:
     # headline: Headed for the Pacific
     phone: "(886) 929-054-136"
     email: linganinja.0120@gmail.com
-    # url: https://github.com/noidilin
+    url: https://noidilin.dev
     # All summary fields supports a limited rich text capabilities in markdown (bold, italic, list, link)
     summary: |
       - Finance graduate transitioning into web development with a strong foundation in analytical thinking and project management
@@ -37,8 +37,7 @@ content:
   education:
     - institution: National Taiwan University
       url: https://management.ntu.edu.tw/en/Fin
-      # Valid degree options: 'Middle School', 'High School', 'Diploma', 'Associate', 'Bachelor', 'Master', 'Doctor'
-      degree: Bachelor
+      degree: Bachelor # 'Middle School' | 'High School' | 'Diploma' | 'Associate' | 'Bachelor' | 'Master' | 'Doctor'
       area: Finance
       # score: "3.8"
       startDate: 2014-09
@@ -46,7 +45,6 @@ content:
       courses:
         - Financial Statement Analysis
         - Business Management
-        - Risk Management
         - Statistics
         - Computer Programming
       summary: |
@@ -56,18 +54,16 @@ content:
         - Produced industry reports using SWOT, Porter’s Six Forces, and PEST frameworks to assess market dynamics
         - Collaborated in agile, team-based projects using Scrum methodology and popular tools to coordinate objectives
   skills:
-    # Valid level options: 'Novice', 'Beginner', 'Intermediate', 'Advanced', 'Expert', 'Master'
     - name: Front-end
-      level: Intermediate
+      level: Intermediate # 'Novice' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Master'
       keywords:
         - React
         - Next
-        - shadcn/ui
-        - motion
+        - Shadcn/ui
     - name: DevOps
       level: Beginner
       keywords:
-        - Shell
+        - Linux
         - Docker
         - GitHub Action
     - name: Design
@@ -78,7 +74,7 @@ content:
         - Blender
         - Unreal Engine 5
   projects:
-    - name: Color Fatigue Color Theme
+    - name: Achroma Color Theme
       url: https://marketplace.visualstudio.com/items?itemName=noidilin.color-fatigue
       # description: aesthetic theme for applications
       startDate: 2025-03
@@ -92,7 +88,7 @@ content:
         - Editor Theming
         - dotfiles
         - userstyles
-        - CLI
+        - CLI Tools
     - name: React
       url: https://github.com/noidilin/grit/tree/main/react
       # description: React from fundamentals to production-ready applications with state management, routing, and server state
@@ -106,14 +102,12 @@ content:
         - Applied form validation with React Hook Form, declarative animations with Motion, and custom hooks for code reusability
       keywords:
         - React
-        - JavaScript
         - TypeScript
         - Redux Toolkit
         - Tanstack Query
         - React Router
         - React Hook Form
-        - Motion
-        - Supabase
+        - Framer Motion
     - name: Next.js
       url: https://github.com/noidilin/grit/tree/main/next
       # description: Next.js App Router mastery with server components, server actions, and modern UI libraries
@@ -127,12 +121,21 @@ content:
         - Optimized performance through image/font optimization, code splitting, and leveraged Turbopack for faster builds
       keywords:
         - Next.js
-        - shadcn/ui
+        - Shadcn/ui
         - Prisma
         - Zod
-        - Lucia Auth
         - Biome
   work:
+    - name: Freelance Front-End Developer
+      # url: https://ppresume.com
+      startDate: 2025-10
+      endDate:
+      position: Junior Front-End Developer
+      summary: |
+        - placeholder text, to be added.
+      keywords:
+        - Spec Driven Developing
+        - Story Book
     - name: Self-Employed Film Maker
       # url: https://ppresume.com
       startDate: 2023-03
@@ -184,40 +187,37 @@ content:
   interests:
     - name: OS Ricing
       keywords:
-        - NixOS
+        - Arch Linux (BTW)
         - Omarchy
-        - CLI tools
+        - Neovim
     - name: Memory Management
       keywords:
         - Heap and Stack
-        - Process and Program
+        - Process and Thread
     - name: Data Visualization
       keywords:
-        - D3.js
+        - Three.js
         - GSAP
-        - Blender Geometry Node
-
-layout:
-  sections:
-    # default: basics, education, work, languages, skills, awards, certificates, publications, references, projects, interests, volunteer
-    order:
-      - basics
-      - education
-      - skills
-      - projects
-      - work
-  locale:
-    # Use `yamlresume languages list` to get the list of supported languages
-    language: en
-  margins:
-    top: 2.5cm
-    left: 1.5cm
-    right: 1.5cm
-    bottom: 2.5cm
-  page:
-    showPageNumbers: true
-  # Use `yamlresume templates list` to get the list of available templates
-  template: moderncv-banking
-  typography:
-    # LaTeX engine only supports 10pt, 11pt, and 12pt
-    fontSize: 11pt
+        - D3.js
+locale:
+  language: en
+layouts:
+  - engine: latex
+    template: moderncv-banking # Use `yamlresume templates list` to get the list of available templates
+    sections:
+      # default: basics, education, work, languages, skills, awards, certificates, publications, references, projects, interests, volunteer
+      order:
+        - basics
+        - education
+        - skills
+        - projects
+        - work
+    page:
+      showPageNumbers: true
+      margins:
+        top: 2.5cm
+        left: 1.5cm
+        right: 1.5cm
+        bottom: 2.5cm
+    typography:
+      fontSize: 11pt # LaTeX engine only supports 10pt, 11pt, and 12pt
