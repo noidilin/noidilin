@@ -17,7 +17,7 @@ content:
     # headline: Headed for the Pacific
     phone: "(886) 929-054-136"
     email: linganinja.0120@gmail.com
-    # url: https://github.com/noidilin
+    url: https://noidilin.dev
     # All summary fields supports a limited rich text capabilities in markdown (bold, italic, list, link)
     summary: |
       - 財務金融系畢業，目前正轉型為網頁開發人員，具備紮實的分析思維與專案管理基礎
@@ -37,8 +37,7 @@ content:
   education:
     - institution: 國立臺灣大學
       url: https://management.ntu.edu.tw/en/Fin
-      # Valid degree options: 'Middle School', 'High School', 'Diploma', 'Associate', 'Bachelor', 'Master', 'Doctor'
-      degree: Bachelor
+      degree: Bachelor # 'Middle School' | 'High School' | 'Diploma' | 'Associate' | 'Bachelor' | 'Master' | 'Doctor'
       area: 財務金融
       # score: "3.8"
       startDate: 2014-09
@@ -46,7 +45,6 @@ content:
       courses:
         - 財務報告分析
         - 企業管理
-        - 風險管理
         - 統計學
         - 商管程式設計
       summary: |
@@ -62,12 +60,12 @@ content:
       keywords:
         - React
         - Next
-        - shadcn/ui
-        - motion
+        - Shadcn/ui
+        - Three.js
     - name: DevOps
       level: Beginner
       keywords:
-        - Shell
+        - Linux
         - Docker
         - GitHub Action
     - name: Design
@@ -78,7 +76,43 @@ content:
         - Blender
         - Unreal Engine 5
   projects:
-    - name: Color Fatigue Color Theme
+    - name: eyeチェック (Client Project)
+      # url: https://example.com # TODO: add public URL
+      startDate: 2025-11
+      endDate:
+      summary: |
+        - 交付日本語的 Next.js 16 + React 19 前端，涵蓋註冊、測驗作答與報表
+        - 實作 OTP 驗證與 session 處理（axios interceptors + token/session storage），以控管付費流程與後台存取
+        - 建立以 token 驅動的測驗流程（題目取得/作答/跳題/中止），並加入完整的 loading/error 狀態與 Zustand 狀態管理
+        - 開發個人與團體（顧問）報告體驗，支援分頁與 query params 深連結
+        - 以 react-pdf 實作 PDF 匯出，包含 CJK 字型設定與安全、可重現的檔名
+      keywords:
+        - Next.js
+        - React
+        - TypeScript
+        - Shadcn/ui
+        - Zustand
+        - React Hook Form
+        - Zod
+        - Axios
+        - Sentry
+        - React-PDF
+    - name: Everflow
+      startDate: 2025-12
+      endDate:
+      summary: |
+        - 加入既有 Vue 3 + TypeScript 後台，於大型多模組 codebase 交付正式環境功能（SFC + TSX composition、Pinia、OpenAPI 產生的 client）
+        - 建置優惠券操作工具：可搜尋/排序表格、日期區間篩選、狀態/發送方式控制，並提供具權限控管的安全取消流程
+        - 實作顧客優惠券明細（持有券 + 使用紀錄），包含空狀態與在地化標籤（vue-i18n）
+        - 透過型別化 API layer 整合（OpenAPI codegen + `useApi`），讓前端行為對齊後端自動/手動發券規則
+      keywords:
+        - Vue 3
+        - TypeScript
+        - Vite
+        - Pinia
+        - Vue Router
+        - OpenAPI
+    - name: Achroma Color Theme
       url: https://marketplace.visualstudio.com/items?itemName=noidilin.color-fatigue
       # description: aesthetic theme for applications
       startDate: 2025-03
@@ -92,47 +126,51 @@ content:
         - Editor Theming
         - dotfiles
         - userstyles
-        - CLI
-    - name: React
-      url: https://github.com/noidilin/grit/tree/main/react
-      # description: React from fundamentals to production-ready applications with state management, routing, and server state
+        - CLI Tools
+    - name: React + Next.js（學習專案）
+      url: https://github.com/noidilin/grit
       startDate: 2024-08
-      endDate: 2025-02
+      endDate:
       summary: |
-        - 開發了 24 個 React 專案，從核心概念循序深化到進階設計模式
-        - 使用 Redux Toolkit 搭配 async thunks 實作複雜狀態管理，並以 React Query 進行伺服器狀態快取
-        - 依循組合式設計模式建立可重用元件庫，並以 React Router 實作用戶端路由
-        - 建置整合 RESTful API、身份驗證與即時資料同步的全端應用程式
-        - 使用 React Hook Form 進行表單驗證，以 Motion 實作聲明式動畫，並開發 custom hooks 以提升程式碼可複用性
+        - 建置一系列 React 與 Next.js 的小型學習專案，從基礎到接近正式專案的模式循序深化
+        - 練習用戶端/伺服器端狀態管理（Redux Toolkit、TanStack Query）、路由設計與可重用 UI 組合
+        - 熟悉 Next.js App Router 能力，包括 server/client components、middleware、快取/重新驗證與型別安全的資料變更
+        - 實作常見產品功能：登入/受保護路由、表單與驗證，以及效能導向的最佳化（圖片/字型/程式碼分割）
       keywords:
         - React
-        - JavaScript
+        - Next.js
         - TypeScript
         - Redux Toolkit
         - Tanstack Query
         - React Router
         - React Hook Form
-        - Motion
-        - Supabase
-    - name: Next.js
-      url: https://github.com/noidilin/grit/tree/main/next
-      # description: Next.js App Router mastery with server components, server actions, and modern UI libraries
-      startDate: 2025-08
-      endDate:
-      summary: |
-        - 建置了 11 個 Next.js 專案，涵蓋 App Router 基礎功能，包含檔案路由、伺服器/客戶端元件與中介層
-        - 實作伺服器端資料擷取，搭配快取策略、重新驗證模式與 Server Actions 以達成型別安全的資料變更
-        - 開發整合 Lucia Auth 身份驗證、會話管理與受保護路由的應用程式
-        - 使用 shadcn/ui 元件系統搭配 Motion 函式庫，建立無障礙且具動畫效果的 UI
-        - 透過圖片/字型最佳化、程式碼分割與運用 Turbopack 提升效能並加速建置
-      keywords:
-        - Next.js
-        - shadcn/ui
-        - Prisma
+        - Shadcn/ui
         - Zod
-        - Lucia Auth
+        - Prisma
         - Biome
   work:
+    - name: Alion Tech
+      startDate: 2025-11
+      endDate:
+      position: Contract Front-End Engineer
+      summary: |
+        - 以合約前端工程師身份參與兩個產品：eyeチェック（Next.js + React）與 Everflow（Vue 3），並交付正式環境功能
+        - 實作驗證與 session 流程、付費/後台權限控管，並建立穩健的非同步狀態與錯誤處理 UX
+        - 在大型 Vue 後台（Pinia、OpenAPI 產生的 client）交付搜尋/篩選表格與安全操作流程等功能
+        - 以型別化 API client 串接後端，對齊權限與商業規則
+      keywords:
+        - Next.js
+        - React
+        - Vue 3
+        - TypeScript
+        - Zustand
+        - Pinia
+        - OpenAPI
+        - Vite
+        - Axios
+        - Zod
+        - Sentry
+        - React-PDF
     - name: Self-Employed Film Maker
       # url: https://ppresume.com
       startDate: 2023-03
@@ -184,40 +222,37 @@ content:
   interests:
     - name: OS Ricing
       keywords:
-        - NixOS
+        - Arch Linux (BTW)
         - Omarchy
-        - CLI tools
+        - Neovim
     - name: Memory Management
       keywords:
         - Heap and Stack
-        - Process and Program
+        - Process and Thread
     - name: Data Visualization
       keywords:
-        - D3.js
+        - Three.js
         - GSAP
-        - Blender Geometry Node
+        - D3.js
 
-layout:
-  sections:
-    # default: basics, education, work, languages, skills, awards, certificates, publications, references, projects, interests, volunteer
-    order:
-      - basics
-      - education
-      - skills
-      - projects
-      - work
-  locale:
-    # Use `yamlresume languages list` to get the list of supported languages
-    language: zh-hant-tw
-  margins:
-    top: 2.5cm
-    left: 1.5cm
-    right: 1.5cm
-    bottom: 2.5cm
-  page:
-    showPageNumbers: true
-  # Use `yamlresume templates list` to get the list of available templates
-  template: moderncv-banking
-  typography:
-    # LaTeX engine only supports 10pt, 11pt, and 12pt
-    fontSize: 11pt
+locale:
+  language: zh-hant-tw
+layouts:
+  - engine: latex
+    template: moderncv-banking
+    sections:
+      order:
+        - basics
+        - education
+        - skills
+        - projects
+        - work
+    page:
+      showPageNumbers: true
+      margins:
+        top: 2.5cm
+        left: 1.5cm
+        right: 1.5cm
+        bottom: 2.5cm
+    typography:
+      fontSize: 11pt
