@@ -60,6 +60,7 @@ content:
         - React
         - Next
         - Shadcn/ui
+        - Three.js
     - name: DevOps
       level: Beginner
       keywords:
@@ -74,6 +75,42 @@ content:
         - Blender
         - Unreal Engine 5
   projects:
+    - name: eyeチェック (Client Project)
+      # url: https://example.com # TODO: add public URL
+      startDate: 2025-11
+      endDate:
+      summary: |
+        - Delivered a Japanese Next.js 16 + React 19 frontend for an assessment platform spanning registration, test-taking, and reporting
+        - Implemented OTP-based verification and session handling (axios interceptors + token/session storage) to gate paid flows and admin access
+        - Shipped token-driven test UX (question fetch/answer/skip/abort) with resilient loading/error states and Zustand-backed state
+        - Built individual + group (advisor) report experiences with pagination and deep-linked query params
+        - Added PDF report export via react-pdf, including CJK-friendly font setup and safe, deterministic filenames
+      keywords:
+        - Next.js
+        - React
+        - TypeScript
+        - Shadcn/ui
+        - Zustand
+        - React Hook Form
+        - Zod
+        - Axios
+        - Sentry
+        - React-PDF
+    - name: Everflow
+      startDate: 2025-12
+      endDate:
+      summary: |
+        - Joined an existing Vue 3 + TypeScript admin dashboard and shipped production changes by navigating a large, multi-module codebase (SFC + TSX composition, Pinia, generated OpenAPI client)
+        - Built coupon operations tooling: searchable/sortable coupon table with date-range filters and status/send-method controls, plus a safe cancellation workflow with permission-based action gating
+        - Implemented customer coupon detail UX (holding coupons + usage history) with resilient empty states and localized labels (vue-i18n)
+        - Integrated changes through the typed API layer (OpenAPI codegen + `useApi`), aligning frontend behavior with backend rules around auto/manual issuance
+      keywords:
+        - Vue 3
+        - TypeScript
+        - Vite
+        - Pinia
+        - Vue Router
+        - OpenAPI
     - name: Achroma Color Theme
       url: https://marketplace.visualstudio.com/items?itemName=noidilin.color-fatigue
       # description: aesthetic theme for applications
@@ -89,53 +126,49 @@ content:
         - dotfiles
         - userstyles
         - CLI Tools
-    - name: React
-      url: https://github.com/noidilin/grit/tree/main/react
-      # description: React from fundamentals to production-ready applications with state management, routing, and server state
+    - name: React + Next.js (Learning Projects)
+      url: https://github.com/noidilin/grit
       startDate: 2024-08
-      endDate: 2025-02
+      endDate:
       summary: |
-        - Developed 24 React projects progressing from core concepts to advanced patterns
-        - Implemented complex state management using Redux Toolkit with async thunks and React Query for server state caching
-        - Created reusable component libraries following composition patterns and implemented client-side routing with React Router
-        - Built full-stack applications with RESTful API integration, authentication, and real-time data synchronization
-        - Applied form validation with React Hook Form, declarative animations with Motion, and custom hooks for code reusability
+        - Built a series of small learning projects across React and Next.js, progressing from fundamentals to production-style patterns
+        - Implemented client state and server state patterns (Redux Toolkit, TanStack Query), routing, and reusable UI composition
+        - Practiced Next.js App Router capabilities including server/client components, middleware, caching/revalidation, and type-safe mutations
+        - Shipped common product features: auth/protected routes, forms + validation, and performance-focused optimizations (image/font/code splitting)
       keywords:
         - React
+        - Next.js
         - TypeScript
         - Redux Toolkit
-        - Tanstack Query
         - React Router
+        - Tanstack Query
         - React Hook Form
-        - Framer Motion
-    - name: Next.js
-      url: https://github.com/noidilin/grit/tree/main/next
-      # description: Next.js App Router mastery with server components, server actions, and modern UI libraries
-      startDate: 2025-08
-      endDate:
-      summary: |
-        - Built 11 Next.js projects including file-based routing, server/client components, and middleware (proxy)
-        - Implemented server-side data fetching with caching strategies, revalidation patterns, and type-safe mutations
-        - Developed applications with Lucia Auth authentication, session management, and protected routes
-        - Created accessible, animated UIs using shadcn/ui component system with Motion library
-        - Optimized performance through image/font optimization, code splitting, and leveraged Turbopack for faster builds
-      keywords:
-        - Next.js
         - Shadcn/ui
-        - Prisma
         - Zod
+        - Prisma
         - Biome
   work:
-    - name: Freelance Front-End Developer
-      # url: https://ppresume.com
-      startDate: 2025-10
+    - name: Alion Tech
+      startDate: 2025-11
       endDate:
-      position: Junior Front-End Developer
+      position: Contract Front-End Engineer
       summary: |
-        - placeholder text, to be added.
+        - Delivered production frontend work across two products: eyeチェック (Next.js + React) and Everflow (Vue 3) under a contract engagement
+        - Implemented authentication/session flows, guarded paid/admin experiences, and resilient UX patterns for async states and error handling
+        - Shipped admin/dashboard features in a large Vue codebase (Pinia, OpenAPI-generated client), including searchable/filterable tables and safe action workflows
+        - Coordinated API integration through typed clients and aligned UI behavior with backend rules and permissions
       keywords:
-        - Spec Driven Developing
-        - Story Book
+        - Next.js
+        - React
+        - Vue 3
+        - TypeScript
+        - Zod
+        - Zustand
+        - Pinia
+        - OpenAPI
+        - Vite
+        - Axios
+        - Sentry
     - name: Self-Employed Film Maker
       # url: https://ppresume.com
       startDate: 2023-03
