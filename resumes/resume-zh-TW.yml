@@ -75,6 +75,62 @@ content:
         - Adobe Suite
         - Blender
         - Unreal Engine 5
+  work:
+    - name: Alion Tech
+      startDate: 2025-11
+      endDate:
+      position: Contract Front-End Engineer
+      summary: |
+        - 以合約前端工程師身份參與兩個產品：eyeチェック（Next.js + React）與 Everflow（Vue 3），並交付正式環境功能
+        - 實作驗證與 session 流程、付費/後台權限控管，並建立穩健的非同步狀態與錯誤處理 UX
+        - 在大型 Vue 後台（Pinia、OpenAPI 產生的 client）交付搜尋/篩選表格與安全操作流程等功能
+        - 以型別化 API client 串接後端，對齊權限與商業規則
+      keywords:
+        - Next.js
+        - React
+        - Vue 3
+        - TypeScript
+        - Zustand
+        - Pinia
+        - OpenAPI
+        - Vite
+        - Axios
+        - Zod
+        - Sentry
+        - React-PDF
+    - name: Self-Employed Film Maker
+      # url: https://ppresume.com
+      startDate: 2023-03
+      endDate:
+      position: Film Maker & Colorist
+      summary: |
+        - 獨立負責完整影像製作流程，從概念發想、拍攝、調色與最終交付
+        - 透過系統化的問題解決與流程設計，在藝術目標與技術限制之間取得平衡
+        - 與跨領域團隊協作，蒐集需求並將創意構想轉化為具體技術解決方案
+        - 專注於紀錄片與商業敘事，運用故事結構與節奏原則強化內容表達
+        - 進行膠片模擬與進階調色，並確保不同硬體設備間視覺風格一致
+        - 應用視覺構圖與電影美學原則，透過構圖與色彩理論傳達情感與品牌識別
+      keywords:
+        - DaVinci Resolve Color Grading
+        - Color Management Pipeline
+        - Commercial Production Workflow
+    - name: Self-Employed Designer
+      # url: https://ppresume.com
+      startDate: 2020-10
+      endDate: 2023-06
+      position: 3D & Interior Designer
+      summary: |
+        - 使用 Blender、Unreal Engine 與 NVIDIA Omniverse 設計互動式 3D 虛擬環境
+        - 在 Unreal Engine 中實作 Blueprint 腳本，動態互動效果與日夜循環模擬
+        - 以 Unreal Engine 5 與 Cycles 渲染器，實現影視級別擬真度的建築與產品視覺化成品
+        - 導入 AI 渲染與插幀推理流程，在維持影像品質的同時縮短 40% 製作時間
+        - 使用程序化建模與著色器節點技術，優化資產生成與動畫製作流程
+        - 管理 ACES 色彩工作流程與物理基礎光照標準，確保跨軟體的視覺一致性
+      keywords:
+        - Blender
+        - Unreal Engine 5
+        - BIM & IFC Industry Open Standard
+        - Fusion
   projects:
     - name: eyeチェック (Client Project)
       # url: https://example.com # TODO: add public URL
@@ -148,62 +204,6 @@ content:
         - Zod
         - Prisma
         - Biome
-  work:
-    - name: Alion Tech
-      startDate: 2025-11
-      endDate:
-      position: Contract Front-End Engineer
-      summary: |
-        - 以合約前端工程師身份參與兩個產品：eyeチェック（Next.js + React）與 Everflow（Vue 3），並交付正式環境功能
-        - 實作驗證與 session 流程、付費/後台權限控管，並建立穩健的非同步狀態與錯誤處理 UX
-        - 在大型 Vue 後台（Pinia、OpenAPI 產生的 client）交付搜尋/篩選表格與安全操作流程等功能
-        - 以型別化 API client 串接後端，對齊權限與商業規則
-      keywords:
-        - Next.js
-        - React
-        - Vue 3
-        - TypeScript
-        - Zustand
-        - Pinia
-        - OpenAPI
-        - Vite
-        - Axios
-        - Zod
-        - Sentry
-        - React-PDF
-    - name: Self-Employed Film Maker
-      # url: https://ppresume.com
-      startDate: 2023-03
-      endDate:
-      position: Film Maker & Colorist
-      summary: |
-        - 獨立負責完整影像製作流程，從概念發想、拍攝、調色與最終交付
-        - 透過系統化的問題解決與流程設計，在藝術目標與技術限制之間取得平衡
-        - 與跨領域團隊協作，蒐集需求並將創意構想轉化為具體技術解決方案
-        - 專注於紀錄片與商業敘事，運用故事結構與節奏原則強化內容表達
-        - 進行膠片模擬與進階調色，並確保不同硬體設備間視覺風格一致
-        - 應用視覺構圖與電影美學原則，透過構圖與色彩理論傳達情感與品牌識別
-      keywords:
-        - DaVinci Resolve Color Grading
-        - Color Management Pipeline
-        - Commercial Production Workflow
-    - name: Self-Employed Designer
-      # url: https://ppresume.com
-      startDate: 2020-10
-      endDate: 2023-06
-      position: 3D & Interior Designer
-      summary: |
-        - 使用 Blender、Unreal Engine 與 NVIDIA Omniverse 設計互動式 3D 虛擬環境
-        - 在 Unreal Engine 中實作 Blueprint 腳本，動態互動效果與日夜循環模擬
-        - 以 Unreal Engine 5 與 Cycles 渲染器，實現影視級別擬真度的建築與產品視覺化成品
-        - 導入 AI 渲染與插幀推理流程，在維持影像品質的同時縮短 40% 製作時間
-        - 使用程序化建模與著色器節點技術，優化資產生成與動畫製作流程
-        - 管理 ACES 色彩工作流程與物理基礎光照標準，確保跨軟體的視覺一致性
-      keywords:
-        - Blender
-        - Unreal Engine 5
-        - BIM & IFC Industry Open Standard
-        - Fusion
   languages:
     # Valid language fluency options:
     #
@@ -245,8 +245,8 @@ layouts:
         - basics
         - education
         - skills
-        - projects
         - work
+        - projects
     page:
       showPageNumbers: true
       margins:
