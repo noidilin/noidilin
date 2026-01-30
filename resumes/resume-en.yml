@@ -19,9 +19,9 @@ content:
     email: linganinja.0120@gmail.com
     url: https://go.noidilin.dev/blog
     summary: |
-      - Finance graduate transitioning into web development, leveraging advanced analytical problem-solving and successfully managed projects to drive results in fast-paced environments
-      - Gained expertise in 3D modeling and design production through the implementation of systematic workflows and the successful completion of 50+ high-precision freelance projects.      
-      - Designed and delivered scalable, user-centered solutions that combined visual clarity with robust technical performance, contributing to multiple high-impact projects.
+      - Finance graduate transitioning into web development with a strong foundation in analytical thinking and project management
+      - Gained expertise in 3D design production through the successful completion of 50+ high-precision freelance projects
+      - Delivered scalable, user-centered solutions that combined visual clarity with robust technical performance, contributing to multiple high-impact projects.
   profiles:
     - network: GitHub
       url: https://go.noidilin.dev/github
@@ -40,20 +40,16 @@ content:
       # score: "3.8"
       startDate: 2014-09
       endDate: 2019-06 # Leave endDate blank to indicate "Present"
-      courses:
-        - Financial Statement Analysis
-        - Business Management
-        - Statistics
-        - Computer Programming
       summary: |
-        - Applied Python to streamline business, supply chain, and finance processes, resulting in a measurable improvement of 40% efficiency and gaining hands-on programming experience.
-        - Conducted financial modeling, valuation, and credit risk analysis using real company data, delivering actionable insights for 2 projects or transactions.
-        - Produced 10+ industry reports utilizing SWOT, Porter’s Six Forces, and PEST frameworks to assess market dynamics and support strategic decision-making.
+        - Applied Python for business, supply chain, and finance analysis and automation
+        - Conducted financial modeling and risk analysis using real company data, delivering actionable insights for 2 financial reports
+        - Produced 10+ industry reports using SWOT, Porter’s Six Forces, and PEST frameworks
   skills:
     - name: Front-end
       level: Intermediate # 'Novice' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Master'
       keywords:
-        - HTML5, CSS3, JavaScript
+        - HTML/CSS/JavaScript
+        - TypeScript
         - React
         - Next
         - SSR/SSG/ISR
@@ -65,7 +61,7 @@ content:
       keywords:
         - Linux
         - Docker
-        - GitHub Action
+        - GitHub Actions
     - name: Design
       level: Expert
       keywords:
@@ -73,16 +69,17 @@ content:
         - Adobe Suite
         - Blender
         - Unreal Engine 5
+        - Omniverse
   work:
     - name: Alion Tech
       startDate: 2025-11
       endDate:
       position: Contract Front-End Engineer
       summary: |
-        - Delivered high-quality, production-level frontend solutions for two products—eye チェック (Next.js + React) and Everflow (Vue 3)—under a contract engagement, significantly improving efficiency and user experience.
-        - Implemented authentication and session flows, secured paid and admin user experiences, and developed resilient UX patterns for asynchronous states and error handling, resulting in improved system security and enhanced user experience for 100+ users.
-        - Delivered admin and dashboard features in a large Vue codebase (utilizing Pinia and OpenAPI-generated client), implementing searchable/filterable tables and secure action workflows to enhance usability and efficiency for 10+ users.
-        - Coordinated API integration via typed clients and ensured UI behavior was aligned with backend rules and permissions, resulting in 10% increase in system reliability and streamlined development workflows.
+        - Shipped production frontend work across two products: eyeチェック (Next.js + React) and Everflow (Vue 3)
+        - Implemented authentication/session flows, protected paid/admin experiences, and resilient async UX (loading/error states)
+        - Delivered admin/dashboard features in a large Vue codebase (Pinia, OpenAPI-generated client), including searchable/filterable tables and safe action workflows; coordinated API integration and permissions
+        - Coordinated API integration via typed clients and ensured UI behavior was aligned with backend rules and permissions
       keywords:
         - Next.js
         - React
@@ -95,16 +92,16 @@ content:
         - Vite
         - Axios
         - Sentry
-    - name: noidilin. visual studio
+    - name: Freelance Motion Designer
       url: https://go.noidilin.dev/design
       startDate: 2020-10
       endDate:
       position: Real-time 3D & Motion Designer (Unreal/Blender) / Colorist
       summary: |
-        - Designed and developed real-time 3D and interactive environments using Blender and Unreal Engine, incorporating dynamic interactions and simulation systems to deliver 15+ successful projects.
-        - Produced architectural and product visuals using physically based lighting and ACES color workflows, ensuring consistent cross-tool output for 3 projects or deliverables.
-        - Built repeatable asset/render pipelines (procedural modeling, shader nodes, automation) to reduce production time by ~40% while maintaining visual fidelity
-        - Delivered color grading and film-print emulation in DaVinci Resolve, ensuring a consistent look across 50+ varied display/hardware setups and contributing to measurable project quality improvements.
+        - Built real-time 3D and interactive environments with Blender + Unreal Engine, including dynamic interactions and simulation systems in 15+ successful projects
+        - Produced architectural and product visuals using physically based lighting and ACES color workflows, ensuring consistent cross-tool output for 3 projects
+        - Developed repeatable asset/render pipelines (procedural modeling, shader nodes, automation) to reduce production time while maintaining visual fidelity
+        - Delivered color grading and film-print emulation in DaVinci Resolve to ensure consistent cross-tool output
       keywords:
         - Unreal Engine 5
         - Blender
