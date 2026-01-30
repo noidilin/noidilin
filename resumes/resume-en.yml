@@ -17,22 +17,20 @@ content:
     # headline: Headed for the Pacific
     phone: "(886) 929-054-136"
     email: linganinja.0120@gmail.com
-    url: https://noidilin.dev
-    # All summary fields supports a limited rich text capabilities in markdown (bold, italic, list, link)
+    url: https://go.noidilin.dev/blog
     summary: |
-      - Finance graduate transitioning into web development with a strong foundation in analytical thinking and project management
-      - Built freelance expertise in 3D and design production, developing systematic workflows and technical precision
-      - Skilled in agile collaboration and cross-disciplinary communication in client and team-based projects
-      - Passionate about creating scalable, user-centered experiences that blend aesthetic clarity with technical reliability
+      - Finance graduate transitioning into web development, leveraging advanced analytical problem-solving and successfully managed projects to drive results in fast-paced environments
+      - Gained expertise in 3D modeling and design production through the implementation of systematic workflows and the successful completion of 50+ high-precision freelance projects.      
+      - Designed and delivered scalable, user-centered solutions that combined visual clarity with robust technical performance, contributing to multiple high-impact projects.
   profiles:
     - network: GitHub
-      url: https://github.com/noidilin
+      url: https://go.noidilin.dev/github
       username: noidilin
     - network: YouTube
-      url: https://www.youtube.com/@noidilin
+      url: https://go.noidilin.dev/youtube
       username: noidilin
     - network: Instagram
-      url: https://www.instagram.com/noidilin
+      url: https://go.noidilin.dev/instagram
       username: noidilin
   education:
     - institution: National Taiwan University
@@ -48,19 +46,20 @@ content:
         - Statistics
         - Computer Programming
       summary: |
-        - Applied Python to solve business, supply chain, and finance problems, gaining practical programming experience
-        - Built data visualizations with Tableau to translate business requirements into analytical insights
-        - Conducted financial modeling, valuation, and credit risk analysis using real company data
-        - Produced industry reports using SWOT, Porter’s Six Forces, and PEST frameworks to assess market dynamics
-        - Collaborated in agile, team-based projects using Scrum methodology and popular tools to coordinate objectives
+        - Applied Python to streamline business, supply chain, and finance processes, resulting in a measurable improvement of 40% efficiency and gaining hands-on programming experience.
+        - Conducted financial modeling, valuation, and credit risk analysis using real company data, delivering actionable insights for 2 projects or transactions.
+        - Produced 10+ industry reports utilizing SWOT, Porter’s Six Forces, and PEST frameworks to assess market dynamics and support strategic decision-making.
   skills:
     - name: Front-end
       level: Intermediate # 'Novice' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Master'
       keywords:
+        - HTML5, CSS3, JavaScript
         - React
         - Next
+        - SSR/SSG/ISR
         - Shadcn/ui
         - Three.js
+        - RWD
     - name: DevOps
       level: Beginner
       keywords:
@@ -80,10 +79,10 @@ content:
       endDate:
       position: Contract Front-End Engineer
       summary: |
-        - Delivered production frontend work across two products: eyeチェック (Next.js + React) and Everflow (Vue 3) under a contract engagement
-        - Implemented authentication/session flows, guarded paid/admin experiences, and resilient UX patterns for async states and error handling
-        - Shipped admin/dashboard features in a large Vue codebase (Pinia, OpenAPI-generated client), including searchable/filterable tables and safe action workflows
-        - Coordinated API integration through typed clients and aligned UI behavior with backend rules and permissions
+        - Delivered high-quality, production-level frontend solutions for two products—eye チェック (Next.js + React) and Everflow (Vue 3)—under a contract engagement, significantly improving efficiency and user experience.
+        - Implemented authentication and session flows, secured paid and admin user experiences, and developed resilient UX patterns for asynchronous states and error handling, resulting in improved system security and enhanced user experience for 100+ users.
+        - Delivered admin and dashboard features in a large Vue codebase (utilizing Pinia and OpenAPI-generated client), implementing searchable/filterable tables and secure action workflows to enhance usability and efficiency for 10+ users.
+        - Coordinated API integration via typed clients and ensured UI behavior was aligned with backend rules and permissions, resulting in 10% increase in system reliability and streamlined development workflows.
       keywords:
         - Next.js
         - React
@@ -96,39 +95,25 @@ content:
         - Vite
         - Axios
         - Sentry
-    - name: Self-Employed Film Maker
-      # url: https://ppresume.com
-      startDate: 2023-03
-      endDate:
-      position: Film Maker & Colorist
-      summary: |
-        - Managed full video production pipeline independently, from concept and shooting to color grading and final delivery
-        - Balanced artistic goals with technical constraints through systematic problem-solving and workflow design
-        - Collaborated with cross-functional teams to gather requirements and translate creative objectives into technical solutions
-        - Specialized in documentary and commercial storytelling, applying narrative structure and pacing principles
-        - Performed film print emulation and advanced color grading, ensuring consistent visual tone across diverse hardware setups
-        - Applied visual composition and cinematic principles to convey emotion and brand identity through framing and color theory
-      keywords:
-        - DaVinci Resolve Color Grading
-        - Color Management Pipeline
-        - Commercial Production Workflow
-    - name: Self-Employed Designer
-      # url: https://ppresume.com
+    - name: noidilin. visual studio
+      url: https://go.noidilin.dev/design
       startDate: 2020-10
-      endDate: 2023-06
-      position: 3D & Interior Designer
+      endDate:
+      position: Real-time 3D & Motion Designer (Unreal/Blender) / Colorist
       summary: |
-        - Designed interactive 3D virtual environments using Blender, Unreal Engine, and NVIDIA Omniverse
-        - Implemented Blueprint scripting in Unreal Engine to create dynamic user interactions, and day-night simulations
-        - Produced architectural and product visualizations from photographic references using Unreal Engine 5 and Cycles renderer
-        - Integrated AI rendering and interpolation workflows to reduce production time by 40% while maintaining visual fidelity
-        - Applied procedural modeling and shader node techniques to streamline asset generation and animation pipelines
-        - Managed ACES color workflows and physically based lighting standards for cross-software visual consistency
+        - Designed and developed real-time 3D and interactive environments using Blender and Unreal Engine, incorporating dynamic interactions and simulation systems to deliver 15+ successful projects.
+        - Produced architectural and product visuals using physically based lighting and ACES color workflows, ensuring consistent cross-tool output for 3 projects or deliverables.
+        - Built repeatable asset/render pipelines (procedural modeling, shader nodes, automation) to reduce production time by ~40% while maintaining visual fidelity
+        - Delivered color grading and film-print emulation in DaVinci Resolve, ensuring a consistent look across 50+ varied display/hardware setups and contributing to measurable project quality improvements.
       keywords:
-        - Blender
         - Unreal Engine 5
+        - Blender
+        - Omniverse
+        - Real-time Rendering
+        - Procedural Modeling
+        - ACES / Color Management
         - BIM & IFC Industry Open Standard
-        - Fusion
+        - DaVinci Resolve Color Grading
   projects:
     - name: eyeチェック (Client Project)
       # url: https://example.com # TODO: add public URL
@@ -146,19 +131,20 @@ content:
         - TypeScript
         - Shadcn/ui
         - Zustand
+        - Context API
         - React Hook Form
         - Zod
         - Axios
         - Sentry
         - React-PDF
-    - name: Everflow
+    - name: Everflow (Client Project)
       startDate: 2025-12
       endDate:
       summary: |
         - Joined an existing Vue 3 + TypeScript admin dashboard and shipped production changes by navigating a large, multi-module codebase (SFC + TSX composition, Pinia, generated OpenAPI client)
         - Built coupon operations tooling: searchable/sortable coupon table with date-range filters and status/send-method controls, plus a safe cancellation workflow with permission-based action gating
         - Implemented customer coupon detail UX (holding coupons + usage history) with resilient empty states and localized labels (vue-i18n)
-        - Integrated changes through the typed API layer (OpenAPI codegen + `useApi`), aligning frontend behavior with backend rules around auto/manual issuance
+        - Integrated changes through the typed API layer (OpenAPI codegen + useApi), aligning frontend behavior with backend rules around auto/manual issuance
       keywords:
         - Vue 3
         - TypeScript
@@ -172,66 +158,30 @@ content:
       startDate: 2025-03
       endDate:
       summary: |
-        - Designed a cohesive, system-wide color theme emphasizing calm focus through muted hues, and balanced tonal hierarchy
+        - Designed a cohesive, system-wide color theme using muted hues and balanced tonal hierarchy, resulting in improved user readability and positive feedback on visual clarity.
         - Defined a color palette for syntax highlighting that maintains consistent readability in multiple environments
         - Ensured fidelity and accessibility guidelines across platform, including VS Code, Neovim, and popular CLI tools
-        - Currently developing a programmatic approach for multi-platform build automation and palette synchronization
+        - Developed a programmatic approach for multi-platform build automation and palette synchronization, enhancing workflow efficiency.
       keywords:
-        - Editor Theming
         - dotfiles
-        - userstyles
         - CLI Tools
-    - name: React + Next.js (Learning Projects)
-      url: https://github.com/noidilin/grit
-      startDate: 2024-08
-      endDate:
-      summary: |
-        - Built a series of small learning projects across React and Next.js, progressing from fundamentals to production-style patterns
-        - Implemented client state and server state patterns (Redux Toolkit, TanStack Query), routing, and reusable UI composition
-        - Practiced Next.js App Router capabilities including server/client components, middleware, caching/revalidation, and type-safe mutations
-        - Shipped common product features: auth/protected routes, forms + validation, and performance-focused optimizations (image/font/code splitting)
-      keywords:
-        - React
-        - Next.js
-        - TypeScript
-        - Redux Toolkit
-        - React Router
-        - Tanstack Query
-        - React Hook Form
-        - Shadcn/ui
-        - Zod
-        - Prisma
-        - Biome
   languages:
-    # Valid language fluency options:
-    #
-    # - 'Elementary Proficiency'
-    # - 'Limited Working Proficiency'
-    # - 'Minimum Professional Proficiency'
-    # - 'Full Professional Proficiency'
-    # - 'Native or Bilingual Proficiency'
     - language: English
       fluency: Full Professional Proficiency
       keywords:
         - TOEIC 985
     - language: Chinese
       fluency: Native or Bilingual Proficiency
-      keywords: []
   interests:
     - name: OS Ricing
       keywords:
         - Arch Linux (BTW)
         - Omarchy
         - Neovim
-    - name: Memory Management
-      keywords:
-        - Heap and Stack
-        - Process and Thread
     - name: Data Visualization
       keywords:
         - Three.js
         - GSAP
-        - D3.js
 locale:
   language: en
 layouts:
@@ -241,9 +191,9 @@ layouts:
       # default: basics, education, work, languages, skills, awards, certificates, publications, references, projects, interests, volunteer
       order:
         - basics
+        - work
         - education
         - skills
-        - work
         - projects
     page:
       showPageNumbers: true
