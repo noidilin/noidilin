@@ -17,22 +17,20 @@ content:
     # headline: Headed for the Pacific
     phone: "(886) 929-054-136"
     email: linganinja.0120@gmail.com
-    url: https://noidilin.dev
-    # All summary fields supports a limited rich text capabilities in markdown (bold, italic, list, link)
+    url: https://go.noidilin.dev/blog
     summary: |
-      - 財務金融系畢業，目前正轉型為網頁開發人員，具備紮實的分析思維與專案管理基礎
-      - 在自由接案過程中，累積了 3D 與設計產出的經驗和系統化的工作流程，還有精確的技術執行力
-      - 熟悉敏捷協作與跨領域的溝通，具備豐富的客戶及團隊合作經驗
-      - 熱衷於打造以使用者為核心且可擴展的體驗，並兼具審美與技術穩定性
+      - 財務金融系畢業，目前正轉型為網頁開發，具備紮實的分析思維與專案管理基礎
+      - 透過完成 50+ 件高精度的 3D 設計製作接案，累積穩定交付與製作能力
+      - 交付可擴展、以使用者為核心的解決方案，結合視覺清晰度與穩健的技術表現，支援多個高影響力專案
   profiles:
     - network: GitHub
-      url: https://github.com/noidilin
+      url: https://go.noidilin.dev/github
       username: noidilin
     - network: YouTube
-      url: https://www.youtube.com/@noidilin
+      url: https://go.noidilin.dev/youtube
       username: noidilin
     - network: Instagram
-      url: https://www.instagram.com/noidilin
+      url: https://go.noidilin.dev/instagram
       username: noidilin
   education:
     - institution: 國立臺灣大學
@@ -42,32 +40,28 @@ content:
       # score: "3.8"
       startDate: 2014-09
       endDate: 2019-06 # Leave endDate blank to indicate "Present"
-      courses:
-        - 財務報告分析
-        - 企業管理
-        - 統計學
-        - 商管程式設計
       summary: |
-        - 使用 Python 解決商業、供應鏈與財務問題，累積實務程式設計經驗
-        - 使用 Tableau 實現資料視覺化，將商業需求轉化為具洞察力的分析成果
-        - 以真實企業資料進行財務模型的建模、估值與信用風險分析
-        - 透過 SWOT、波特五力與 PEST 架構撰寫產業報告，評估市場動態
-        - 於敏捷式團隊專案中協作，並採用 Scrum 方法論與熱門工具來協調專案目標
+        - 使用 Python 進行商業、供應鏈與財務分析與自動化
+        - 以真實企業資料進行財務建模與風險分析，並為 2 份財務報告產出可執行的洞察
+        - 使用 SWOT、波特五力與 PEST 架構撰寫 10+ 份產業報告
   skills:
-    # Valid level options: 'Novice', 'Beginner', 'Intermediate', 'Advanced', 'Expert', 'Master'
     - name: Front-end
-      level: Intermediate
+      level: Intermediate # 'Novice' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Master'
       keywords:
+        - HTML/CSS/JavaScript
+        - TypeScript
         - React
         - Next
+        - SSR/SSG/ISR
         - Shadcn/ui
         - Three.js
+        - RWD
     - name: DevOps
       level: Beginner
       keywords:
         - Linux
         - Docker
-        - GitHub Action
+        - GitHub Actions
     - name: Design
       level: Expert
       keywords:
@@ -75,73 +69,57 @@ content:
         - Adobe Suite
         - Blender
         - Unreal Engine 5
+        - Omniverse
   work:
     - name: Alion Tech
       startDate: 2025-11
       endDate:
       position: Contract Front-End Engineer
       summary: |
-        - 以合約前端工程師身份參與兩個產品：eyeチェック（Next.js + React）與 Everflow（Vue 3），並交付正式環境功能
-        - 實作驗證與 session 流程、付費/後台權限控管，並建立穩健的非同步狀態與錯誤處理 UX
-        - 在大型 Vue 後台（Pinia、OpenAPI 產生的 client）交付搜尋/篩選表格與安全操作流程等功能
-        - 以型別化 API client 串接後端，對齊權限與商業規則
+        - 交付兩個產品的正式環境前端功能：eyeチェック（Next.js + React）與 Everflow（Vue 3）
+        - 實作驗證與 session 流程、付費/後台權限控管，並建立穩健的非同步 UX（loading/error）
+        - 在大型 Vue 後台（Pinia、OpenAPI 產生的 client）交付搜尋/篩選表格與安全操作流程；並協調 API 整合與權限行為
+        - 透過型別化 client 協調 API 串接，確保 UI 行為與後端規則與權限一致
       keywords:
         - Next.js
         - React
         - Vue 3
         - TypeScript
+        - Zod
         - Zustand
         - Pinia
         - OpenAPI
         - Vite
         - Axios
-        - Zod
         - Sentry
-        - React-PDF
-    - name: Self-Employed Film Maker
-      # url: https://ppresume.com
-      startDate: 2023-03
-      endDate:
-      position: Film Maker & Colorist
-      summary: |
-        - 獨立負責完整影像製作流程，從概念發想、拍攝、調色與最終交付
-        - 透過系統化的問題解決與流程設計，在藝術目標與技術限制之間取得平衡
-        - 與跨領域團隊協作，蒐集需求並將創意構想轉化為具體技術解決方案
-        - 專注於紀錄片與商業敘事，運用故事結構與節奏原則強化內容表達
-        - 進行膠片模擬與進階調色，並確保不同硬體設備間視覺風格一致
-        - 應用視覺構圖與電影美學原則，透過構圖與色彩理論傳達情感與品牌識別
-      keywords:
-        - DaVinci Resolve Color Grading
-        - Color Management Pipeline
-        - Commercial Production Workflow
-    - name: Self-Employed Designer
-      # url: https://ppresume.com
+    - name: Freelance Motion Designer
+      url: https://go.noidilin.dev/design
       startDate: 2020-10
-      endDate: 2023-06
-      position: 3D & Interior Designer
+      endDate:
+      position: Real-time 3D & Motion Designer (Unreal/Blender) / Colorist
       summary: |
-        - 使用 Blender、Unreal Engine 與 NVIDIA Omniverse 設計互動式 3D 虛擬環境
-        - 在 Unreal Engine 中實作 Blueprint 腳本，動態互動效果與日夜循環模擬
-        - 以 Unreal Engine 5 與 Cycles 渲染器，實現影視級別擬真度的建築與產品視覺化成品
-        - 導入 AI 渲染與插幀推理流程，在維持影像品質的同時縮短 40% 製作時間
-        - 使用程序化建模與著色器節點技術，優化資產生成與動畫製作流程
-        - 管理 ACES 色彩工作流程與物理基礎光照標準，確保跨軟體的視覺一致性
+        - 以 Blender + Unreal Engine 製作 real-time 3D 與互動式環境，包含動態互動與模擬系統，累積 15+ 件成功專案
+        - 以物理基礎光照與 ACES 色彩工作流程產出建築/產品視覺化內容，確保跨工具輸出一致性（3 件專案）
+        - 建立可重複使用的資產與渲染流程（程序化建模、shader nodes、自動化），提升效率並維持視覺品質
+        - 使用 DaVinci Resolve 進行調色與膠片模擬（film-print emulation），確保跨工具輸出一致性
       keywords:
-        - Blender
         - Unreal Engine 5
+        - Blender
+        - Omniverse
+        - Real-time Rendering
+        - Procedural Modeling
+        - ACES / Color Management
         - BIM & IFC Industry Open Standard
-        - Fusion
+        - DaVinci Resolve Color Grading
   projects:
     - name: eyeチェック (Client Project)
       # url: https://example.com # TODO: add public URL
       startDate: 2025-11
       endDate:
       summary: |
-        - 交付日本語的 Next.js 16 + React 19 前端，涵蓋註冊、測驗作答與報表
-        - 實作 OTP 驗證與 session 處理（axios interceptors + token/session storage），以控管付費流程與後台存取
-        - 建立以 token 驅動的測驗流程（題目取得/作答/跳題/中止），並加入完整的 loading/error 狀態與 Zustand 狀態管理
-        - 開發個人與團體（顧問）報告體驗，支援分頁與 query params 深連結
-        - 以 react-pdf 實作 PDF 匯出，包含 CJK 字型設定與安全、可重現的檔名
+        - 建置日語的 Next.js + React 測評平台前端，涵蓋註冊、測驗作答與報表
+        - 實作 OTP 驗證與 session 處理，以控管付費流程與後台存取
+        - 交付報表體驗（分頁 + query params 深連結）與 PDF 匯出（react-pdf、CJK 字型、可重現檔名）
       keywords:
         - Next.js
         - React
@@ -153,14 +131,13 @@ content:
         - Axios
         - Sentry
         - React-PDF
-    - name: Everflow
+    - name: Everflow (Client Project)
       startDate: 2025-12
       endDate:
       summary: |
-        - 加入既有 Vue 3 + TypeScript 後台，於大型多模組 codebase 交付正式環境功能（SFC + TSX composition、Pinia、OpenAPI 產生的 client）
-        - 建置優惠券操作工具：可搜尋/排序表格、日期區間篩選、狀態/發送方式控制，並提供具權限控管的安全取消流程
-        - 實作顧客優惠券明細（持有券 + 使用紀錄），包含空狀態與在地化標籤（vue-i18n）
-        - 透過型別化 API layer 整合（OpenAPI codegen + `useApi`），讓前端行為對齊後端自動/手動發券規則
+        - 在大型 Vue 3 + TypeScript 後台（SFC + TSX、Pinia、OpenAPI 產生的 client）交付正式環境功能
+        - 建置優惠券操作工具（搜尋/排序/日期篩選/狀態控制），並加入權限控管與安全取消流程
+        - 交付顧客優惠券明細 UX（穩健的空狀態、在地化 vue-i18n），並透過型別化 API 對齊後端發券規則
       keywords:
         - Vue 3
         - TypeScript
@@ -174,66 +151,29 @@ content:
       startDate: 2025-03
       endDate:
       summary: |
-        - 一款風格一致且橫跨各系統的配色主題，以柔和色調營造平靜專注的氛圍，並維持平衡的色階層次
-        - 特別優化其在各環境中語法高亮的配色方案，確保在多種環境中仍具有一致的可讀性
-        - 於 VS Code、Neovim 與常見 CLI 工具中實現色彩準確度與無障礙設計規範
-        - 正在規劃自動化流程，以實現多平台自動化建置與色彩同步
+        - 設計一致的編輯器/終端配色主題，以柔和色調與清晰色階提升長時間閱讀舒適度
+        - 定義語法高亮配色，並確保在多種環境（VS Code、Neovim、CLI）呈現一致
+        - 開發多平台自動化建置與色彩同步流程
       keywords:
-        - Editor Theming
         - dotfiles
-        - userstyles
         - CLI Tools
-    - name: React + Next.js（學習專案）
-      url: https://github.com/noidilin/grit
-      startDate: 2024-08
-      endDate:
-      summary: |
-        - 建置一系列 React 與 Next.js 的小型學習專案，從基礎到接近正式專案的模式循序深化
-        - 練習用戶端/伺服器端狀態管理（Redux Toolkit、TanStack Query）、路由設計與可重用 UI 組合
-        - 熟悉 Next.js App Router 能力，包括 server/client components、middleware、快取/重新驗證與型別安全的資料變更
-        - 實作常見產品功能：登入/受保護路由、表單與驗證，以及效能導向的最佳化（圖片/字型/程式碼分割）
-      keywords:
-        - React
-        - Next.js
-        - TypeScript
-        - Redux Toolkit
-        - Tanstack Query
-        - React Router
-        - React Hook Form
-        - Shadcn/ui
-        - Zod
-        - Prisma
-        - Biome
   languages:
-    # Valid language fluency options:
-    #
-    # - 'Elementary Proficiency'
-    # - 'Limited Working Proficiency'
-    # - 'Minimum Professional Proficiency'
-    # - 'Full Professional Proficiency'
-    # - 'Native or Bilingual Proficiency'
     - language: English
       fluency: Full Professional Proficiency
       keywords:
         - TOEIC 985
     - language: Chinese
       fluency: Native or Bilingual Proficiency
-      keywords: []
   interests:
     - name: OS Ricing
       keywords:
         - Arch Linux (BTW)
         - Omarchy
         - Neovim
-    - name: Memory Management
-      keywords:
-        - Heap and Stack
-        - Process and Thread
     - name: Data Visualization
       keywords:
         - Three.js
         - GSAP
-        - D3.js
 
 locale:
   language: zh-hant-tw
@@ -243,9 +183,9 @@ layouts:
     sections:
       order:
         - basics
+        - work
         - education
         - skills
-        - work
         - projects
     page:
       showPageNumbers: true
