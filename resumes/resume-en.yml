@@ -117,11 +117,9 @@ content:
       startDate: 2025-11
       endDate:
       summary: |
-        - Delivered a Japanese Next.js 16 + React 19 frontend for an assessment platform spanning registration, test-taking, and reporting
-        - Implemented OTP-based verification and session handling (axios interceptors + token/session storage) to gate paid flows and admin access
-        - Shipped token-driven test UX (question fetch/answer/skip/abort) with resilient loading/error states and Zustand-backed state
-        - Built individual + group (advisor) report experiences with pagination and deep-linked query params
-        - Added PDF report export via react-pdf, including CJK-friendly font setup and safe, deterministic filenames
+        - Built a Japanese Next.js + React assessment platform spanning registration, test-taking, and reporting
+        - Implemented OTP verification and session handling to gate paid flows and admin access
+        - Shipped reporting UX (deep-linked pagination) and PDF export via react-pdf (CJK font support, deterministic filenames)
       keywords:
         - Next.js
         - React
@@ -138,10 +136,9 @@ content:
       startDate: 2025-12
       endDate:
       summary: |
-        - Joined an existing Vue 3 + TypeScript admin dashboard and shipped production changes by navigating a large, multi-module codebase (SFC + TSX composition, Pinia, generated OpenAPI client)
-        - Built coupon operations tooling: searchable/sortable coupon table with date-range filters and status/send-method controls, plus a safe cancellation workflow with permission-based action gating
-        - Implemented customer coupon detail UX (holding coupons + usage history) with resilient empty states and localized labels (vue-i18n)
-        - Integrated changes through the typed API layer (OpenAPI codegen + useApi), aligning frontend behavior with backend rules around auto/manual issuance
+        - Shipped production changes in a large Vue 3 + TypeScript admin dashboard (SFC/TSX, Pinia, generated OpenAPI client)
+        - Built coupon operations tooling (search/sort/date filters/status) with permission-gated actions and a safe cancellation workflow
+        - Delivered customer coupon detail UX with resilient empty states, localization (vue-i18n), and alignment with backend issuance rules via typed APIs
       keywords:
         - Vue 3
         - TypeScript
@@ -155,10 +152,9 @@ content:
       startDate: 2025-03
       endDate:
       summary: |
-        - Designed a cohesive, system-wide color theme using muted hues and balanced tonal hierarchy, resulting in improved user readability and positive feedback on visual clarity.
-        - Defined a color palette for syntax highlighting that maintains consistent readability in multiple environments
-        - Ensured fidelity and accessibility guidelines across platform, including VS Code, Neovim, and popular CLI tools
-        - Developed a programmatic approach for multi-platform build automation and palette synchronization, enhancing workflow efficiency.
+        - Designed a cohesive editor/terminal color theme with muted hues and a clear tonal hierarchy for calm readability
+        - Defined a syntax highlighting palette that stays consistent across environments (VS Code, Neovim, CLI)
+        - Developed a programmatic approach for multi-platform build automation and palette synchronization
       keywords:
         - dotfiles
         - CLI Tools
