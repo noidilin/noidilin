@@ -13,7 +13,7 @@
 ---
 content:
   basics:
-    name: 林湘棣
+    name: 林佳隆
     # headline: Headed for the Pacific
     phone: "(886) 929-054-136"
     email: linganinja.0120@gmail.com
@@ -119,6 +119,7 @@ content:
       summary: |
         - 建置日語的 Next.js + React 測評平台前端，涵蓋註冊、測驗作答與報表
         - 實作 OTP 驗證與 session 處理，以控管付費流程與後台存取
+        - 交付 token 驅動的測驗（題目取得/作答/跳題/中止），並加入的 loading/error 狀態與 Zustand 狀態管理
         - 交付報表體驗（分頁 + query params 深連結）與 PDF 匯出（react-pdf、CJK 字型、可重現檔名）
       keywords:
         - Next.js

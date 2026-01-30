@@ -13,7 +13,7 @@
 ---
 content:
   basics:
-    name: Xiang-Di, Lin
+    name: Jia-Long, Lin
     # headline: Headed for the Pacific
     phone: "(886) 929-054-136"
     email: linganinja.0120@gmail.com
@@ -119,6 +119,7 @@ content:
       summary: |
         - Built a Japanese Next.js + React assessment platform spanning registration, test-taking, and reporting
         - Implemented OTP verification and session handling to gate paid flows and admin access
+        - Shipped token-driven test UX (question fetch/answer/skip/abort) with resilient loading/error states and Zustand-backed state
         - Shipped reporting UX (deep-linked pagination) and PDF export via react-pdf (CJK font support, deterministic filenames)
       keywords:
         - Next.js
