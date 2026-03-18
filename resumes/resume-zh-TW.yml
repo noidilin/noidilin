@@ -19,7 +19,7 @@ content:
     email: linganinja.0120@gmail.com
     url: https://go.noidilin.dev/blog
     summary: |
-      - 財務金融系畢業，目前正轉型為網頁開發，具備紮實的分析思維與專案管理基礎
+      - 財務金融系畢業，轉型為網頁開發，具備紮實的分析思維與專案管理基礎
       - 透過完成 50+ 件高精度的 3D 設計製作接案，累積穩定交付與製作能力
       - 交付可擴展、以使用者為核心的解決方案，結合視覺清晰度與穩健的技術表現，支援多個高影響力專案
   profiles:
@@ -76,22 +76,24 @@ content:
       endDate:
       position: Contract Front-End Engineer
       summary: |
-        - 交付兩個產品的正式環境前端功能：eyeチェック（Next.js + React）與 Everflow（Vue 3）
-        - 實作驗證與 session 流程、付費/後台權限控管，並建立穩健的非同步 UX（loading/error）
-        - 在大型 Vue 後台（Pinia、OpenAPI 產生的 client）交付搜尋/篩選表格與安全操作流程；並協調 API 整合與權限行為
-        - 透過型別化 client 協調 API 串接，確保 UI 行為與後端規則與權限一致
+        - 參與日本 B2B 維修媒合平台 Misegoto 的管理後台與使用者端網站前端交付
+        - 以現代技術棧重構管理平台（Next.js 16、React 19、Tailwind v4、shadcn/ui、Storybook），提升可維護性、型別安全與後續擴充性
+        - 交付請求單、發票、店家付款與維修方撥款等後台流程，包含搜尋/篩選表格、CSV/PDF 匯出、銀行帳戶管理、批次操作與權限控管
+        - 擴充使用者端支付流程、收據/PDF 產生、個人資料與銀行資訊管理、詢問/重設密碼流程，以及更穩健的驗證與 session 體驗
+        - 協調型別化 API 串接、在地化與即時訊息行為，確保前端體驗符合後端規則與營運需求
       keywords:
         - Next.js
         - React
-        - Vue 3
         - TypeScript
-        - Zod
+        - Tailwind CSS
+        - shadcn/ui
+        - Storybook
+        - TanStack Query
         - Zustand
-        - Pinia
-        - OpenAPI
-        - Vite
+        - Firebase
+        - next-intl
         - Axios
-        - Sentry
+        - Snapdom
     - name: Freelance Motion Designer
       url: https://go.noidilin.dev/design
       startDate: 2020-10
@@ -112,18 +114,36 @@ content:
         - BIM & IFC Industry Open Standard
         - DaVinci Resolve Color Grading
   projects:
-    - name: eyeチェック (Client Project)
+    - name: Misegoto (Alion)
+      startDate: 2026-01
+      endDate:
+      summary: |
+        - 交付日本 B2B 平台的前端功能，串接餐飲店家與維修服務提供者，涵蓋管理後台與使用者端產品
+        - 以 Next.js 16 + React 19 重構管理後台，導入現代化元件系統、在地化路由、響應式 dashboard 版面與可擴展的資料流程
+        - 交付請求追蹤、發票處理、店家付款審核與維修方撥款執行等營運工具，包含匯出流程、批次操作與即時聊天支援
+        - 擴充網站端餐廳支付流程、收據 PDF 匯出、個人/銀行資料管理，並強化以角色為基礎的驗證與 session 體驗
+      keywords:
+        - Next.js
+        - TypeScript
+        - shadcn/ui
+        - Storybook
+        - Mantine
+        - React Query
+        - Zustand
+        - Firebase
+        - Localization
+        - B2B SaaS
+    - name: eyeチェック (Alion)
       # url: https://example.com # TODO: add public URL
-      startDate: 2025-11
+      startDate: 2025-10
       endDate:
       summary: |
         - 建置日語的 Next.js + React 測評平台前端，涵蓋註冊、測驗作答與報表
         - 實作 OTP 驗證與 session 處理，以控管付費流程與後台存取
-        - 交付 token 驅動的測驗（題目取得/作答/跳題/中止），並加入的 loading/error 狀態與 Zustand 狀態管理
-        - 交付報表體驗（分頁 + query params 深連結）與 PDF 匯出（react-pdf、CJK 字型、可重現檔名）
+        - 交付 token 驅動的測驗體驗（題目取得/作答/跳題/中止），並加入穩健的 loading/error 狀態與 Zustand 狀態管理
+        - 交付報表體驗（分頁與 query params 深連結）與 PDF 匯出（react-pdf、CJK 字型支援、可重現檔名）
       keywords:
         - Next.js
-        - React
         - TypeScript
         - Shadcn/ui
         - Zustand
@@ -132,7 +152,7 @@ content:
         - Axios
         - Sentry
         - React-PDF
-    - name: Everflow (Client Project)
+    - name: Everflow (Alion)
       startDate: 2025-12
       endDate:
       summary: |
@@ -145,16 +165,15 @@ content:
         - Vite
         - Pinia
         - Vue Router
-        - OpenAPI
     - name: Achroma Color Theme
       url: https://marketplace.visualstudio.com/items?itemName=noidilin.color-fatigue
       # description: aesthetic theme for applications
       startDate: 2025-03
       endDate:
       summary: |
-        - 設計一致的編輯器/終端配色主題，以柔和色調與清晰色階提升長時間閱讀舒適度
-        - 定義語法高亮配色，並確保在多種環境（VS Code、Neovim、CLI）呈現一致
-        - 開發多平台自動化建置與色彩同步流程
+        - 設計一致的編輯器/終端配色主題，以柔和色調與清晰明度層級提升長時間閱讀舒適度
+        - 定義語法高亮配色，並確保在多種環境（VS Code、Neovim、CLI）維持一致表現
+        - 開發程式化的多平台建置自動化與色盤同步流程
       keywords:
         - dotfiles
         - CLI Tools

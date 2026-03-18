@@ -76,22 +76,24 @@ content:
       endDate:
       position: Contract Front-End Engineer
       summary: |
-        - Shipped production frontend work across two products: eyeチェック (Next.js + React) and Everflow (Vue 3)
-        - Implemented authentication/session flows, protected paid/admin experiences, and resilient async UX (loading/error states)
-        - Delivered admin/dashboard features in a large Vue codebase (Pinia, OpenAPI-generated client), including searchable/filterable tables and safe action workflows; coordinated API integration and permissions
-        - Coordinated API integration via typed clients and ensured UI behavior was aligned with backend rules and permissions
+        - Participate frontend delivery across Misegoto’s admin dashboard and user-facing web app for a Japanese B2B repair marketplace
+        - Rewrote the admin platform on a modern stack (Next.js 16, React 19, Tailwind v4, shadcn/ui, Storybook), improving maintainability, type safety, and scalability for future feature work
+        - Shipped new admin workflows for requests, invoices, store payments, and repairer payouts, including searchable/filterable tables, CSV/PDF export, bank-account management, batch operations, and permission-aware actions
+        - Expanded the customer-facing web experience with payment flows, receipt/PDF generation, profile and bank-info management, inquiry/password-reset flows, and resilient auth/session handling
+        - Coordinated typed API integration, localization, and real-time messaging behavior to keep frontend UX aligned with backend rules and operational needs
       keywords:
         - Next.js
         - React
-        - Vue 3
         - TypeScript
-        - Zod
+        - Tailwind CSS
+        - shadcn/ui
+        - Storybook
+        - TanStack Query
         - Zustand
-        - Pinia
-        - OpenAPI
-        - Vite
+        - Firebase
+        - next-intl
         - Axios
-        - Sentry
+        - Snapdom
     - name: Freelance Motion Designer
       url: https://go.noidilin.dev/design
       startDate: 2020-10
@@ -112,9 +114,28 @@ content:
         - BIM & IFC Industry Open Standard
         - DaVinci Resolve Color Grading
   projects:
-    - name: eyeチェック (Client Project)
+    - name: Misegoto (Alion)
+      startDate: 2026-01
+      endDate:
+      summary: |
+        - Delivered frontend work for a Japanese B2B platform connecting restaurants with repair service providers across both admin and customer-facing products
+        - Rebuilt the admin dashboard with Next.js 16 + React 19, introducing a modern component system, localized routing, responsive dashboard layouts, and scalable data workflows
+        - Shipped operational tooling for request tracking, invoice handling, store-payment review, and repairer-payout execution, including export flows, batch actions, and real-time chat support
+        - Expanded the web app with restaurant payment journeys, receipt PDF export, profile/bank management, and stronger auth/session UX for role-based experiences
+      keywords:
+        - Next.js
+        - TypeScript
+        - shadcn/ui
+        - Storybook
+        - Mantine
+        - React Query
+        - Zustand
+        - Firebase
+        - Localization
+        - B2B SaaS
+    - name: eyeチェック (Alion)
       # url: https://example.com # TODO: add public URL
-      startDate: 2025-11
+      startDate: 2025-10
       endDate:
       summary: |
         - Built a Japanese Next.js + React assessment platform spanning registration, test-taking, and reporting
@@ -123,17 +144,15 @@ content:
         - Shipped reporting UX (deep-linked pagination) and PDF export via react-pdf (CJK font support, deterministic filenames)
       keywords:
         - Next.js
-        - React
         - TypeScript
         - Shadcn/ui
         - Zustand
-        - Context API
         - React Hook Form
         - Zod
         - Axios
         - Sentry
         - React-PDF
-    - name: Everflow (Client Project)
+    - name: Everflow (Alion)
       startDate: 2025-12
       endDate:
       summary: |
@@ -146,7 +165,6 @@ content:
         - Vite
         - Pinia
         - Vue Router
-        - OpenAPI
     - name: Achroma Color Theme
       url: https://marketplace.visualstudio.com/items?itemName=noidilin.color-fatigue
       # description: aesthetic theme for applications
