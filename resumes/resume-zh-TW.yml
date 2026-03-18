@@ -19,18 +19,13 @@ content:
     email: linganinja.0120@gmail.com
     url: https://go.noidilin.dev/blog
     summary: |
-      - 財務金融系畢業，轉型為網頁開發，具備紮實的分析思維與專案管理基礎
-      - 透過完成 50+ 件高精度的 3D 設計製作接案，累積穩定交付與製作能力
-      - 交付可擴展、以使用者為核心的解決方案，結合視覺清晰度與穩健的技術表現，支援多個高影響力專案
+      - 具財務背景的前端工程師，具備紮實的分析思維、系統推理能力與專案交付基礎
+      - 以現代 React 技術棧開發使用者產品與內部工具，重視可維護架構、可靠 UX 與可擴展的前端工作流程
+      - 擅長打造可維護介面，重視型別安全、在地化、響應式行為與穩定的使用者體驗
+      - 結合設計、動態影像與即時 3D 製作的跨領域經驗，打造具視覺清晰度與完成度的介面
   profiles:
     - network: GitHub
       url: https://go.noidilin.dev/github
-      username: noidilin
-    - network: YouTube
-      url: https://go.noidilin.dev/youtube
-      username: noidilin
-    - network: Instagram
-      url: https://go.noidilin.dev/instagram
       username: noidilin
   education:
     - institution: 國立臺灣大學
@@ -41,46 +36,65 @@ content:
       startDate: 2014-09
       endDate: 2019-06 # Leave endDate blank to indicate "Present"
       summary: |
-        - 使用 Python 進行商業、供應鏈與財務分析與自動化
-        - 以真實企業資料進行財務建模與風險分析，並為 2 份財務報告產出可執行的洞察
-        - 使用 SWOT、波特五力與 PEST 架構撰寫 10+ 份產業報告
+        - 將 Python 應用於商業、供應鏈與財務情境中的分析流程自動化
+        - 以真實企業資料進行財務建模與風險分析，產出可支援決策的報告
+        - 建立分析思維、結構化問題拆解能力與以資料為基礎的溝通方法
   skills:
     - name: Front-end
-      level: Intermediate # 'Novice' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Master'
+      level: Advanced # 'Novice' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Master'
       keywords:
         - HTML/CSS/JavaScript
         - TypeScript
         - React
-        - Next
+        - Next.js
         - SSR/SSG/ISR
-        - Shadcn/ui
-        - Three.js
-        - RWD
+        - shadcn/ui
+        - Responsive Design
+        - Accessibility
+    - name: State & Data
+      level: Advanced
+      keywords:
+        - TanStack Query
+        - Zustand
+        - React Hook Form
+        - Zod
+        - Axios
+        - Typed API Integration
+        - Localization
+    - name: UI Engineering
+      level: Advanced
+      keywords:
+        - Figma MCP
+        - Storybook
+        - Tailwind CSS
+        - Design Systems
+        - Component Architecture
+        - PDF / Export Workflows
     - name: DevOps
       level: Beginner
       keywords:
         - Linux
         - Docker
         - GitHub Actions
-    - name: Design
+    - name: Creative Technology
       level: Expert
       keywords:
-        - Figma
-        - Adobe Suite
+        - Three.js
         - Blender
         - Unreal Engine 5
         - Omniverse
+        - Motion Design
   work:
     - name: Alion Tech
       startDate: 2025-11
       endDate:
       position: Contract Front-End Engineer
       summary: |
-        - 參與日本 B2B 維修媒合平台 Misegoto 的管理後台與使用者端網站前端交付
-        - 以現代技術棧重構管理平台（Next.js 16、React 19、Tailwind v4、shadcn/ui、Storybook），提升可維護性、型別安全與後續擴充性
-        - 交付請求單、發票、店家付款與維修方撥款等後台流程，包含搜尋/篩選表格、CSV/PDF 匯出、銀行帳戶管理、批次操作與權限控管
-        - 擴充使用者端支付流程、收據/PDF 產生、個人資料與銀行資訊管理、詢問/重設密碼流程，以及更穩健的驗證與 session 體驗
-        - 協調型別化 API 串接、在地化與即時訊息行為，確保前端體驗符合後端規則與營運需求
+        - 為日本 B2B 產品交付管理後台與使用者端網站的前端功能
+        - 以 Next.js 16、React 19、Tailwind v4、shadcn/ui 與 Storybook 現代化管理平台，提升可維護性、型別安全與持續擴充能力
+        - 建置資料管理與金流營運相關後台流程，包含進階表格、CSV/PDF 匯出、批次操作、付款明細表單與權限感知互動
+        - 開發支付、帳號設定、客服詢問、密碼重設與收據/PDF 產生等使用者流程，並確保驗證與 session 體驗穩定可靠
+        - 整合型別化 API、在地化與即時訊息機制，讓複雜 UI 行為能持續對齊產品需求
       keywords:
         - Next.js
         - React
@@ -100,10 +114,10 @@ content:
       endDate:
       position: Real-time 3D & Motion Designer (Unreal/Blender) / Colorist
       summary: |
-        - 以 Blender + Unreal Engine 製作 real-time 3D 與互動式環境，包含動態互動與模擬系統，累積 15+ 件成功專案
-        - 以物理基礎光照與 ACES 色彩工作流程產出建築/產品視覺化內容，確保跨工具輸出一致性（3 件專案）
-        - 建立可重複使用的資產與渲染流程（程序化建模、shader nodes、自動化），提升效率並維持視覺品質
-        - 使用 DaVinci Resolve 進行調色與膠片模擬（film-print emulation），確保跨工具輸出一致性
+        - 在持續進行產品導向前端開發的同時，平行承接即時 3D、動態設計與調色專案
+        - 以 Blender 與 Unreal Engine 為 15+ 件接案專案建構即時 3D 場景與互動式環境
+        - 透過程序化建模、shader nodes 與自動化建立可重複使用的資產與渲染流程，提升製作效率
+        - 運用打光、色彩管理與視覺系統思維，交付完成度高且適合對客展示的輸出成果
       keywords:
         - Unreal Engine 5
         - Blender
@@ -114,51 +128,51 @@ content:
         - BIM & IFC Industry Open Standard
         - DaVinci Resolve Color Grading
   projects:
-    - name: Misegoto (Alion)
+    - name: Misegoto
       startDate: 2026-01
       endDate:
       summary: |
-        - 交付日本 B2B 平台的前端功能，串接餐飲店家與維修服務提供者，涵蓋管理後台與使用者端產品
-        - 以 Next.js 16 + React 19 重構管理後台，導入現代化元件系統、在地化路由、響應式 dashboard 版面與可擴展的資料流程
-        - 交付請求追蹤、發票處理、店家付款審核與維修方撥款執行等營運工具，包含匯出流程、批次操作與即時聊天支援
-        - 擴充網站端餐廳支付流程、收據 PDF 匯出、個人/銀行資料管理，並強化以角色為基礎的驗證與 session 體驗
+        - 以 Next.js 16 與 React 19 重構日本 B2B 管理後台，導入在地化路由、響應式版面與可重用 UI primitives
+        - 建置涵蓋篩選、匯出、批次操作與權限感知互動的進階表格流程，以支援高操作密度的營運場景
+        - 建立收據與文件產生流程，包含瀏覽器端 PDF 匯出與支付相關的使用者端介面
+        - 整合 Firebase 即時訊息與型別化 API 資料流，使營運工具保持即時、可預測且穩定
       keywords:
         - Next.js
         - TypeScript
         - shadcn/ui
         - Storybook
         - Mantine
-        - React Query
+        - TanStack Query
         - Zustand
         - Firebase
         - Localization
         - B2B SaaS
-    - name: eyeチェック (Alion)
+    - name: eyeチェック
       # url: https://example.com # TODO: add public URL
       startDate: 2025-10
       endDate:
       summary: |
-        - 建置日語的 Next.js + React 測評平台前端，涵蓋註冊、測驗作答與報表
-        - 實作 OTP 驗證與 session 處理，以控管付費流程與後台存取
-        - 交付 token 驅動的測驗體驗（題目取得/作答/跳題/中止），並加入穩健的 loading/error 狀態與 Zustand 狀態管理
-        - 交付報表體驗（分頁與 query params 深連結）與 PDF 匯出（react-pdf、CJK 字型支援、可重現檔名）
+        - 建置日語 Next.js 與 React 測評平台，涵蓋註冊、測驗作答與報表流程
+        - 實作 OTP 驗證與 session 處理，以支援付費使用者流程與後台存取控管
+        - 開發以 token 驅動的測驗互動，搭配穩健的 loading/error 狀態與 Zustand 狀態管理
+        - 建立報表檢視、深連結分頁與透過 react-pdf 匯出的 PDF 流程，並支援 CJK 字型與可重現檔名
       keywords:
         - Next.js
         - TypeScript
-        - Shadcn/ui
+        - shadcn/ui
         - Zustand
         - React Hook Form
         - Zod
         - Axios
         - Sentry
-        - React-PDF
-    - name: Everflow (Alion)
+        - react-pdf
+    - name: Everflow
       startDate: 2025-12
       endDate:
       summary: |
-        - 在大型 Vue 3 + TypeScript 後台（SFC + TSX、Pinia、OpenAPI 產生的 client）交付正式環境功能
-        - 建置優惠券操作工具（搜尋/排序/日期篩選/狀態控制），並加入權限控管與安全取消流程
-        - 交付顧客優惠券明細 UX（穩健的空狀態、在地化 vue-i18n），並透過型別化 API 對齊後端發券規則
+        - 在大型 Vue 3 與 TypeScript 管理後台中，以 SFC/TSX、Pinia 與自動產生的 OpenAPI client 交付正式環境功能
+        - 建置促銷活動營運工具，涵蓋搜尋、排序、日期篩選、狀態控制、權限控管與安全取消流程
+        - 開發顧客明細檢視，提供穩健的空狀態、vue-i18n 在地化與型別化 API 串接，維持一致的產品行為
       keywords:
         - Vue 3
         - TypeScript
@@ -171,12 +185,14 @@ content:
       startDate: 2025-03
       endDate:
       summary: |
-        - 設計一致的編輯器/終端配色主題，以柔和色調與清晰明度層級提升長時間閱讀舒適度
-        - 定義語法高亮配色，並確保在多種環境（VS Code、Neovim、CLI）維持一致表現
-        - 開發程式化的多平台建置自動化與色盤同步流程
+        - 設計編輯器與終端配色主題，以低飽和色相與清楚的明度層級提升長時間使用的可讀性
+        - 建立語法高亮系統，使其在 VS Code、Neovim 與 CLI 環境中維持視覺一致性
+        - 自動化多平台主題產生與色盤同步流程，降低維護與發佈成本
       keywords:
-        - dotfiles
-        - CLI Tools
+        - VS Code Extension
+        - Developer Tooling
+        - Design Tokens
+        - Theming Systems
   languages:
     - language: English
       fluency: Full Professional Proficiency
