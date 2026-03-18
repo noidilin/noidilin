@@ -19,9 +19,9 @@ content:
     email: linganinja.0120@gmail.com
     url: https://go.noidilin.dev/blog
     summary: |
-      - Finance graduate transitioning into web development with a strong foundation in analytical thinking and project management
-      - Gained expertise in 3D design production through the successful completion of 50+ high-precision freelance projects
-      - Delivered scalable, user-centered solutions that combined visual clarity with robust technical performance, contributing to multiple high-impact projects.
+      - Frontend engineer with a finance background and strong foundations in analytical thinking, systems reasoning, and project delivery
+      - Built user-facing products and internal tools with modern React-based stacks, focusing on maintainable architecture, reliable UX, and scalable frontend workflows
+      - Brings cross-disciplinary experience in design, motion, and real-time 3D production to create polished interfaces with strong visual clarity
   profiles:
     - network: GitHub
       url: https://go.noidilin.dev/github
@@ -41,9 +41,9 @@ content:
       startDate: 2014-09
       endDate: 2019-06 # Leave endDate blank to indicate "Present"
       summary: |
-        - Applied Python for business, supply chain, and finance analysis and automation
-        - Conducted financial modeling and risk analysis using real company data, delivering actionable insights for 2 financial reports
-        - Produced 10+ industry reports using SWOT, Porter’s Six Forces, and PEST frameworks
+        - Applied Python to automate analysis workflows across business, supply chain, and finance use cases
+        - Conducted financial modeling and risk analysis using real company data, contributing to 2 decision-oriented financial reports
+        - Produced 10+ industry research reports using SWOT, Porter’s Six Forces, and PEST frameworks
   skills:
     - name: Front-end
       level: Intermediate # 'Novice' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Master'
@@ -51,11 +51,11 @@ content:
         - HTML/CSS/JavaScript
         - TypeScript
         - React
-        - Next
+        - Next.js
         - SSR/SSG/ISR
-        - Shadcn/ui
+        - shadcn/ui
         - Three.js
-        - RWD
+        - Responsive Design
     - name: DevOps
       level: Beginner
       keywords:
@@ -76,11 +76,11 @@ content:
       endDate:
       position: Contract Front-End Engineer
       summary: |
-        - Participate frontend delivery across Misegoto’s admin dashboard and user-facing web app for a Japanese B2B repair marketplace
-        - Rewrote the admin platform on a modern stack (Next.js 16, React 19, Tailwind v4, shadcn/ui, Storybook), improving maintainability, type safety, and scalability for future feature work
-        - Shipped new admin workflows for requests, invoices, store payments, and repairer payouts, including searchable/filterable tables, CSV/PDF export, bank-account management, batch operations, and permission-aware actions
-        - Expanded the customer-facing web experience with payment flows, receipt/PDF generation, profile and bank-info management, inquiry/password-reset flows, and resilient auth/session handling
-        - Coordinated typed API integration, localization, and real-time messaging behavior to keep frontend UX aligned with backend rules and operational needs
+        - Delivered frontend features across admin dashboards and customer-facing web apps for Japanese B2B products
+        - Modernized an admin platform with Next.js 16, React 19, Tailwind v4, shadcn/ui, and Storybook, improving maintainability, type safety, and scalability for ongoing development
+        - Built admin workflows for data management and financial operations, including advanced tables, CSV/PDF export, batch actions, payment-detail forms, and permission-aware interactions
+        - Developed customer-facing flows for payments, account settings, support inquiries, password reset, and receipt/PDF generation with reliable auth and session handling
+        - Integrated typed APIs, localization, and real-time messaging to keep complex UI behavior consistent with product requirements
       keywords:
         - Next.js
         - React
@@ -100,10 +100,10 @@ content:
       endDate:
       position: Real-time 3D & Motion Designer (Unreal/Blender) / Colorist
       summary: |
-        - Built real-time 3D and interactive environments with Blender + Unreal Engine, including dynamic interactions and simulation systems in 15+ successful projects
-        - Produced architectural and product visuals using physically based lighting and ACES color workflows, ensuring consistent cross-tool output for 3 projects
-        - Developed repeatable asset/render pipelines (procedural modeling, shader nodes, automation) to reduce production time while maintaining visual fidelity
-        - Delivered color grading and film-print emulation in DaVinci Resolve to ensure consistent cross-tool output
+        - Built real-time 3D scenes and interactive environments with Blender and Unreal Engine for 15+ freelance projects
+        - Produced architectural and product visuals with physically based lighting and ACES color workflows for consistent cross-tool output
+        - Developed repeatable asset and rendering pipelines with procedural modeling, shader nodes, and automation to improve production efficiency
+        - Delivered color grading and film-print emulation in DaVinci Resolve to maintain visual consistency across final outputs
       keywords:
         - Unreal Engine 5
         - Blender
@@ -118,17 +118,17 @@ content:
       startDate: 2026-01
       endDate:
       summary: |
-        - Delivered frontend work for a Japanese B2B platform connecting restaurants with repair service providers across both admin and customer-facing products
-        - Rebuilt the admin dashboard with Next.js 16 + React 19, introducing a modern component system, localized routing, responsive dashboard layouts, and scalable data workflows
-        - Shipped operational tooling for request tracking, invoice handling, store-payment review, and repairer-payout execution, including export flows, batch actions, and real-time chat support
-        - Expanded the web app with restaurant payment journeys, receipt PDF export, profile/bank management, and stronger auth/session UX for role-based experiences
+        - Built frontend features for a Japanese B2B platform across both admin and customer-facing products
+        - Rebuilt the admin dashboard with Next.js 16 and React 19, introducing a reusable component system, localized routing, responsive layouts, and scalable data flows
+        - Implemented operational tooling with export workflows, batch actions, and real-time chat to support day-to-day platform operations
+        - Strengthened customer-facing UX with payment flows, receipt PDF export, account management, and role-aware auth/session behavior
       keywords:
         - Next.js
         - TypeScript
         - shadcn/ui
         - Storybook
         - Mantine
-        - React Query
+        - TanStack Query
         - Zustand
         - Firebase
         - Localization
@@ -138,27 +138,27 @@ content:
       startDate: 2025-10
       endDate:
       summary: |
-        - Built a Japanese Next.js + React assessment platform spanning registration, test-taking, and reporting
-        - Implemented OTP verification and session handling to gate paid flows and admin access
-        - Shipped token-driven test UX (question fetch/answer/skip/abort) with resilient loading/error states and Zustand-backed state
-        - Shipped reporting UX (deep-linked pagination) and PDF export via react-pdf (CJK font support, deterministic filenames)
+        - Built a Japanese Next.js and React assessment platform covering registration, test-taking, and reporting flows
+        - Implemented OTP verification and session handling for paid user journeys and admin access control
+        - Developed token-driven test interactions with resilient loading/error states and Zustand-based state management
+        - Built reporting views with deep-linked pagination and PDF export via react-pdf, including CJK font support and deterministic filenames
       keywords:
         - Next.js
         - TypeScript
-        - Shadcn/ui
+        - shadcn/ui
         - Zustand
         - React Hook Form
         - Zod
         - Axios
         - Sentry
-        - React-PDF
+        - react-pdf
     - name: Everflow (Alion)
       startDate: 2025-12
       endDate:
       summary: |
-        - Shipped production changes in a large Vue 3 + TypeScript admin dashboard (SFC/TSX, Pinia, generated OpenAPI client)
-        - Built coupon operations tooling (search/sort/date filters/status) with permission-gated actions and a safe cancellation workflow
-        - Delivered customer coupon detail UX with resilient empty states, localization (vue-i18n), and alignment with backend issuance rules via typed APIs
+        - Shipped production features in a large Vue 3 and TypeScript admin dashboard using SFC/TSX, Pinia, and a generated OpenAPI client
+        - Built admin tooling for promotional workflows with search, sort, date filters, status controls, permission-gated actions, and a safe cancellation flow
+        - Developed customer detail views with resilient empty states, localization via vue-i18n, and typed API integration for consistent product behavior
       keywords:
         - Vue 3
         - TypeScript
@@ -171,9 +171,9 @@ content:
       startDate: 2025-03
       endDate:
       summary: |
-        - Designed a cohesive editor/terminal color theme with muted hues and a clear tonal hierarchy for calm readability
-        - Defined a syntax highlighting palette that stays consistent across environments (VS Code, Neovim, CLI)
-        - Developed a programmatic approach for multi-platform build automation and palette synchronization
+        - Designed an editor and terminal color theme with muted hues and a clear tonal hierarchy for long-session readability
+        - Built a syntax highlighting system that stays visually consistent across VS Code, Neovim, and CLI environments
+        - Automated multi-platform theme generation and palette synchronization to streamline maintenance and releases
       keywords:
         - dotfiles
         - CLI Tools
