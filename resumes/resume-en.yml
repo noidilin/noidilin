@@ -1,15 +1,4 @@
-# yaml-language-server: $schema=https://yamlresume.dev/schema.json
-#
-# YAMLResume provides a builtin schema to validate resumes and help avoid lots
-# of low level mistakes.
-#
-# You need to install https://github.com/redhat-developer/yaml-language-server
-# in order to get the best editing experience in your choice of editor/IDE.
-#
-# ref:
-# - https://yamlresume.dev/docs/compiler/schema
-# - https://yamlresume.dev/docs/compiler/schema/json
-
+# yaml-language-server: $schema=../.schemas/yamlresume.schema.json
 ---
 content:
   basics:
@@ -49,32 +38,22 @@ content:
         - Next.js
         - SSR/SSG/ISR
         - shadcn/ui
-        - Responsive Design
-        - Accessibility
-    - name: State & Data
-      level: Advanced
-      keywords:
         - TanStack Query
         - Zustand
         - React Hook Form
         - Zod
         - Axios
-        - Typed API Integration
-        - Localization
-    - name: UI Engineering
+    - name: DevOps
       level: Advanced
       keywords:
-        - Figma MCP
-        - Storybook
-        - Tailwind CSS
-        - Design Systems
-        - Component Architecture
-        - PDF / Export Workflows
-    - name: DevOps
-      level: Beginner
-      keywords:
-        - Linux
+        - AWS
         - Docker
+        - Terraform
+        - GitOps
+        - Kubernetes
+        - Prometheus
+        - Grafana
+        - Argo CD
         - GitHub Actions
     - name: Creative Technology
       level: Expert
@@ -83,10 +62,9 @@ content:
         - Blender
         - Unreal Engine 5
         - Omniverse
-        - Motion Design
   work:
     - name: Alion Tech
-      startDate: 2025-11
+      startDate: 2025-10
       endDate:
       position: Contract Front-End Engineer
       summary: |
@@ -128,7 +106,27 @@ content:
         - BIM & IFC Industry Open Standard
         - DaVinci Resolve Color Grading
   projects:
+    - name: Hiraya DevOps Portfolio
+      url: https://hiraya.noidilin.dev
+      startDate: 2026-06
+      endDate:
+      summary: |
+        - Designed a cloud-native e-commerce app on AWS EKS, separating Project Bootstrap, Platform Core, Cluster Bootstrap, and GitOps ownership for reproducible rebuilds
+        - Built a Dockerized React, Node.js, and PostgreSQL microservices storefront with gateway, auth, catalog, order, and user services behind contract-tested API boundaries
+        - Automated delivery with GitHub Actions, ECR image promotion, Argo CD app-of-apps, and Kustomize manifests to move service releases through Git-owned desired state
+        - Implemented observability foundations with Prometheus, Grafana, and CloudWatch log forwarding for SRE diagnosis decision making
+      keywords:
+        - AWS EKS
+        - Terraform
+        - Kubernetes
+        - Argo CD
+        - GitHub Actions
+        - Docker
+        - Prometheus
+        - Grafana
+        - AWS CloudWatch
     - name: Misegoto
+      url: https://misegoto.jp
       startDate: 2026-01
       endDate:
       summary: |
@@ -148,7 +146,7 @@ content:
         - Localization
         - B2B SaaS
     - name: eyeチェック
-      # url: https://example.com # TODO: add public URL
+      url: https://eyecheck-bloodcell.com
       startDate: 2025-10
       endDate:
       summary: |
@@ -179,20 +177,6 @@ content:
         - Vite
         - Pinia
         - Vue Router
-    - name: Achroma Color Theme
-      url: https://marketplace.visualstudio.com/items?itemName=noidilin.color-fatigue
-      # description: aesthetic theme for applications
-      startDate: 2025-03
-      endDate:
-      summary: |
-        - Designed an editor and terminal color theme with muted hues and a clear tonal hierarchy for long-session readability
-        - Built a syntax highlighting system that stays visually consistent across VS Code, Neovim, and CLI environments
-        - Automated multi-platform theme generation and palette synchronization to streamline maintenance and releases
-      keywords:
-        - VS Code Extension
-        - Developer Tooling
-        - Design Tokens
-        - Theming Systems
   languages:
     - language: English
       fluency: Full Professional Proficiency
@@ -205,11 +189,13 @@ content:
       keywords:
         - Arch Linux (BTW)
         - Omarchy
+        - DevTools
         - Neovim
-    - name: Data Visualization
+    - name: Achroma Color Theme
       keywords:
-        - Three.js
-        - GSAP
+        - VS Code Extension
+        - Design Tokens
+        - Theming Systems
 locale:
   language: en
 layouts:
