@@ -32,17 +32,13 @@ content:
     - name: Front-end
       level: Advanced # 'Novice' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Master'
       keywords:
-        - HTML/CSS/JavaScript
         - TypeScript
         - React
         - Next.js
-        - SSR/SSG/ISR
         - shadcn/ui
         - TanStack Query
         - Zustand
-        - React Hook Form
         - Zod
-        - Axios
     - name: DevOps
       level: Advanced
       keywords:
@@ -68,11 +64,10 @@ content:
       endDate:
       position: Contract Front-End Engineer
       summary: |
-        - Delivered frontend features across admin dashboards and customer-facing web apps for Japanese B2B products
-        - Modernized an admin platform with Next.js 16, React 19, Tailwind v4, shadcn/ui, and Storybook, improving maintainability, type safety, and scalability for ongoing development
-        - Built admin workflows for data management and financial operations, including advanced tables, CSV/PDF export, batch actions, payment-detail forms, and permission-aware interactions
-        - Developed customer-facing flows for payments, account settings, support inquiries, password reset, and receipt/PDF generation with reliable auth and session handling
-        - Integrated typed APIs, localization, and real-time messaging to keep complex UI behavior consistent with product requirements
+        - Contributed to the modernization of Japanese B2B products by improving both admin and customer-facing experiences
+        - Helped the team move faster by creating reusable patterns, clearer implementation standards, and easier-to-review UI work
+        - Guided deployment planning by comparing cost-conscious environment strategies and aligning the final approach with team familiarity and project needs
+        - Improved customer-facing reliability across account, payment, support, password reset, receipt, and document-generation journeys
       keywords:
         - Next.js
         - React
@@ -106,8 +101,9 @@ content:
         - BIM & IFC Industry Open Standard
         - DaVinci Resolve Color Grading
   projects:
-    - name: Hiraya DevOps Portfolio
+    - name: Hiraya E-commerce
       url: https://hiraya.noidilin.dev
+      description: A cloud-native e-commerce platform built on AWS EKS
       startDate: 2026-06
       endDate:
       summary: |
@@ -127,6 +123,7 @@ content:
         - AWS CloudWatch
     - name: Misegoto
       url: https://misegoto.jp
+      description: A Japanese B2B platform connecting stores and repairers through trusted workflows
       startDate: 2026-01
       endDate:
       summary: |
@@ -145,8 +142,9 @@ content:
         - Firebase
         - Localization
         - B2B SaaS
-    - name: eyeチェック
+    - name: eye チェック
       url: https://eyecheck-bloodcell.com
+      description: A blood-cell recognition exam platform with reporting and personalized practice
       startDate: 2025-10
       endDate:
       summary: |
@@ -164,19 +162,6 @@ content:
         - Axios
         - Sentry
         - react-pdf
-    - name: Everflow
-      startDate: 2025-12
-      endDate:
-      summary: |
-        - Shipped production features in a large Vue 3 and TypeScript admin dashboard using SFC/TSX, Pinia, and a generated OpenAPI client
-        - Built admin tooling for promotional workflows with search, sort, date filters, status controls, permission-gated actions, and a safe cancellation flow
-        - Developed customer detail views with resilient empty states, localization via vue-i18n, and typed API integration for consistent product behavior
-      keywords:
-        - Vue 3
-        - TypeScript
-        - Vite
-        - Pinia
-        - Vue Router
   languages:
     - language: English
       fluency: Full Professional Proficiency
@@ -191,11 +176,7 @@ content:
         - Omarchy
         - DevTools
         - Neovim
-    - name: Achroma Color Theme
-      keywords:
-        - VS Code Extension
-        - Design Tokens
-        - Theming Systems
+        - Personal Theming Systems
 locale:
   language: en
 layouts:

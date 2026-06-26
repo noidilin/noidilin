@@ -1,15 +1,4 @@
-# yaml-language-server: $schema=https://yamlresume.dev/schema.json
-#
-# YAMLResume provides a builtin schema to validate resumes and help avoid lots
-# of low level mistakes.
-#
-# You need to install https://github.com/redhat-developer/yaml-language-server
-# in order to get the best editing experience in your choice of editor/IDE.
-#
-# ref:
-# - https://yamlresume.dev/docs/compiler/schema
-# - https://yamlresume.dev/docs/compiler/schema/json
-
+# yaml-language-server: $schema=../.schemas/yamlresume.schema.json
 ---
 content:
   basics:
@@ -43,38 +32,24 @@ content:
     - name: Front-end
       level: Advanced # 'Novice' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Master'
       keywords:
-        - HTML/CSS/JavaScript
         - TypeScript
         - React
         - Next.js
-        - SSR/SSG/ISR
         - shadcn/ui
-        - Responsive Design
-        - Accessibility
-    - name: State & Data
-      level: Advanced
-      keywords:
         - TanStack Query
         - Zustand
-        - React Hook Form
         - Zod
-        - Axios
-        - Typed API Integration
-        - Localization
-    - name: UI Engineering
+    - name: DevOps
       level: Advanced
       keywords:
-        - Figma MCP
-        - Storybook
-        - Tailwind CSS
-        - Design Systems
-        - Component Architecture
-        - PDF / Export Workflows
-    - name: DevOps
-      level: Beginner
-      keywords:
-        - Linux
+        - AWS
         - Docker
+        - Terraform
+        - GitOps
+        - Kubernetes
+        - Prometheus
+        - Grafana
+        - Argo CD
         - GitHub Actions
     - name: Creative Technology
       level: Expert
@@ -83,18 +58,16 @@ content:
         - Blender
         - Unreal Engine 5
         - Omniverse
-        - Motion Design
   work:
     - name: Alion Tech
-      startDate: 2025-11
+      startDate: 2025-10
       endDate:
       position: Contract Front-End Engineer
       summary: |
-        - 為日本 B2B 產品交付管理後台與使用者端網站的前端功能
-        - 以 Next.js 16、React 19、Tailwind v4、shadcn/ui 與 Storybook 現代化管理平台，提升可維護性、型別安全與持續擴充能力
-        - 建置資料管理與金流營運相關後台流程，包含進階表格、CSV/PDF 匯出、批次操作、付款明細表單與權限感知互動
-        - 開發支付、帳號設定、客服詢問、密碼重設與收據/PDF 產生等使用者流程，並確保驗證與 session 體驗穩定可靠
-        - 整合型別化 API、在地化與即時訊息機制，讓複雜 UI 行為能持續對齊產品需求
+        - 協助日本 B2B 產品現代化，改善管理後台與使用者端體驗
+        - 透過建立可重用模式、更清楚的實作標準與更易審查的 UI 工作流程，提升團隊開發速度
+        - 比較具成本意識的環境策略並依團隊熟悉度與專案需求調整最終方案，協助部署規劃
+        - 改善帳號、支付、客服、密碼重設、收據與文件產生等使用者流程的可靠性
       keywords:
         - Next.js
         - React
@@ -128,7 +101,29 @@ content:
         - BIM & IFC Industry Open Standard
         - DaVinci Resolve Color Grading
   projects:
+    - name: Hiraya E-commerce
+      url: https://hiraya.noidilin.dev
+      description: 建置於 AWS EKS 的雲端原生電商平台
+      startDate: 2026-06
+      endDate:
+      summary: |
+        - 在 AWS EKS 上設計雲端原生電商應用，分離 Project Bootstrap、Platform Core、Cluster Bootstrap 與 GitOps 權責，以支援可重現的環境重建
+        - 建置 Docker 化的 React、Node.js 與 PostgreSQL 微服務店面，透過 gateway、auth、catalog、order 與 user services 建立具契約測試邊界的 API 架構
+        - 以 GitHub Actions、ECR image promotion、Argo CD app-of-apps 與 Kustomize manifests 自動化交付，讓服務發布透過 Git 管理的 desired state 推進
+        - 建立 Prometheus、Grafana 與 CloudWatch log forwarding 等可觀測性基礎，支援 SRE 診斷與決策
+      keywords:
+        - AWS EKS
+        - Terraform
+        - Kubernetes
+        - Argo CD
+        - GitHub Actions
+        - Docker
+        - Prometheus
+        - Grafana
+        - AWS CloudWatch
     - name: Misegoto
+      url: https://misegoto.jp
+      description: 連結店家與維修商的日本 B2B 平台，支援可信任的協作流程
       startDate: 2026-01
       endDate:
       summary: |
@@ -147,8 +142,9 @@ content:
         - Firebase
         - Localization
         - B2B SaaS
-    - name: eyeチェック
-      # url: https://example.com # TODO: add public URL
+    - name: eye チェック
+      url: https://eyecheck-bloodcell.com
+      description: 具備報表與個人化練習建議的血球辨識測驗平台
       startDate: 2025-10
       endDate:
       summary: |
@@ -166,33 +162,6 @@ content:
         - Axios
         - Sentry
         - react-pdf
-    - name: Everflow
-      startDate: 2025-12
-      endDate:
-      summary: |
-        - 在大型 Vue 3 與 TypeScript 管理後台中，以 SFC/TSX、Pinia 與自動產生的 OpenAPI client 交付正式環境功能
-        - 建置促銷活動營運工具，涵蓋搜尋、排序、日期篩選、狀態控制、權限控管與安全取消流程
-        - 開發顧客明細檢視，提供穩健的空狀態、vue-i18n 在地化與型別化 API 串接，維持一致的產品行為
-      keywords:
-        - Vue 3
-        - TypeScript
-        - Vite
-        - Pinia
-        - Vue Router
-    - name: Achroma Color Theme
-      url: https://marketplace.visualstudio.com/items?itemName=noidilin.color-fatigue
-      # description: aesthetic theme for applications
-      startDate: 2025-03
-      endDate:
-      summary: |
-        - 設計編輯器與終端配色主題，以低飽和色相與清楚的明度層級提升長時間使用的可讀性
-        - 建立語法高亮系統，使其在 VS Code、Neovim 與 CLI 環境中維持視覺一致性
-        - 自動化多平台主題產生與色盤同步流程，降低維護與發佈成本
-      keywords:
-        - VS Code Extension
-        - Developer Tooling
-        - Design Tokens
-        - Theming Systems
   languages:
     - language: English
       fluency: Full Professional Proficiency
@@ -205,11 +174,9 @@ content:
       keywords:
         - Arch Linux (BTW)
         - Omarchy
+        - DevTools
         - Neovim
-    - name: Data Visualization
-      keywords:
-        - Three.js
-        - GSAP
+        - Personal Theming Systems
 
 locale:
   language: zh-hant-tw
