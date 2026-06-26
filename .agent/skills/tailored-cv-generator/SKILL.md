@@ -1,6 +1,6 @@
 ---
 name: tailored-cv-generator
-description: Generates job-specific cover letters from a target job description and an existing resume, emphasizing credible frontend-engineer fit
+description: Generates concise job-specific cover letters from a target job description and an existing resume, emphasizing credible frontend-engineer fit
 ---
 
 # Tailored CV Generator
@@ -20,7 +20,7 @@ description: Generates job-specific cover letters from a target job description 
 3. **Builds A Focused Narrative**: Selects 2 to 4 of the strongest proof points and turns them into a coherent cover letter
 4. **Optimizes Relevance**: Uses role-relevant language and keywords naturally, without sounding templated
 5. **Handles Gaps Honestly**: Reframes adjacent or transferable experience when direct matches are limited
-6. **Produces Application-Ready Copy**: Returns a polished cover letter, with optional shorter or more formal variants
+6. **Produces Application-Ready Copy**: Returns a polished, concise cover letter, with optional variants only when requested
 
 ## Default Workflow
 
@@ -31,7 +31,7 @@ When a user requests a job-specific CV letter:
 3. Select the strongest matching experience, skills, and achievements
 4. Build a letter around concrete evidence instead of generic enthusiasm
 5. Return a polished cover letter tailored to that role only
-6. Optionally add brief notes on gaps, talking points, or alternative emphasis choices
+6. Add notes, variants, or talking points only if the user explicitly asks for them
 
 ## Inputs This Skill Expects
 
@@ -95,33 +95,32 @@ For each important requirement:
 
 Default structure:
 
-### Opening
+### Paragraph 1
 
 - Name the role and company
 - State the strongest high-level reason the candidate fits
 - Ground interest in product, scope, or role shape rather than generic praise
 
-### Body Paragraph 1
+### Paragraph 2
 
-- Lead with the most aligned experience
-- Connect the user's work to the employer's likely needs
-- Mention concrete systems, workflows, or product surfaces when useful
+- Lead with the most aligned evidence from recent work or projects
+- Connect that evidence to the employer's likely needs
+- Use one or two concrete systems, workflows, or product surfaces at most
 
-### Body Paragraph 2
-
-- Add a second differentiator, such as design systems, localization, admin tooling, dashboards, auth/session flows, or customer-facing UX
-- Show how this differentiator improves delivery quality, maintainability, or user outcomes
-
-### Closing
+### Paragraph 3
 
 - Reinforce fit in one sentence
 - Express interest in discussing how the candidate can contribute
-- Keep the close professional and concise
+- Keep the close brief and professional
+
+Prefer three short paragraphs by default. Add a fourth paragraph only when the user explicitly asks for a longer version.
 
 ## Tone And Length
 
 - Default to a concise professional cover letter
-- Aim for roughly 250 to 400 words unless the user requests otherwise
+- Aim for roughly 150 to 220 words unless the user requests otherwise
+- Prefer three short paragraphs over a comprehensive multi-paragraph narrative
+- Prioritize clarity, specificity, and relevance over completeness
 - Sound specific and thoughtful, not theatrical or overly formal
 - Match the company tone when the job description strongly suggests it, while preserving credibility
 
@@ -133,18 +132,21 @@ Default structure:
 - Do not overemphasize unrelated experience that weakens the frontend narrative
 - Do not overclaim seniority, leadership scope, or domain expertise
 - Do not write a vague letter that could be sent to any employer
+- Do not exceed 220 words by default
+- Do not append meta commentary, analysis, or proof-point notes unless requested
 
 ## Output Format
 
 Default output should include:
 
 1. A tailored cover letter in plain prose
-2. A brief note on the main evidence used to shape the letter
-3. Optional alternatives such as:
-   - shorter version
-   - more formal version
-   - more technical version
-   - interview talking points derived from the letter
+
+Only include extras when explicitly requested, such as:
+- a shorter version
+- a more formal version
+- a more technical version
+- interview talking points derived from the letter
+- a brief note on the main evidence used to shape the letter
 
 ## Example
 
@@ -170,11 +172,9 @@ Use my existing YAMLResume as the source of truth.
 ```text
 Dear Hiring Team,
 
-I am applying for the Frontend Engineer role at ExampleSoft. My background aligns closely with the combination of customer-facing product work, internal operational tooling, and modern React development described in the role. I currently build frontend features across admin dashboards and user-facing applications using React, Next.js, TypeScript, and typed API integrations, with a strong focus on maintainable architecture and reliable UX.
+I am applying for the Frontend Engineer role at ExampleSoft. My background aligns well with your mix of customer-facing product work, internal dashboard improvements, and modern React and TypeScript development. I currently build frontend features across user-facing flows and operational tools with a focus on maintainable architecture, typed API integration, and reliable UX.
 
-In recent work, I have delivered both operational and customer-facing product flows, including data management interfaces, payment-related experiences, account settings, support flows, and export workflows. That mix of responsibilities has required balancing implementation detail with broader product concerns such as auth and session handling, localization, responsive layouts, and consistency across complex UI states. It also matches well with your emphasis on improving dashboards while continuing to strengthen the customer experience.
-
-I would also bring a cross-disciplinary perspective shaped by design and visual production work, which helps me build interfaces with strong usability and clarity while still keeping engineering quality high. I value close collaboration with design, product, and backend partners, and I am comfortable turning product requirements into frontend systems that are scalable, predictable, and easy to extend.
+In recent work, I have delivered dashboards, account and support flows, and export-oriented workflows that required close collaboration with product, design, and backend partners. That experience maps well to your need for someone who can improve internal operations while continuing to strengthen the customer experience.
 
 I would welcome the opportunity to discuss how I could contribute to ExampleSoft's frontend platform and product experience.
 
@@ -190,7 +190,7 @@ Sincerely,
 
 ## Strategic Recommendations
 
-After producing the letter, optionally include:
+After producing the letter, optionally include these only when requested:
 
 - **Strongest Proof Points**: The 2 to 4 pieces of evidence carrying the application
 - **Gap Notes**: Requirements that are only partially covered and how to frame them honestly
@@ -201,7 +201,7 @@ After producing the letter, optionally include:
 
 - Use the resume as evidence, not as text to be copied
 - Build the letter around relevance, not completeness
-- Prefer two strong examples over six shallow claims
+- Prefer one or two strong examples over a long list of shallow claims
 - Keep the role/company references specific enough that the letter feels genuinely tailored
 - Preserve the candidate's established voice and market positioning
 - If the job description is weak or vague, infer priorities carefully and state assumptions through the letter's emphasis rather than explicit caveats
