@@ -8,10 +8,10 @@ content:
     email: linganinja.0120@gmail.com
     url: https://go.noidilin.dev/blog
     summary: |
-      - 具財務背景的前端工程師，具備紮實的分析思維、系統推理能力與專案交付基礎
-      - 以現代 React 技術棧開發使用者產品與內部工具，重視可維護架構、可靠 UX 與可擴展的前端工作流程
-      - 擅長打造可維護介面，重視型別安全、在地化、響應式行為與穩定的使用者體驗
-      - 結合設計、動態影像與即時 3D 製作的跨領域經驗，打造具視覺清晰度與完成度的介面
+      - 具財務背景的前端工程師，將分析思維、系統推理與交付紀律帶入產品與平台工作
+      - 建構 React/Next.js 產品，同時延伸至 AWS、Terraform、Kubernetes、GitOps、CI/CD 與可觀測性工作流程
+      - 以清楚邊界、可重現流程與營運可視性設計系統，讓團隊能更有信心地理解與推進變更
+      - 串接產品端實作與 DevOps 實務，建立易審查的工作流程、可重用標準與更容易由團隊維運的系統
   profiles:
     - network: GitHub
       url: https://go.noidilin.dev/github
@@ -62,12 +62,12 @@ content:
     - name: Alion Tech
       startDate: 2025-10
       endDate:
-      position: Contract Front-End Engineer
+      position: Front-End Engineer
       summary: |
         - 協助日本 B2B 產品現代化，改善管理後台與使用者端體驗
-        - 透過建立可重用模式、更清楚的實作標準與更易審查的 UI 工作流程，提升團隊開發速度
-        - 比較具成本意識的環境策略並依團隊熟悉度與專案需求調整最終方案，協助部署規劃
-        - 改善帳號、支付、客服、密碼重設、收據與文件產生等使用者流程的可靠性
+        - 在身分驗證、付款、發票與文件等 4 個使用者流程中標準化可重用前端模式，並以 Fallow CLI duplication checks 維持 5% 最高重複率門檻
+        - 比較具成本意識的環境策略並依團隊熟悉度調整最終方案，降低部署實作的不確定性
+        - 透過更清楚的實作標準、型別化資料流與共享可重用模式，讓 UI 工作更容易審查與延伸
       keywords:
         - Next.js
         - React
@@ -89,8 +89,8 @@ content:
       summary: |
         - 在持續進行產品導向前端開發的同時，平行承接即時 3D、動態設計與調色專案
         - 以 Blender 與 Unreal Engine 為 15+ 件接案專案建構即時 3D 場景與互動式環境
-        - 透過程序化建模、shader nodes 與自動化建立可重複使用的資產與渲染流程，提升製作效率
-        - 運用打光、色彩管理與視覺系統思維，交付完成度高且適合對客展示的輸出成果
+        - 建立 AI 輔助渲染流程，結合較低解析度／較少採樣輸出、AI 放大、AI 降噪與光流影格插補，將渲染時間最多縮短 85%
+        - 運用打光、色彩管理、DWAB EXR 工作流程與視覺系統思維，為對客輸出保留最大的後製彈性
       keywords:
         - Unreal Engine 5
         - Blender
@@ -102,14 +102,14 @@ content:
         - DaVinci Resolve Color Grading
   projects:
     - name: Hiraya E-commerce
-      url: https://hiraya.noidilin.dev
+      url: https://lazyhiraya.noidilin.dev
       description: 建置於 AWS EKS 的雲端原生電商平台
       startDate: 2026-06
       endDate:
       summary: |
-        - 在 AWS EKS 上設計雲端原生電商應用，分離 Project Bootstrap、Platform Core、Cluster Bootstrap 與 GitOps 權責，以支援可重現的環境重建
-        - 建置 Docker 化的 React、Node.js 與 PostgreSQL 微服務店面，透過 gateway、auth、catalog、order 與 user services 建立具契約測試邊界的 API 架構
-        - 以 GitHub Actions、ECR image promotion、Argo CD app-of-apps 與 Kustomize manifests 自動化交付，讓服務發布透過 Git 管理的 desired state 推進
+        - 設計雲端原生 AWS EKS 平台，結合 Terraform 管理的基礎設施、bootstrap 權責邊界與 GitOps 工作流程，以支援可重現重建
+        - 建置由 5 個服務組成的微服務店面，透過閘道、身分驗證、商品目錄、訂單與使用者服務建立具契約測試邊界的 API 架構，釐清服務權責與整合點
+        - 透過 GitHub Actions、Terraform、ECR image promotion、Argo CD 與 Kustomize 自動化完整 AWS EKS 平台部署與銷毀，降低手動平台建置成本
         - 建立 Prometheus、Grafana 與 CloudWatch log forwarding 等可觀測性基礎，支援 SRE 診斷與決策
       keywords:
         - AWS EKS
@@ -129,8 +129,8 @@ content:
       summary: |
         - 以 Next.js 16 與 React 19 重構日本 B2B 管理後台，導入在地化路由、響應式版面與可重用 UI primitives
         - 建置涵蓋篩選、匯出、批次操作與權限感知互動的進階表格流程，以支援高操作密度的營運場景
-        - 建立收據與文件產生流程，包含瀏覽器端 PDF 匯出與支付相關的使用者端介面
-        - 整合 Firebase 即時訊息與型別化 API 資料流，使營運工具保持即時、可預測且穩定
+        - 交付 3 個交易導向 UI／文件流程：付款、收據輸出與文件輸出，並以型別化 API 處理維持管理端與使用者端操作的可預測性
+        - 建立型別化 API 資料流與前端狀態模式，讓營運工具更易維護與審查
       keywords:
         - Next.js
         - TypeScript
@@ -148,7 +148,7 @@ content:
       startDate: 2025-10
       endDate:
       summary: |
-        - 建置日語 Next.js 與 React 測評平台，涵蓋註冊、測驗作答與報表流程
+        - 建置 3 個核心產品流程：註冊、測驗作答與報表，支援日語 Next.js 與 React 測驗平台
         - 實作 OTP 驗證與 session 處理，以支援付費使用者流程與後台存取控管
         - 開發以 token 驅動的測驗互動，搭配穩健的 loading/error 狀態與 Zustand 狀態管理
         - 建立報表檢視、深連結分頁與透過 react-pdf 匯出的 PDF 流程，並支援 CJK 字型與可重現檔名

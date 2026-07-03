@@ -8,10 +8,10 @@ content:
     email: linganinja.0120@gmail.com
     url: https://go.noidilin.dev/blog
     summary: |
-      - Frontend engineer with a finance background and strong foundations in analytical thinking, systems reasoning, and project delivery
-      - Built user-facing products and internal tools with modern React-based stacks, focusing on maintainable architecture, reliable UX, and scalable frontend workflows
-      - Develops maintainable interfaces with strong attention to type safety, localization, responsive behavior, and reliable UX
-      - Brings cross-disciplinary experience in design, motion, and real-time 3D production to create polished interfaces with strong visual clarity
+      - Frontend engineer with a finance background, bringing analytical thinking, systems reasoning, and delivery discipline to product and platform work
+      - Builds React/Next.js products while extending ownership into AWS, Terraform, Kubernetes, GitOps, CI/CD, and observability workflows
+      - Designs systems with clear boundaries, reproducible workflows, and operational visibility so teams can reason about changes confidently
+      - Connects product-facing implementation with DevOps practices, creating reviewable workflows, reusable standards, and systems that are easier for teams to operate
   profiles:
     - network: GitHub
       url: https://go.noidilin.dev/github
@@ -62,12 +62,12 @@ content:
     - name: Alion Tech
       startDate: 2025-10
       endDate:
-      position: Contract Front-End Engineer
+      position: Front-End Engineer
       summary: |
         - Contributed to the modernization of Japanese B2B products by improving both admin and customer-facing experiences
-        - Helped the team move faster by creating reusable patterns, clearer implementation standards, and easier-to-review UI work
-        - Guided deployment planning by comparing cost-conscious environment strategies and aligning the final approach with team familiarity and project needs
-        - Improved customer-facing reliability across account, payment, support, password reset, receipt, and document-generation journeys
+        - Standardized reusable frontend patterns across 4 customer-facing journeys — auth, payment, invoice, and document — backed by Fallow CLI duplication checks with a 5% maximum threshold
+        - Guided deployment planning by comparing cost-conscious environment strategies and aligning the final approach with team familiarity, reducing implementation ambiguity
+        - Made UI work easier to review and extend through clearer implementation standards, typed data flows, and shared reusable patterns
       keywords:
         - Next.js
         - React
@@ -89,8 +89,8 @@ content:
       summary: |
         - Delivered freelance real-time 3D, motion, and color work in parallel with product-focused frontend development
         - Built real-time 3D scenes and interactive environments with Blender and Unreal Engine for 15+ freelance projects
-        - Developed repeatable asset and rendering pipelines with procedural modeling, shader nodes, and automation to improve production efficiency
-        - Applied lighting, color management, and visual-system thinking to produce polished client-facing outputs
+        - Developed AI-assisted rendering pipelines with lower-resolution/lower-sample passes, AI upscaling, AI denoising, and optical-flow frame interpolation, cutting render time by up to 85%
+        - Applied lighting, color management, DWAB EXR workflows, and visual-system thinking to preserve maximum post-production flexibility for client-facing outputs
       keywords:
         - Unreal Engine 5
         - Blender
@@ -102,14 +102,14 @@ content:
         - DaVinci Resolve Color Grading
   projects:
     - name: Hiraya E-commerce
-      url: https://hiraya.noidilin.dev
+      url: https://lazyhiraya.noidilin.dev
       description: A cloud-native e-commerce platform built on AWS EKS
       startDate: 2026-06
       endDate:
       summary: |
-        - Designed a cloud-native e-commerce app on AWS EKS, separating Project Bootstrap, Platform Core, Cluster Bootstrap, and GitOps ownership for reproducible rebuilds
-        - Built a Dockerized React, Node.js, and PostgreSQL microservices storefront with gateway, auth, catalog, order, and user services behind contract-tested API boundaries
-        - Automated delivery with GitHub Actions, ECR image promotion, Argo CD app-of-apps, and Kustomize manifests to move service releases through Git-owned desired state
+        - Designed a cloud-native AWS EKS platform with Terraform-managed infrastructure, bootstrap ownership boundaries, and GitOps workflows for reproducible rebuilds
+        - Built a 5-service microservices storefront with gateway, auth, catalog, order, and user services behind contract-tested API boundaries, clarifying service ownership and integration points
+        - Automated full AWS EKS platform deploy/destroy through GitHub Actions, Terraform, ECR image promotion, Argo CD, and Kustomize to reduce manual platform setup
         - Implemented observability foundations with Prometheus, Grafana, and CloudWatch log forwarding for SRE diagnosis decision making
       keywords:
         - AWS EKS
@@ -129,8 +129,8 @@ content:
       summary: |
         - Rebuilt a Japanese B2B admin dashboard with Next.js 16 and React 19 using localized routing, responsive layouts, and reusable UI primitives
         - Implemented advanced table workflows with filtering, export, batch actions, and permission-aware interactions for operations-heavy use cases
-        - Built receipt and document generation flows, including browser-side PDF export and payment-related UI for customer-facing journeys
-        - Integrated Firebase-backed real-time messaging and typed API data flows to keep operational tooling responsive and predictable
+        - Delivered 3 transaction-facing UI/document flows for payment, receipt output, and document output with typed API handling to keep admin/customer operations predictable
+        - Built typed API data flows and frontend state patterns to make operational tooling more maintainable and easier to review
       keywords:
         - Next.js
         - TypeScript
@@ -148,7 +148,7 @@ content:
       startDate: 2025-10
       endDate:
       summary: |
-        - Built a Japanese Next.js and React assessment platform covering registration, test-taking, and reporting flows
+        - Built 3 core product flows — registration, assessment, and reporting — for a Japanese Next.js and React exam platform
         - Implemented OTP verification and session handling for paid user journeys and admin access control
         - Developed token-driven test interactions with resilient loading/error states and Zustand-based state management
         - Built reporting views with deep-linked pagination and PDF export via react-pdf, including CJK font support and deterministic filenames
