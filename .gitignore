@@ -3,7 +3,7 @@ resumes/**.tex
 # resumes/**.pdf
 
 # cv letters
-cv-letters/
+cover-letters/done
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
