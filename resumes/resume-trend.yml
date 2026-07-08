@@ -1,0 +1,195 @@
+# yaml-language-server: $schema=../.schemas/yamlresume.schema.json
+---
+content:
+  basics:
+    name: Jia-Long Lin
+    phone: "(886) 929-054-136"
+    email: linganinja.0120@gmail.com
+    url: https://go.noidilin.dev/blog
+    summary: |
+      - Full-cycle cloud/web engineer with frontend roots, AWS SAA certification, and hands-on AWS EKS, Terraform, Kubernetes, GitOps, CI/CD, and observability project experience
+      - Builds product-facing features while expanding ownership into cloud-native deployment, service boundaries, container workflows, testing, release automation, and operational visibility
+      - Comfortable with Linux CLI, container networking, Kubernetes networking basics, AWS architecture fundamentals, and web development/debug/test workflows
+      - Uses AI-assisted engineering workflows responsibly for planning, implementation, testing, debugging, documentation, and review preparation while preserving human ownership of final decisions
+  profiles:
+    - network: GitHub
+      url: https://go.noidilin.dev/github
+      username: noidilin
+  certificates:
+    - name: AWS Certified Solutions Architect – Associate
+      issuer: Amazon Web Services
+      date: "2026"
+  skills:
+    - name: Cloud & Infrastructure
+      level: Advanced
+      keywords:
+        - AWS
+        - AWS EKS
+        - AWS ECS
+        - Terraform
+        - Kubernetes
+        - Docker
+        - GitHub Actions
+        - Argo CD
+        - Kustomize
+        - Container networking
+        - Kubernetes networking basics
+    - name: Software Engineering
+      level: Advanced
+      keywords:
+        - TypeScript
+        - Node.js
+        - React
+        - Next.js
+        - Python scripting
+        - REST APIs
+        - Vitest
+        - React Testing Library
+        - Playwright
+    - name: Observability & Operations
+      level: Intermediate
+      keywords:
+        - Prometheus
+        - Grafana
+        - AWS CloudWatch
+        - CloudWatch Logs
+        - GitOps
+        - CI/CD
+        - Linux basics
+        - Deployment troubleshooting
+    - name: AI-Native Engineering
+      level: Advanced
+      keywords:
+        - AI-assisted development
+        - Context engineering
+        - Agent workflows
+        - AI PR review
+        - GitHub Actions agentic workflows
+        - Amazon Bedrock Knowledge Base
+        - RAG
+  work:
+    - name: Alion Tech
+      startDate: 2025-10
+      endDate:
+      position: Front-End Engineer
+      summary: |
+        - Contributed to modernization of Japanese B2B products by improving admin and customer-facing experiences with Next.js, React, TypeScript, and reusable implementation standards
+        - Standardized frontend patterns across 4 customer-facing journeys — auth, payment, invoice, and document — backed by Fallow CLI duplication checks with a 5% maximum threshold
+        - Supported deployment planning and environment strategy discussions across AWS Amplify and EC2-based workflows, connecting product implementation with practical release constraints
+        - Built typed API data flows, resilient loading/error states, and reviewable frontend architecture for operations-heavy admin and customer workflows
+        - Used AI-assisted development practices for implementation planning, debugging hypotheses, documentation, and review preparation while keeping final integration decisions human-owned
+      keywords:
+        - Next.js
+        - React
+        - TypeScript
+        - Node.js
+        - Tailwind CSS
+        - shadcn/ui
+        - Storybook
+        - TanStack Query
+        - Zustand
+        - AWS Amplify
+    - name: Freelance Motion Designer
+      url: https://go.noidilin.dev/design
+      startDate: 2020-10
+      endDate:
+      position: Real-time 3D & AI Workflow Designer
+      summary: |
+        - Delivered real-time 3D and motion projects while building AI-assisted rendering workflows using upscaling, denoising, and optical-flow frame interpolation to reduce iteration time by up to 85%
+      keywords:
+        - Unreal Engine 5
+        - Blender
+        - Omniverse
+        - AI-assisted Rendering
+        - Workflow Automation
+  projects:
+    - name: Hiraya E-commerce
+      url: https://lazyhiraya.noidilin.dev
+      description: Public cloud-native AWS EKS demonstration platform and recruiter-facing project site
+      startDate: 2026-06
+      endDate:
+      summary: |
+        - Built a 5-service cloud-native demonstration platform to exercise service boundaries, API contracts, Dockerized services, CI/CD, GitOps delivery, and observability on AWS EKS
+        - Automated AWS EKS platform deploy/destroy workflows with Terraform, GitHub Actions, ECR image promotion, Argo CD, and Kustomize for reproducible rebuilds
+        - Implemented observability foundations with Prometheus, Grafana to support service diagnosis and operational visibility
+        - Added AI PR code review and a GitHub Actions agentic documentation workflow so implementation changes can trigger reviewable updates to source documents used by the project knowledge base
+        - Built a recruiter-facing static site with diagrams, interactions, public repo links, and a RAG chatbot powered by Amazon Bedrock Knowledge Base to explain the architecture and decisions
+      keywords:
+        - AWS EKS
+        - Terraform
+        - Kubernetes
+        - Docker
+        - Argo CD
+        - GitHub Actions
+        - Kustomize
+        - Prometheus
+        - Grafana
+        - CloudWatch
+        - Amazon Bedrock Knowledge Base
+    - name: pi-noid AI-Native Workflow Extensions
+      url: https://github.com/noidilin/pi-noid
+      description: Public TypeScript monorepo for personal AI-agent workflow extensions
+      startDate: 2026-04
+      endDate:
+      summary: |
+        - Built custom pi extensions for loop-based AI-agent workflows, herdr orchestration, and skill management, turning daily development practices into reusable TypeScript tooling
+        - Applied explicit context management, CLI/MCP/tool-routing decisions, and human review gates to keep AI-assisted implementation, testing, debugging, and documentation workflows reliable
+      keywords:
+        - TypeScript
+        - AI agents
+        - Context engineering
+        - Loop engineering
+        - CLI tooling
+        - MCP
+    - name: Misegoto
+      url: https://misegoto.jp
+      description: Japanese B2B platform connecting stores and repairers through trusted workflows
+      startDate: 2026-01
+      endDate:
+      summary: |
+        - Rebuilt a Japanese B2B admin dashboard with Next.js 16 and React 19 using localized routing, responsive layouts, and reusable UI primitives
+        - Implemented advanced table workflows with filtering, export, batch actions, permission-aware interactions, and typed API handling for operations-heavy use cases
+        - Delivered transaction-facing payment, receipt, and document flows while keeping frontend state and API integration predictable for review and maintenance
+      keywords:
+        - Next.js
+        - TypeScript
+        - React
+        - TanStack Query
+        - Zustand
+        - REST APIs
+        - B2B SaaS
+  education:
+    - institution: National Taiwan University
+      url: https://management.ntu.edu.tw/en/Fin
+      degree: Bachelor
+      area: Finance
+      startDate: 2014-09
+      endDate: 2019-06
+  languages:
+    - language: English
+      fluency: Full Professional Proficiency
+      keywords:
+        - TOEIC 985
+locale:
+  language: en
+layouts:
+  - engine: latex
+    template: moderncv-banking
+    sections:
+      order:
+        - basics
+        - skills
+        - certificates
+        - work
+        - projects
+        - education
+        - languages
+    page:
+      showPageNumbers: true
+      margins:
+        top: 2.5cm
+        left: 1.5cm
+        right: 1.5cm
+        bottom: 2.5cm
+    typography:
+      fontSize: 11pt

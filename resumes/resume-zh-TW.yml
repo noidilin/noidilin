@@ -9,13 +9,17 @@ content:
     url: https://go.noidilin.dev/blog
     summary: |
       - 具財務背景的前端工程師，將分析思維、系統推理與交付紀律帶入產品與平台工作
-      - 建構 React/Next.js 產品，同時延伸至 AWS、Terraform、Kubernetes、GitOps、CI/CD 與可觀測性工作流程
-      - 以清楚邊界、可重現流程與營運可視性設計系統，讓團隊能更有信心地理解與推進變更
+      - 建構 React/Next.js 產品，同時延伸至 AWS、Terraform、Kubernetes、GitOps、CI/CD、可觀測性與 AI 輔助工程工作流程
+      - 建立可重複使用的 AI-agent 工作流程，透過 loop-based execution、context management、CLI/MCP tool routing 與 human review gates 改善規劃、實作、測試與文件維護
       - 串接產品端實作與 DevOps 實務，建立易審查的工作流程、可重用標準與更容易由團隊維運的系統
   profiles:
     - network: GitHub
       url: https://go.noidilin.dev/github
       username: noidilin
+  certificates:
+    - name: AWS Certified Solutions Architect – Associate
+      issuer: Amazon Web Services
+      date: "2026"
   education:
     - institution: 國立臺灣大學
       url: https://management.ntu.edu.tw/en/Fin
@@ -24,10 +28,6 @@ content:
       # score: "3.8"
       startDate: 2014-09
       endDate: 2019-06 # Leave endDate blank to indicate "Present"
-      summary: |
-        - 將 Python 應用於商業、供應鏈與財務情境中的分析流程自動化
-        - 以真實企業資料進行財務建模與風險分析，產出可支援決策的報告
-        - 建立分析思維、結構化問題拆解能力與以資料為基礎的溝通方法
   skills:
     - name: Front-end
       level: Advanced # 'Novice' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Master'
@@ -51,6 +51,13 @@ content:
         - Grafana
         - Argo CD
         - GitHub Actions
+    - name: AI-Native Workflow
+      level: Advanced
+      keywords:
+        - Agent Workflows
+        - Context Engineering
+        - Loop Engineering
+        - CLI/MCP Tool Routing
     - name: Creative Technology
       level: Expert
       keywords:
@@ -77,20 +84,16 @@ content:
         - Storybook
         - TanStack Query
         - Zustand
-        - Firebase
         - next-intl
         - Axios
-        - Snapdom
     - name: Freelance Motion Designer
       url: https://go.noidilin.dev/design
       startDate: 2020-10
       endDate:
       position: Real-time 3D & Motion Designer (Unreal/Blender) / Colorist
       summary: |
-        - 在持續進行產品導向前端開發的同時，平行承接即時 3D、動態設計與調色專案
-        - 以 Blender 與 Unreal Engine 為 15+ 件接案專案建構即時 3D 場景與互動式環境
-        - 建立 AI 輔助渲染流程，結合較低解析度／較少採樣輸出、AI 放大、AI 降噪與光流影格插補，將渲染時間最多縮短 85%
-        - 運用打光、色彩管理、DWAB EXR 工作流程與視覺系統思維，為對客輸出保留最大的後製彈性
+        - 在前端產品開發之外，完成 15+ 件即時 3D、動態設計與調色接案專案，使用 Blender、Unreal Engine、Omniverse 與 DaVinci Resolve
+        - 建立 AI 輔助渲染流程，結合低採樣輸出、放大、降噪與光流影格插補，將渲染時間最多縮短 85%
       keywords:
         - Unreal Engine 5
         - Blender
@@ -110,7 +113,8 @@ content:
         - 設計雲端原生 AWS EKS 平台，結合 Terraform 管理的基礎設施、bootstrap 權責邊界與 GitOps 工作流程，以支援可重現重建
         - 建置由 5 個服務組成的微服務店面，透過閘道、身分驗證、商品目錄、訂單與使用者服務建立具契約測試邊界的 API 架構，釐清服務權責與整合點
         - 透過 GitHub Actions、Terraform、ECR image promotion、Argo CD 與 Kustomize 自動化完整 AWS EKS 平台部署與銷毀，降低手動平台建置成本
-        - 建立 Prometheus、Grafana 與 CloudWatch log forwarding 等可觀測性基礎，支援 SRE 診斷與決策
+        - 加入 AI PR review、GitHub Actions agentic documentation updates，以及招募導向專案網站中的 Bedrock Knowledge Base RAG chatbot，讓架構說明能隨實作變更保持一致
+        - 建立 Prometheus 與 Grafana 等可觀測性基礎，支援 SRE 診斷與決策
       keywords:
         - AWS EKS
         - Terraform
@@ -121,6 +125,9 @@ content:
         - Prometheus
         - Grafana
         - AWS CloudWatch
+        - Amazon Bedrock Knowledge Base
+        - RAG
+        - AI PR Review
     - name: Misegoto
       url: https://misegoto.jp
       description: 連結店家與維修商的日本 B2B 平台，支援可信任的協作流程
@@ -142,42 +149,28 @@ content:
         - Firebase
         - Localization
         - B2B SaaS
-    - name: eye チェック
-      url: https://eyecheck-bloodcell.com
-      description: 具備報表與個人化練習建議的血球辨識測驗平台
-      startDate: 2025-10
+    - name: pi-noid
+      url: https://github.com/noidilin/pi-noid
+      description: 用於個人 AI-agent 工作流程擴充的公開 TypeScript monorepo
+      startDate: 2026-06
       endDate:
       summary: |
-        - 建置 3 個核心產品流程：註冊、測驗作答與報表，支援日語 Next.js 與 React 測驗平台
-        - 實作 OTP 驗證與 session 處理，以支援付費使用者流程與後台存取控管
-        - 開發以 token 驅動的測驗互動，搭配穩健的 loading/error 狀態與 Zustand 狀態管理
-        - 建立報表檢視、深連結分頁與透過 react-pdf 匯出的 PDF 流程，並支援 CJK 字型與可重現檔名
+        - 建置 Ralph loop workflows、herdr orchestration 與 skill management 的自訂 pi extensions，將每日 AI-agent 使用方式整理成可重用的開發工具
+        - 在規劃、實作、測試、除錯與文件維護流程中導入明確的 context management、CLI/MCP tool-routing decisions 與 human review gates
+        - 發展何時使用直接 CLI tools、skills、MCP servers 或較長時間 agent loops 的實務判斷，以管理 context 並降低 drift
       keywords:
-        - Next.js
         - TypeScript
-        - shadcn/ui
-        - Zustand
-        - React Hook Form
-        - Zod
-        - Axios
-        - Sentry
-        - react-pdf
+        - AI Agents
+        - Context Engineering
+        - Loop Engineering
+        - CLI Tooling
+        - MCP
+        - Vitest
   languages:
     - language: English
       fluency: Full Professional Proficiency
       keywords:
         - TOEIC 985
-    - language: Chinese
-      fluency: Native or Bilingual Proficiency
-  interests:
-    - name: OS Ricing
-      keywords:
-        - Arch Linux (BTW)
-        - Omarchy
-        - DevTools
-        - Neovim
-        - Personal Theming Systems
-
 locale:
   language: zh-hant-tw
 layouts:
@@ -188,6 +181,7 @@ layouts:
         - basics
         - work
         - education
+        - certificates
         - skills
         - projects
     page:

@@ -9,13 +9,17 @@ content:
     url: https://go.noidilin.dev/blog
     summary: |
       - Frontend engineer with a finance background, bringing analytical thinking, systems reasoning, and delivery discipline to product and platform work
-      - Builds React/Next.js products while extending ownership into AWS, Terraform, Kubernetes, GitOps, CI/CD, and observability workflows
-      - Designs systems with clear boundaries, reproducible workflows, and operational visibility so teams can reason about changes confidently
+      - Builds React/Next.js products while extending ownership into AWS, Terraform, Kubernetes, GitOps, CI/CD, observability, and AI-assisted engineering workflows
+      - Builds repeatable AI-agent workflows using loop-based execution, context management, CLI/MCP tool routing, and human review gates to improve planning, implementation, testing, and documentation
       - Connects product-facing implementation with DevOps practices, creating reviewable workflows, reusable standards, and systems that are easier for teams to operate
   profiles:
     - network: GitHub
       url: https://go.noidilin.dev/github
       username: noidilin
+  certificates:
+    - name: AWS Certified Solutions Architect – Associate
+      issuer: Amazon Web Services
+      date: "2026"
   education:
     - institution: National Taiwan University
       url: https://management.ntu.edu.tw/en/Fin
@@ -24,10 +28,6 @@ content:
       # score: "3.8"
       startDate: 2014-09
       endDate: 2019-06 # Leave endDate blank to indicate "Present"
-      summary: |
-        - Applied Python to automate analysis workflows across business, supply chain, and finance use cases
-        - Conducted financial modeling and risk analysis using real company data for decision-oriented reporting
-        - Built a foundation in analytical thinking, structured problem solving, and data-backed communication
   skills:
     - name: Front-end
       level: Advanced # 'Novice' | 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' | 'Master'
@@ -51,6 +51,13 @@ content:
         - Grafana
         - Argo CD
         - GitHub Actions
+    - name: AI-Native Workflow
+      level: Advanced
+      keywords:
+        - Agent Workflows
+        - Context Engineering
+        - Loop Engineering
+        - CLI/MCP Tool Routing
     - name: Creative Technology
       level: Expert
       keywords:
@@ -77,20 +84,16 @@ content:
         - Storybook
         - TanStack Query
         - Zustand
-        - Firebase
         - next-intl
         - Axios
-        - Snapdom
     - name: Freelance Motion Designer
       url: https://go.noidilin.dev/design
       startDate: 2020-10
       endDate:
       position: Real-time 3D & Motion Designer (Unreal/Blender) / Colorist
       summary: |
-        - Delivered freelance real-time 3D, motion, and color work in parallel with product-focused frontend development
-        - Built real-time 3D scenes and interactive environments with Blender and Unreal Engine for 15+ freelance projects
-        - Developed AI-assisted rendering pipelines with lower-resolution/lower-sample passes, AI upscaling, AI denoising, and optical-flow frame interpolation, cutting render time by up to 85%
-        - Applied lighting, color management, DWAB EXR workflows, and visual-system thinking to preserve maximum post-production flexibility for client-facing outputs
+        - Delivered 15+ freelance real-time 3D, motion, and color projects using Blender, Unreal Engine, Omniverse, and DaVinci Resolve alongside frontend product work
+        - Developed AI-assisted rendering workflows using lower-sample passes, upscaling, denoising, and optical-flow interpolation, reducing render time by up to 85%
       keywords:
         - Unreal Engine 5
         - Blender
@@ -110,7 +113,8 @@ content:
         - Designed a cloud-native AWS EKS platform with Terraform-managed infrastructure, bootstrap ownership boundaries, and GitOps workflows for reproducible rebuilds
         - Built a 5-service microservices storefront with gateway, auth, catalog, order, and user services behind contract-tested API boundaries, clarifying service ownership and integration points
         - Automated full AWS EKS platform deploy/destroy through GitHub Actions, Terraform, ECR image promotion, Argo CD, and Kustomize to reduce manual platform setup
-        - Implemented observability foundations with Prometheus, Grafana, and CloudWatch log forwarding for SRE diagnosis decision making
+        - Added AI PR review, GitHub Actions agentic documentation updates, and a Bedrock Knowledge Base RAG chatbot on the recruiter-facing project site to keep architecture explanations aligned with implementation changes
+        - Implemented observability foundations with Prometheus and Grafana for SRE diagnosis decision making
       keywords:
         - AWS EKS
         - Terraform
@@ -121,6 +125,9 @@ content:
         - Prometheus
         - Grafana
         - AWS CloudWatch
+        - Amazon Bedrock Knowledge Base
+        - RAG
+        - AI PR Review
     - name: Misegoto
       url: https://misegoto.jp
       description: A Japanese B2B platform connecting stores and repairers through trusted workflows
@@ -142,41 +149,28 @@ content:
         - Firebase
         - Localization
         - B2B SaaS
-    - name: eye チェック
-      url: https://eyecheck-bloodcell.com
-      description: A blood-cell recognition exam platform with reporting and personalized practice
-      startDate: 2025-10
+    - name: pi-noid
+      url: https://github.com/noidilin/pi-noid
+      description: A public TypeScript monorepo for personal AI-agent workflow extensions
+      startDate: 2026-06
       endDate:
       summary: |
-        - Built 3 core product flows — registration, assessment, and reporting — for a Japanese Next.js and React exam platform
-        - Implemented OTP verification and session handling for paid user journeys and admin access control
-        - Developed token-driven test interactions with resilient loading/error states and Zustand-based state management
-        - Built reporting views with deep-linked pagination and PDF export via react-pdf, including CJK font support and deterministic filenames
+        - Built custom pi extensions for Ralph loop workflows, herdr orchestration, and skill management, turning daily AI-agent usage into reusable development tooling
+        - Applied explicit context management, CLI/MCP tool-routing decisions, and human review gates across planning, implementation, testing, debugging, and documentation workflows
+        - Developed practical workflow opinions around when to use direct CLI tools, skills, MCP servers, or longer-running agent loops to manage context and reduce drift
       keywords:
-        - Next.js
         - TypeScript
-        - shadcn/ui
-        - Zustand
-        - React Hook Form
-        - Zod
-        - Axios
-        - Sentry
-        - react-pdf
+        - AI Agents
+        - Context Engineering
+        - Loop Engineering
+        - CLI Tooling
+        - MCP
+        - Vitest
   languages:
     - language: English
       fluency: Full Professional Proficiency
       keywords:
         - TOEIC 985
-    - language: Chinese
-      fluency: Native or Bilingual Proficiency
-  interests:
-    - name: OS Ricing
-      keywords:
-        - Arch Linux (BTW)
-        - Omarchy
-        - DevTools
-        - Neovim
-        - Personal Theming Systems
 locale:
   language: en
 layouts:
@@ -188,6 +182,7 @@ layouts:
         - basics
         - work
         - education
+        - certificates
         - skills
         - projects
     page:
