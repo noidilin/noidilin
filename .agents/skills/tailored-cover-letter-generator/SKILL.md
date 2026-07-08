@@ -1,9 +1,9 @@
 ---
-name: tailored-cv-generator
-description: Generates concise job-specific cover letters from a target job description and an existing resume, emphasizing credible frontend-engineer fit
+name: tailored-cover-letter-generator
+description: Generates concise job-specific cover letters from a target job description and an existing resume, emphasizing credible frontend-engineer fit. Supports reading a job/application markdown file such as @cover-letters/company-role.md and writing the result back into its cover letter section.
 ---
 
-# Tailored CV Generator
+# Tailored Cover Letter Generator
 
 ## When to Use This Skill
 
@@ -12,6 +12,7 @@ description: Generates concise job-specific cover letters from a target job desc
 - Highlighting the strongest matching experience for one company or position
 - Adapting tone and emphasis for different employers without rewriting the resume itself
 - Preparing a concise, credible motivation letter for frontend or adjacent product-engineering roles
+- Updating an application tracking markdown file, such as `@cover-letters/company-role.md`, by reading its job requirements and filling its cover letter section
 
 ## What This Skill Does
 
@@ -21,10 +22,11 @@ description: Generates concise job-specific cover letters from a target job desc
 4. **Optimizes Relevance**: Uses role-relevant language and keywords naturally, without sounding templated
 5. **Handles Gaps Honestly**: Reframes adjacent or transferable experience when direct matches are limited
 6. **Produces Application-Ready Copy**: Returns a polished, concise cover letter, with optional variants only when requested
+7. **Updates Application Files When Requested**: If the user provides a file path and asks to write into it, reads the job requirements from that file and edits only the cover letter section
 
 ## Default Workflow
 
-When a user requests a job-specific CV letter:
+When a user requests a job-specific cover letter:
 
 1. Read the job description and identify the role title, company, and hiring priorities
 2. Read the existing resume or relevant YAMLResume sections as the source of truth
@@ -33,17 +35,31 @@ When a user requests a job-specific CV letter:
 5. Return a polished cover letter tailored to that role only
 6. Add notes, variants, or talking points only if the user explicitly asks for them
 
+When a user provides an application file path, such as `@cover-letters/hong-yac.md`, and asks to write the letter into that file:
+
+1. Treat the path as the target application file; resolve `@path` to a repository-relative file path when supported by the harness or by context
+2. Read the file and extract the company, role, and job requirements from sections such as `## Job Description`, `## Requirements`, `## Role`, or equivalent headings; if a `## Source` section exists, use it only for provenance/context, not as a substitute for the JD
+3. Read the existing resume or relevant YAMLResume sections as the source of truth
+4. Generate the tailored cover letter using the normal rules in this skill
+5. Locate a section named `## Cover Letter`, `## Motivation Letter`, or a clearly equivalent section
+6. Replace only that section's placeholder/body while preserving all other file content, headings, notes, and job details
+7. If the target section is missing or ambiguous, ask the user whether to add a new section or which section to update before editing
+
 ## Inputs This Skill Expects
 
 Prefer these inputs, in order of importance:
 
-- The full job description
-- Company name and role title
+- The full job description, or a file path containing the job description, such as `@cover-letters/company-role.md`
+- A collector-prepared application file with `## Source`, `## Job Description`, and `## Cover Letter` sections
+- Company name and role title, either provided directly or discoverable in the target file
 - Existing resume, YAMLResume file, or relevant sections like `content.work`, `content.projects`, `content.skills`, and `content.basics`
 - Target language if multiple resume versions exist
 - Optional tone, length, or emphasis preferences
+- Optional instruction to write the generated letter back into a specific section of the target file
 
 If the user does not provide a full resume, use the provided background as evidence and state where details are thin.
+
+For this repository, prefer `resumes/resume-en.yml` for English applications and `resumes/resume-zh-TW.yml` for Traditional Chinese applications unless the user specifies a different resume file.
 
 ## Source-Of-Truth Rules
 
@@ -141,7 +157,10 @@ Default output should include:
 
 1. A tailored cover letter in plain prose
 
+If the user explicitly asks to update a file, edit the file instead of only returning prose. After editing, respond with a concise confirmation that names the updated file and section. Do not include analysis or proof-point notes unless requested.
+
 Only include extras when explicitly requested, such as:
+
 - a shorter version
 - a more formal version
 - a more technical version
@@ -149,6 +168,8 @@ Only include extras when explicitly requested, such as:
 - a brief note on the main evidence used to shape the letter
 
 ## Example
+
+### Direct Prompt Example
 
 **User Request:**
 
@@ -186,7 +207,41 @@ Sincerely,
 
 - Connects the role directly to supported frontend experience
 - Uses concrete product and workflow evidence instead of generic claims
-- Keeps the tone specific, professional, and role-focused
+- Keeps the tone specific, professional and role-focused
+
+### File Update Example
+
+**User Request:**
+
+```text
+Use tailored-cover-generator on @cover-letters/hong-yac.md.
+Read the job description in that file and write the result into the cover letter section.
+Use resumes/resume-en.yml as the source of truth.
+```
+
+**Expected File Shape:**
+
+```md
+# Hong Yac Frontend Engineer Application
+
+## Job Description
+
+...
+
+## Cover Letter
+
+TODO
+```
+
+**Agent Behavior:**
+
+- Read `cover-letters/hong-yac.md`
+- Extract company, role, and job requirements from the file
+- Read `resumes/resume-en.yml`
+- Generate a concise tailored cover letter
+- Replace only the body under `## Cover Letter`
+- Preserve the job description and any other notes in the file
+- If `## Cover Letter` does not exist, ask before adding or editing a different section
 
 ## Strategic Recommendations
 
