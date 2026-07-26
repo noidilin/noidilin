@@ -1,0 +1,12 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  background: var(--background, oklch(0.9551 0 0));
+}

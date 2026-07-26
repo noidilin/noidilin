@@ -1,0 +1,104 @@
+@use './template/mixins' as mixins;
+@use './template/settings' with (
+  $background-color: oklch(0.9551 0 0),
+  $main-font: "'Merriweather Sans', ui-sans-serif, sans-serif, system-ui",
+  $main-font-size: 38px,
+  $main-color: oklch(0.3753 0 0),
+  $block-margin: 24px,
+  $heading-font: "'Fraunces', ui-serif, serif",
+  $heading-color: oklch(0.285 0 0),
+  $heading-line-height: 1.1,
+  $heading-letter-spacing: -0.025em,
+  $heading-text-transform: none,
+  $heading-font-weight: 700,
+  $heading1-size: 2.65em,
+  $heading2-size: 1.7em,
+  $heading3-size: 1.3em,
+  $heading4-size: 1em,
+  $code-font: "'Fira Code', ui-monospace, monospace",
+  $link-color: oklch(0.3753 0 0),
+  $link-color-hover: oklch(0.285 0 0),
+  $selection-color: oklch(0.937 0 0),
+  $selection-background-color: oklch(0.285 0 0),
+  $overlay-element-bg-color: '40, 40, 40',
+  $overlay-element-fg-color: '240, 240, 240'
+);
+@use './template/theme';
+
+:root {
+  color-scheme: light;
+
+  --background: oklch(0.9551 0 0);
+  --foreground: oklch(0.3753 0 0);
+  --card: oklch(0.937 0 0);
+  --card-foreground: oklch(0.3753 0 0);
+  --primary: oklch(0.285 0 0);
+  --primary-foreground: oklch(0.937 0 0);
+  --secondary: oklch(0.8452 0 0);
+  --secondary-foreground: oklch(0.3753 0 0);
+  --muted: oklch(0.8452 0 0);
+  --muted-foreground: oklch(0.5452 0 0);
+  --accent: oklch(0.8673 0.0101 87.4777);
+  --accent-foreground: oklch(0.4239 0 0);
+  --destructive: oklch(0.7183 0.0692 18.9061);
+  --destructive-foreground: oklch(0.937 0 0);
+  --border: oklch(0.7668 0 0);
+  --ring: oklch(0.6234 0 0);
+  --chart-1: oklch(0.7902 0.0193 86.1584);
+  --chart-2: oklch(0.7141 0.1045 33.0967);
+  --chart-3: oklch(0.7573 0.0479 256.4904);
+  --chart-4: oklch(0.8854 0.0473 77.6093);
+  --chart-5: oklch(0.8033 0.0506 43.489);
+  --radius: 0.45rem;
+  --shadow-sm: 0 1px 2px 0 hsl(0 0% 25.4902% / 25%),
+    0 1px 2px -1px hsl(0 0% 25.4902% / 25%);
+  --shadow-lg: 0 1px 2px 0 hsl(0 0% 25.4902% / 25%),
+    0 4px 6px -1px hsl(0 0% 25.4902% / 25%);
+
+  --r-background: var(--background);
+  --r-background-color: var(--background);
+  --r-main-font: 'Merriweather Sans', ui-sans-serif, sans-serif, system-ui;
+  --r-main-color: var(--foreground);
+  --r-heading-font: 'Fraunces', ui-serif, serif;
+  --r-heading-color: var(--primary);
+  --r-code-font: 'Fira Code', ui-monospace, monospace;
+  --r-link-color: var(--primary);
+  --r-link-color-dark: var(--foreground);
+  --r-link-color-hover: var(--muted-foreground);
+  --r-selection-color: var(--primary-foreground);
+  --r-selection-background-color: var(--primary);
+}
+
+:root.dark,
+.dark {
+  color-scheme: dark;
+
+  --background: oklch(0.2134 0 0);
+  --foreground: oklch(0.7668 0 0);
+  --card: oklch(0.235 0 0);
+  --card-foreground: oklch(0.7668 0 0);
+  --primary: oklch(0.8452 0 0);
+  --primary-foreground: oklch(0.235 0 0);
+  --secondary: oklch(0.3753 0 0);
+  --secondary-foreground: oklch(0.7668 0 0);
+  --muted: oklch(0.329 0 0);
+  --muted-foreground: oklch(0.5452 0 0);
+  --accent: oklch(0.7579 0.0134 86.8455);
+  --accent-foreground: oklch(0.2134 0 0);
+  --destructive: oklch(0.63 0.0706 19.2286);
+  --destructive-foreground: oklch(0.235 0 0);
+  --border: oklch(0.329 0 0);
+  --ring: oklch(0.4784 0 0);
+  --chart-1: oklch(0.7902 0.0193 86.1584);
+  --chart-2: oklch(0.7141 0.1045 33.0967);
+  --chart-3: oklch(0.6619 0.0445 246.2935);
+  --chart-4: oklch(0.8407 0.0437 89.372);
+  --chart-5: oklch(0.4784 0 0);
+  --shadow-sm: 0 1px 2px 0 hsl(0 0% 6.2745% / 25%),
+    0 1px 2px -1px hsl(0 0% 6.2745% / 25%);
+  --shadow-lg: 0 1px 2px 0 hsl(0 0% 6.2745% / 25%),
+    0 4px 6px -1px hsl(0 0% 6.2745% / 25%);
+}
+
+@include mixins.light-bg-text-color(oklch(0.3753 0 0));
+@include mixins.dark-bg-text-color(oklch(0.7668 0 0));

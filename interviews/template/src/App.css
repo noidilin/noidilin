@@ -1,0 +1,87 @@
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal h1 {
+  letter-spacing: -0.045em;
+}
+
+.reveal p {
+  line-height: 1.5;
+}
+
+.reveal .eyebrow {
+  margin-bottom: 0.55rem;
+  color: var(--muted-foreground);
+  font-family: var(--r-main-font);
+  font-size: 0.48em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.reveal .subtitle {
+  max-width: 24em;
+  color: var(--muted-foreground);
+}
+
+.reveal .byline {
+  margin-top: 3rem;
+  color: var(--muted-foreground);
+  font-size: 0.55em;
+}
+
+.reveal .agenda {
+  margin-top: 1.5em;
+}
+
+.reveal .agenda li {
+  margin: 0.65em 0;
+  padding-left: 0.35em;
+}
+
+.reveal .callout {
+  margin-top: 1.5em;
+  padding: 1em 1.2em;
+  border: 1px solid var(--border);
+  border-left: 0.22em solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--card-foreground);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+
+.reveal pre {
+  width: 100%;
+  margin-top: 1.5em;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.reveal pre code.hljs {
+  padding: 1.2em;
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+.reveal .hljs-keyword,
+.reveal .hljs-selector-tag,
+.reveal .hljs-type {
+  color: var(--chart-3);
+}
+
+.reveal .hljs-string,
+.reveal .hljs-attr {
+  color: var(--chart-2);
+}
+
+.reveal .hljs-number,
+.reveal .hljs-literal,
+.reveal .hljs-built_in {
+  color: var(--chart-5);
+}
+
+.reveal .controls,
+.reveal .progress {
+  color: var(--primary);
+}
