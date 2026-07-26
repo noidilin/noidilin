@@ -1,6 +1,6 @@
 ---
 name: tailored-cover-letter-generator
-description: Generates concise job-specific cover letters from a target job description and an existing resume, emphasizing credible frontend-engineer fit. Supports reading a job/application markdown file such as @cover-letters/company-role.md and writing the result back into its cover letter section.
+description: Generates concise job-specific cover letters from a target job description and an existing resume. Routes supported role families and locales through deterministic reference templates, with generic fallback behavior for role families that do not yet have templates.
 ---
 
 # Tailored Cover Letter Generator
@@ -11,15 +11,15 @@ description: Generates concise job-specific cover letters from a target job desc
 - Turning an existing public resume into a role-specific application narrative
 - Highlighting the strongest matching experience for one company or position
 - Adapting tone and emphasis for different employers without rewriting the resume itself
-- Preparing a concise, credible motivation letter for frontend or adjacent product-engineering roles
+- Preparing a concise, credible motivation letter for frontend, cloud, SRE, DevOps, or adjacent engineering roles
 - Updating an application tracking markdown file, such as `@cover-letters/company-role.md`, by reading its job requirements and filling its cover letter section
 
 ## What This Skill Does
 
 1. **Analyzes The Job Description**: Extracts required skills, responsibilities, product context, and likely hiring priorities
 2. **Uses The Resume As Evidence**: Pulls only supported experience from the user's existing resume or YAMLResume sections
-3. **Builds A Focused Narrative**: Selects 2 to 4 of the strongest proof points and turns them into a coherent cover letter
-4. **Optimizes Relevance**: Uses role-relevant language and keywords naturally, without sounding templated
+3. **Builds A Focused Narrative**: Uses two role-family proof sources in a fixed order and adapts their approved facts to the JD
+4. **Optimizes Relevance**: Uses role-relevant language and keywords naturally within a deterministic scaffold
 5. **Handles Gaps Honestly**: Reframes adjacent or transferable experience when direct matches are limited
 6. **Produces Application-Ready Copy**: Returns a polished, concise cover letter, with optional variants only when requested
 7. **Updates Application Files When Requested**: If the user provides a file path and asks to write into it, reads the job requirements from that file and edits only the cover letter section
@@ -28,22 +28,49 @@ description: Generates concise job-specific cover letters from a target job desc
 
 When a user requests a job-specific cover letter:
 
-1. Read the job description and identify the role title, company, and hiring priorities
-2. Read the existing resume or relevant YAMLResume sections as the source of truth
-3. Select the strongest matching experience, skills, and achievements
-4. Build a letter around concrete evidence instead of generic enthusiasm
-5. Return a polished cover letter tailored to that role only
-6. Add notes, variants, or talking points only if the user explicitly asks for them
+1. Read the job description and identify the company, role, locale, and hiring priorities.
+2. Read the matching locale resume or relevant YAMLResume sections as the factual source of truth.
+3. Classify the role family using the routing table below.
+4. If matching family references exist, read the family's proof file and exactly one locale scaffold before drafting. Loading both references is mandatory for a supported family and locale.
+5. Internally populate the complete common slot contract from the locked proofs before writing prose. Do not expose the slot map unless requested.
+6. Compose against the loaded scaffold, preserving its sentence purposes and mostly fixed connective wording.
+7. Run the factuality, structure, language, and length checks in this skill.
+8. Return only the polished letter unless extras were explicitly requested.
 
 When a user provides an application file path, such as `@cover-letters/hong-yac.md`, and asks to write the letter into that file:
 
-1. Treat the path as the target application file; resolve `@path` to a repository-relative file path when supported by the harness or by context
-2. Read the file and extract the company, role, and job requirements from sections such as `## Job Description`, `## Requirements`, `## Role`, or equivalent headings; if a `## Source` section exists, use it only for provenance/context, not as a substitute for the JD
-3. Read the existing resume or relevant YAMLResume sections as the source of truth
-4. Generate the tailored cover letter using the normal rules in this skill
-5. Locate a section named `## Cover Letter`, `## Motivation Letter`, or a clearly equivalent section
-6. Replace only that section's placeholder/body while preserving all other file content, headings, notes, and job details
-7. If the target section is missing or ambiguous, ask the user whether to add a new section or which section to update before editing
+1. Resolve the path and extract the company, role, locale, and requirements from the application file. Treat `## Source` as provenance, not as a substitute for the JD.
+2. Follow the normal classify → load family references → populate slots → compose → validate workflow.
+3. Locate `## Cover Letter`, `## Motivation Letter`, or a clearly equivalent section.
+4. Replace only that section's body and preserve all other content.
+5. If the target section is missing or ambiguous, ask before adding or editing a different section.
+
+## Template Routing
+
+Map the dominant JD responsibilities to one family slug, then resolve both:
+
+```text
+references/templates/{family}.proofs.md
+references/templates/{family}.{locale}.md
+```
+
+| Family | Dominant signals | Slug |
+| --- | --- | --- |
+| Frontend | Browser product interfaces, React/Vue, UI systems, frontend architecture, web visualization | `frontend` |
+| Cloud | Cloud application/service development, cloud architecture, AWS service integration, full-cycle cloud feature delivery | `cloud` |
+| SRE/DevOps | CI/CD, infrastructure as code, platform provisioning, reliability, observability, service operations, incidents, on-call | `sre-devops` |
+
+Locale slugs currently supported are `en` and `zh-TW`.
+
+Routing rules:
+
+- Honor an explicit user choice of family or locale.
+- Otherwise choose the family represented by the largest share of core responsibilities, not title alone.
+- For a close Cloud versus SRE/DevOps tie, apply the operational-duty test: route to SRE/DevOps when on-call, incidents, SLI/SLO ownership, service operations, reliability operations, or infrastructure ownership are core duties; otherwise route cloud service building and architecture to Cloud.
+- For bilingual application files, use explicit language metadata when it selects one language. If metadata says bilingual, default Taiwan 104 postings to `zh-TW` and English-only career sites to `en`.
+- Load one shared role-family proof file plus exactly one locale scaffold for each requested output locale. When the user requests both locales, reuse the proof file and run a separate render pass against each scaffold.
+- A family is template-supported only when both its proof file and requested locale scaffold exist. Otherwise use the generic rules in this skill.
+- Never substitute one family's references for another missing family.
 
 ## Inputs This Skill Expects
 
@@ -73,13 +100,13 @@ For this repository, prefer `resumes/resume-en.yml` for English applications and
 
 Follow these authoring rules for this repo:
 
-- Present the candidate as a frontend engineer in the present tense
-- Keep a cohesive frontend-engineer voice even when drawing on finance, design, or creative experience
-- Use direct action language rooted in engineering impact, product delivery, and user-facing value
-- Favor recruiter-friendly frontend terms such as `admin dashboard`, `customer-facing flows`, `auth/session handling`, `typed API integration`, `responsive layouts`, and `export/reporting workflows`
-- Treat finance and design background as supporting differentiators, not as competing identities
-- Keep language concise, specific, and credible
-- Avoid filler like `I am passionate`, `I am excited to apply`, or broad praise with no substance unless the tone explicitly calls for it
+- Present the candidate in the role identity selected for the target family; for frontend templates, use a cohesive frontend-engineer identity in the present tense.
+- Use direct action language rooted in engineering impact, product delivery, and user-facing value.
+- For frontend roles, favor supported recruiter-friendly terms such as `admin dashboard`, `customer-facing flows`, `typed API integration`, `responsive layouts`, and `export/reporting workflows` when they match the JD.
+- Treat finance, design, creative technology, platform, and AI-agent experience as supporting differentiators rather than competing identities.
+- Keep language concise, specific, and credible.
+- Reuse a small number of high-priority JD terms exactly when the resume supports them. Do not produce a stack list.
+- Avoid filler such as `I am passionate`, `I am excited to apply`, or unsupported company praise.
 
 ## How To Analyze The Job Description
 
@@ -99,56 +126,106 @@ Build a simple priority map:
 
 ## How To Map Resume Evidence
 
-For each important requirement:
+For a template-supported role family:
 
-- Find the most credible supporting example from `work` or `projects`
-- Prefer recent, production-facing experience over older or less relevant background
-- Use one concrete outcome, workflow, or implementation detail when possible
-- If no direct match exists, choose the closest transferable evidence and frame it carefully
-- Avoid stuffing every keyword into the letter; select only the strongest support
+- Use the two sources declared by `{family}.proofs.md`; both are mandatory and their order is fixed.
+- Select one or two approved facts per source according to the JD. Never use facts outside the proof file, even if another resume entry appears more relevant.
+- Keep each proof to one sentence in paragraph two.
+- Obey each source's purpose and exclusions. A supporting differentiator must not be presented as direct evidence for an unsupported capability.
+- When the proof file contains a translation guide matching the output locale, apply its project naming, preferred terminology, and natural-framing rules.
+- Treat translation guides as wording constraints, not additional evidence. They may not expand or alter the approved facts.
+- When no metric exists in the approved facts, use workflow, surface, technical scope, or practical outcome. Never invent a number.
+- Bridge adjacent experience only for a central unsupported requirement. Silently omit unsupported nice-to-haves.
+- Avoid stuffing every keyword into the letter.
 
-## Letter Structure
+For a family without template references, select two strong resume-backed proof points using the generic source-of-truth rules.
 
-Default structure:
+## Frontend Classification
 
-### Paragraph 1
+For a frontend-dominant JD, select one primary and at most one secondary subtype:
 
-- Name the role and company
-- State the strongest high-level reason the candidate fits
-- Ground interest in product, scope, or role shape rather than generic praise
+1. **Product/workflow UI** — customer flows, dashboards, forms, commerce, reporting, operational tooling
+2. **Data/visualization** — dense tables, charts, maps, streaming or real-time state, scientific/IoT data
+3. **Design-system/UI craft** — reusable components, Figma fidelity, responsive design, accessibility, visual consistency
+4. **Frontend platform/architecture** — state/data patterns, testing, standards, modularity, build systems, cross-team frontend foundations
 
-### Paragraph 2
+Treat performance as a cross-cutting concern rather than a subtype. When no subtype clearly dominates, default to product frontend plus systems depth. Subtypes determine which approved facts receive emphasis; they never change the locked proof sources or order.
 
-- Lead with the most aligned evidence from recent work or projects
-- Connect that evidence to the employer's likely needs
-- Use one or two concrete systems, workflows, or product surfaces at most
+## Cloud Classification
 
-### Paragraph 3
+For a Cloud-dominant JD, select one primary and at most one secondary subtype:
 
-- Reinforce fit in one sentence
-- Express interest in discussing how the candidate can contribute
-- Keep the close brief and professional
+1. **Cloud application/services** — backend or cloud features, APIs, microservices, testing, full-cycle delivery
+2. **Platform/architecture** — cloud-native design, containers, service boundaries, infrastructure design, scalability
+3. **Cloud integration/security** — AWS service integration, networking, IAM/security expectations, data and payment integrations
+4. **AI-assisted cloud engineering** — AI-native development, context engineering, AI review, agentic delivery workflows
 
-Prefer three short paragraphs by default. Add a fourth paragraph only when the user explicitly asks for a longer version.
+Subtypes determine which approved Hiraya and Misegoto facts receive emphasis; they never change the locked proof sources or order.
+
+## SRE/DevOps Classification
+
+For an SRE/DevOps-dominant JD, select one primary and at most one secondary subtype:
+
+1. **Delivery automation** — CI/CD, release engineering, deployment workflows, toil reduction
+2. **IaC/platform** — Terraform, Kubernetes, GitOps, provisioning, platform lifecycle
+3. **Reliability/observability** — monitoring, alerting, service health, diagnosis, SLI/SLO concerns
+4. **Operations/security** — service operations, incidents, on-call, Linux/networking, cloud security and compliance
+
+Subtypes determine which approved Hiraya and pi-noid facts receive emphasis; they never change the locked proof sources or order. Unsupported production operations must remain adjacent evidence and must not be stated as direct experience.
+
+## Common Slot Contract
+
+The skill owns this contract. Templates arrange these Mustache-style slots into locale- and role-specific sentence patterns.
+
+| Slot | Contract |
+| --- | --- |
+| `{{ addressee }}` | Named recipient when known; otherwise the locale's neutral hiring-team addressee |
+| `{{ company }}` / `{{ role }}` | Exact company and role names from the input |
+| `{{ candidate_identity }}` | Concise present-tense role identity aligned to the family |
+| `{{ primary_need }}` / `{{ secondary_need }}` | Highest-priority and complementary JD needs, phrased naturally for the loaded scaffold |
+| `{{ role_interest? }}` | Optional role-grounded reason; omit its complete sentence when unsupported |
+| `{{ proof_1_context }}` / `{{ proof_2_context }}` | Ordered source names from the loaded family proof file |
+| `{{ proof_n_action }}` | Candidate-owned action composed only from that source's approved facts |
+| `{{ proof_n_scope }}` | One or two approved workflow, surface, or technical-scope facts |
+| `{{ proof_n_outcome? }}` | Optional approved metric or practical result; omit its complete clause when unsupported |
+| `{{ contribution }}` | Specific combination of capabilities the candidate would bring |
+| `{{ candidate_name }}` | Name from the matching locale resume |
+
+Required slots must be resolved before rendering. Only `role_interest` and each `proof_n_outcome` are optional. For supported families, validate every proof slot against the loaded proof file before rendering. For sparse JDs, populate needs conservatively from explicit role cues instead of inventing company context.
+
+## Rendering Contract
+
+Use a required two-pass process:
+
+1. **Populate:** resolve every required slot internally from the JD, locked proof file, and resume. Verify proof sources, order, selected facts, exclusions, and locale-specific translation guidance before prose generation.
+2. **Render:** follow the loaded locale scaffold's sentence sequence and mostly fixed connective wording. Small grammatical changes are allowed; changing paragraph purpose, replacing a locked proof, or adding unsupported claims is not.
+
+The final artifact contains a neutral greeting, three short paragraphs, and a sign-off:
+
+1. Role/company → primary need and candidate identity → optional role-grounded interest
+2. Proof 1 → proof 2 → synthesis against the secondary need
+3. Contribution → invitation to discuss
+
+Do not output unresolved Mustache tokens or the internal slot map.
 
 ## Tone And Length
 
-- Default to a concise professional cover letter
-- Aim for roughly 150 to 220 words unless the user requests otherwise
-- Prefer three short paragraphs over a comprehensive multi-paragraph narrative
-- Prioritize clarity, specificity, and relevance over completeness
-- Sound specific and thoughtful, not theatrical or overly formal
-- Match the company tone when the job description strongly suggests it, while preserving credibility
+- Optimize for recruiter scanning while retaining enough technical proof for an engineering manager.
+- Use a direct, credible, confident-but-restrained voice.
+- English: 150–220 words by default.
+- Traditional Chinese: 250–400 Chinese characters by default.
+- Write each locale as native prose from the same evidence logic; do not translate sentence by sentence.
+- Add a fourth paragraph only when the user explicitly asks for a longer version.
 
 ## What To Avoid
 
 - Do not copy resume bullets verbatim into paragraph form
 - Do not list every skill or project just because it appears in the resume
 - Do not flatter the company generically without linking it to role fit
-- Do not overemphasize unrelated experience that weakens the frontend narrative
+- Do not overemphasize unrelated experience that weakens the selected role-family narrative
 - Do not overclaim seniority, leadership scope, or domain expertise
 - Do not write a vague letter that could be sent to any employer
-- Do not exceed 220 words by default
+- Do not exceed the selected locale's default length range
 - Do not append meta commentary, analysis, or proof-point notes unless requested
 
 ## Output Format
@@ -167,87 +244,23 @@ Only include extras when explicitly requested, such as:
 - interview talking points derived from the letter
 - a brief note on the main evidence used to shape the letter
 
-## Example
+## Reference Files
 
-### Direct Prompt Example
+Current deterministic references:
 
-**User Request:**
+| Family | Proofs and translation guides | English scaffold | Traditional Chinese scaffold |
+| --- | --- | --- | --- |
+| Frontend | `references/templates/frontend.proofs.md` | `references/templates/frontend.en.md` | `references/templates/frontend.zh-TW.md` |
+| Cloud | `references/templates/cloud.proofs.md` | `references/templates/cloud.en.md` | `references/templates/cloud.zh-TW.md` |
+| SRE/DevOps | `references/templates/sre-devops.proofs.md` | `references/templates/sre-devops.en.md` | `references/templates/sre-devops.zh-TW.md` |
 
-```text
-Write a cover letter for this frontend engineer role.
-
-Company: ExampleSoft
-Role: Frontend Engineer
-
-Job Description:
-- Build customer-facing web experiences in React and TypeScript
-- Collaborate with product, design, and backend teams
-- Improve internal dashboards and operational workflows
-- Experience with modern frontend architecture and API integration preferred
-
-Use my existing YAMLResume as the source of truth.
-```
-
-**Generated Output:**
-
-```text
-Dear Hiring Team,
-
-I am applying for the Frontend Engineer role at ExampleSoft. My background aligns well with your mix of customer-facing product work, internal dashboard improvements, and modern React and TypeScript development. I currently build frontend features across user-facing flows and operational tools with a focus on maintainable architecture, typed API integration, and reliable UX.
-
-In recent work, I have delivered dashboards, account and support flows, and export-oriented workflows that required close collaboration with product, design, and backend partners. That experience maps well to your need for someone who can improve internal operations while continuing to strengthen the customer experience.
-
-I would welcome the opportunity to discuss how I could contribute to ExampleSoft's frontend platform and product experience.
-
-Sincerely,
-[Your Name]
-```
-
-**Why this works:**
-
-- Connects the role directly to supported frontend experience
-- Uses concrete product and workflow evidence instead of generic claims
-- Keeps the tone specific, professional and role-focused
-
-### File Update Example
-
-**User Request:**
-
-```text
-Use tailored-cover-generator on @cover-letters/hong-yac.md.
-Read the job description in that file and write the result into the cover letter section.
-Use resumes/resume-en.yml as the source of truth.
-```
-
-**Expected File Shape:**
-
-```md
-# Hong Yac Frontend Engineer Application
-
-## Job Description
-
-...
-
-## Cover Letter
-
-TODO
-```
-
-**Agent Behavior:**
-
-- Read `cover-letters/hong-yac.md`
-- Extract company, role, and job requirements from the file
-- Read `resumes/resume-en.yml`
-- Generate a concise tailored cover letter
-- Replace only the body under `## Cover Letter`
-- Preserve the job description and any other notes in the file
-- If `## Cover Letter` does not exist, ask before adding or editing a different section
+Validation fixtures are under `references/examples/{family}/`. Each fixture records its source JD, selected primary/secondary subtype, both locale outputs, and a compact pass checklist. Fixtures are maintenance examples, not extra content to return during normal generation.
 
 ## Strategic Recommendations
 
 After producing the letter, optionally include these only when requested:
 
-- **Strongest Proof Points**: The 2 to 4 pieces of evidence carrying the application
+- **Strongest Proof Points**: The two pieces of evidence carrying the application
 - **Gap Notes**: Requirements that are only partially covered and how to frame them honestly
 - **Interview Hooks**: Stories worth preparing based on the letter's claims
 - **Variant Ideas**: Ways to shift tone toward more technical, product-focused, or formal language

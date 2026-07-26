@@ -171,4 +171,5 @@ cython_debug/
 *.gif
 !output.gif
 temp*
+!template
 frame*
